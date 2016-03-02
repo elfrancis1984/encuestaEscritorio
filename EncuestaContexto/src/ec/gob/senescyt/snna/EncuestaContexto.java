@@ -17,6 +17,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
     public EncuestaContexto() {
         initComponents();
         
+        this.setLocationRelativeTo(null);
+        
         buttonGroup_1.add(resp_100);
         buttonGroup_1.add(resp_101);
         buttonGroup_1.add(resp_102);
@@ -53,8 +55,11 @@ public class EncuestaContexto extends javax.swing.JFrame {
         resp_104 = new javax.swing.JRadioButton();
         resp_105 = new javax.swing.JRadioButton();
         jPanel2 = new javax.swing.JPanel();
+        jButton_Sigueinte = new javax.swing.JButton();
+        jButton_Atras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocationByPlatform(true);
 
         jLayeredPane_1.setBackground(new java.awt.Color(0, 204, 255));
         jLayeredPane_1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -204,10 +209,24 @@ public class EncuestaContexto extends javax.swing.JFrame {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 395, Short.MAX_VALUE)
+            .addGap(0, 357, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Sección Dos", jPanel2);
+
+        jButton_Sigueinte.setText("Siguiente");
+        jButton_Sigueinte.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_SigueinteActionPerformed(evt);
+            }
+        });
+
+        jButton_Atras.setText("Atrás");
+        jButton_Atras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_AtrasActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -217,13 +236,23 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 716, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton_Atras, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton_Sigueinte)
+                .addGap(58, 58, 58))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(41, 41, 41)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton_Sigueinte)
+                    .addComponent(jButton_Atras))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         pack();
@@ -258,6 +287,24 @@ public class EncuestaContexto extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_resp_105ActionPerformed
 
+    private void jButton_SigueinteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SigueinteActionPerformed
+        // TODO add your handling code here:
+        int i = jTabbedPane1.getSelectedIndex() + 1;
+        int total = jTabbedPane1.getTabCount();
+        if(i < total){
+            jTabbedPane1.setSelectedIndex(i++);
+        }
+    }//GEN-LAST:event_jButton_SigueinteActionPerformed
+
+    private void jButton_AtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_AtrasActionPerformed
+        // TODO add your handling code here:
+        int i = jTabbedPane1.getSelectedIndex();
+        if(i > 0){
+            i--;
+        }
+        jTabbedPane1.setSelectedIndex(i);
+    }//GEN-LAST:event_jButton_AtrasActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -269,7 +316,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -297,6 +344,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup_1;
     private javax.swing.ButtonGroup buttonGroup_2;
+    private javax.swing.JButton jButton_Atras;
+    private javax.swing.JButton jButton_Sigueinte;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLayeredPane jLayeredPane_1;
