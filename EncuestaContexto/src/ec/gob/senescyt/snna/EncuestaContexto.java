@@ -2133,7 +2133,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_rad_1088ActionPerformed
 
-    /**
+    /** 
      * @param args the command line arguments
      */
     public HashMap<String,Component> obtenerComponentesPorPanel(JPanel j) {
