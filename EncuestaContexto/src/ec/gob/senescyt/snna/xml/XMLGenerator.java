@@ -73,6 +73,7 @@ public class XMLGenerator {
                 Element itemNode = document.createElement("ITEM"); 
                 //Key Node
                 Element keyNode = document.createElement("PREGUNTA"); 
+                keyNode.setAttribute("attr1", "xxx");
                 Text nodeKeyValue = document.createTextNode(key.get(i));
                 keyNode.appendChild(nodeKeyValue);      
                 //Value Node
