@@ -2187,6 +2187,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
             }
         }
     }
+    
+    public void casita(){
+    }
     /**
      * 
      */
