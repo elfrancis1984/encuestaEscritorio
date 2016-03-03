@@ -170,10 +170,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jPanel_109.setVisible(false);
         jPanel_111.setVisible(false);
         jPanel_113.setVisible(false);
-        
-        
-        
-    
+        jPanel_114.setVisible(false);
+        jPanel_115.setVisible(false);
+
     }
 
     
@@ -2025,96 +2024,112 @@ public class EncuestaContexto extends javax.swing.JFrame {
     private void rad_1045ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1045ActionPerformed
         if(rad_1045.isSelected()){
             muestraOcultaPanel(jPanel_111, true);
+            muestraOcultaPanel(jPanel_114, true);
         }
     }//GEN-LAST:event_rad_1045ActionPerformed
 
     private void rad_1046ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1046ActionPerformed
         if(rad_1046.isSelected()){
             muestraOcultaPanel(jPanel_111, false);
+            muestraOcultaPanel(jPanel_114, true);
         }
     }//GEN-LAST:event_rad_1046ActionPerformed
 
     private void rad_1047ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1047ActionPerformed
         if(rad_1047.isSelected()){
             muestraOcultaPanel(jPanel_111, false);
+            muestraOcultaPanel(jPanel_114, true);
         }
     }//GEN-LAST:event_rad_1047ActionPerformed
 
     private void rad_1048ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1048ActionPerformed
         if(rad_1048.isSelected()){
             muestraOcultaPanel(jPanel_111, false);
+            muestraOcultaPanel(jPanel_114, true);
         }
     }//GEN-LAST:event_rad_1048ActionPerformed
 
     private void rad_1049ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1049ActionPerformed
         if(rad_1049.isSelected()){
             muestraOcultaPanel(jPanel_111, false);
+            muestraOcultaPanel(jPanel_114, true);
         }
     }//GEN-LAST:event_rad_1049ActionPerformed
 
     private void rad_1050ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1050ActionPerformed
         if(rad_1050.isSelected()){
             muestraOcultaPanel(jPanel_111, false);
+            muestraOcultaPanel(jPanel_114, true);
         }
     }//GEN-LAST:event_rad_1050ActionPerformed
 
     private void rad_1051ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1051ActionPerformed
         if(rad_1051.isSelected()){
             muestraOcultaPanel(jPanel_111, false);
+            muestraOcultaPanel(jPanel_114, true);
         }
     }//GEN-LAST:event_rad_1051ActionPerformed
 
     private void rad_1052ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1052ActionPerformed
         if(rad_1052.isSelected()){
             muestraOcultaPanel(jPanel_111, false);
+            muestraOcultaPanel(jPanel_114, false);
         }
     }//GEN-LAST:event_rad_1052ActionPerformed
 
     private void rad_1081ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1081ActionPerformed
         if(rad_1081.isSelected()){
             muestraOcultaPanel(jPanel_113, true);
+            muestraOcultaPanel(jPanel_115, true);
         }
     }//GEN-LAST:event_rad_1081ActionPerformed
 
     private void rad_1082ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1082ActionPerformed
         if(rad_1082.isSelected()){
             muestraOcultaPanel(jPanel_113, false);
+            muestraOcultaPanel(jPanel_115, true);
         }
     }//GEN-LAST:event_rad_1082ActionPerformed
 
     private void rad_1083ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1083ActionPerformed
         if(rad_1083.isSelected()){
             muestraOcultaPanel(jPanel_113, false);
+            muestraOcultaPanel(jPanel_115, true);
         }
     }//GEN-LAST:event_rad_1083ActionPerformed
 
     private void rad_1084ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1084ActionPerformed
         if(rad_1084.isSelected()){
             muestraOcultaPanel(jPanel_113, false);
+            muestraOcultaPanel(jPanel_115, true);
         }
     }//GEN-LAST:event_rad_1084ActionPerformed
 
     private void rad_1085ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1085ActionPerformed
         if(rad_1085.isSelected()){
             muestraOcultaPanel(jPanel_113, false);
+            muestraOcultaPanel(jPanel_115, true);
         }
     }//GEN-LAST:event_rad_1085ActionPerformed
 
     private void rad_1086ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1086ActionPerformed
         if(rad_1086.isSelected()){
             muestraOcultaPanel(jPanel_113, false);
+            muestraOcultaPanel(jPanel_115, true);
         }
     }//GEN-LAST:event_rad_1086ActionPerformed
 
     private void rad_1087ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1087ActionPerformed
         if(rad_1087.isSelected()){
             muestraOcultaPanel(jPanel_113, false);
+            muestraOcultaPanel(jPanel_115, true);
         }
     }//GEN-LAST:event_rad_1087ActionPerformed
 
     private void rad_1088ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1088ActionPerformed
         if(rad_1088.isSelected()){
             muestraOcultaPanel(jPanel_113, false);
+            muestraOcultaPanel(jPanel_115, false);
         }
     }//GEN-LAST:event_rad_1088ActionPerformed
 
