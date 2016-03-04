@@ -2338,8 +2338,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
             //Generate XML
             Source source = new DOMSource(document);
             //Indicamos donde lo queremos almacenar
-            //Result result = new StreamResult(new java.io.File("./xml/"+name+".xml")); //nombre del archivo
-            Result result = new StreamResult(new java.io.File("./src/ec/gob/senescyt/snna/xml/"+fileConfig+".xml"));
+            Result result = new StreamResult(new java.io.File("./xml/"+fileConfig+".xml")); //nombre del archivo
+            //Result result = new StreamResult(new java.io.File("./src/ec/gob/senescyt/snna/xml/"+fileConfig+".xml"));
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
             transformer.transform(source, result);
         }
@@ -2351,7 +2351,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
     public void cargarXml(){
         //Se crea un SAXBuilder para poder parsear el archivo
         SAXBuilder builder = new SAXBuilder();
-        File xmlFile = new File( "./src/ec/gob/senescyt/snna/xml/"+fileConfig+".xml" );
+        //File xmlFile = new File( "./src/ec/gob/senescyt/snna/xml/"+fileConfig+".xml" );
+        File xmlFile = new File( "./xml/"+fileConfig+".xml" );
         try
         {
             //Se crea el documento a traves del archivo
