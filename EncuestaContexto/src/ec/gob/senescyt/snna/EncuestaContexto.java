@@ -6,8 +6,11 @@
 package ec.gob.senescyt.snna;
 
 import java.awt.Component;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -17,6 +20,7 @@ import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.Result;
@@ -25,9 +29,11 @@ import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.JDOMException;
+import org.jdom2.input.SAXBuilder;
 import org.w3c.dom.DOMImplementation;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
 import org.w3c.dom.Text;
 
 /**
@@ -37,6 +43,8 @@ import org.w3c.dom.Text;
 public class EncuestaContexto extends javax.swing.JFrame {
   
     HashMap<String,Component> componentesSeccionUno = new HashMap<>();
+    HashMap<String,Component> allComponents = new HashMap<>();
+    String ruta = "";
     
     /**
      * Creates new form Encuesta
@@ -47,6 +55,10 @@ public class EncuestaContexto extends javax.swing.JFrame {
         /* -------- Seccion 1 ---------- */
         initSeccionUno();
         componentesSeccionUno = obtenerComponentesPorPanel(jPanelSec_1);
+        /*---------Uno todos los componentes de todas las secciones------------------------*/
+        allComponents.putAll(componentesSeccionUno);
+        /*-----Carga respuestas almacenadas----------*/
+        cargarXml();
     }
 
     /**
@@ -1861,6 +1873,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         if (i < total) {
             jTabbedPane1.setSelectedIndex(i++);
         }
+        //OPTIMIZAR
         obtenerRespuestasPorSeccion(jPanelSec_1);
     }//GEN-LAST:event_jButton_SigueinteActionPerformed
 
@@ -1871,6 +1884,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
             i--;
         }
         jTabbedPane1.setSelectedIndex(i);
+        //OPTIMIZAR
+        obtenerRespuestasPorSeccion(jPanelSec_1);
     }//GEN-LAST:event_jButton_AtrasActionPerformed
 
     private void chk_1025ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1025ActionPerformed
@@ -1883,9 +1898,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
     private void chk_1000ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1000ActionPerformed
         if(chk_1000.isSelected()){
-            habilitaDeshabilitaComponentesRango(1001,1009,false,componentesSeccionUno);
+            habilitaDeshabilitaComponentesRango(1001,1009,false);
         }else{
-            habilitaDeshabilitaComponentesRango(1001,1009,true,componentesSeccionUno);
+            habilitaDeshabilitaComponentesRango(1001,1009,true);
         }
         
     }//GEN-LAST:event_chk_1000ActionPerformed
@@ -1924,51 +1939,51 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
     private void chk_1001ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1001ActionPerformed
         if(chk_1001.isSelected()){
-            habilitaDeshabilitaComponentesRango(1023,1023,false,componentesSeccionUno);
-            habilitaDeshabilitaComponentesRango(1052,1052,false,componentesSeccionUno);
+            habilitaDeshabilitaComponentesRango(1023,1023,false);
+            habilitaDeshabilitaComponentesRango(1052,1052,false);
         }else{
-            habilitaDeshabilitaComponentesRango(1023,1023,true,componentesSeccionUno);
+            habilitaDeshabilitaComponentesRango(1023,1023,true);
         }
     }//GEN-LAST:event_chk_1001ActionPerformed
 
     private void chk_1002ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1002ActionPerformed
         if(chk_1002.isSelected()){
-            habilitaDeshabilitaComponentesRango(1024,1024,false,componentesSeccionUno);
-            habilitaDeshabilitaComponentesRango(1088,1088,false,componentesSeccionUno);
+            habilitaDeshabilitaComponentesRango(1024,1024,false);
+            habilitaDeshabilitaComponentesRango(1088,1088,false);
         }else{
-            habilitaDeshabilitaComponentesRango(1024,1024,true,componentesSeccionUno);
+            habilitaDeshabilitaComponentesRango(1024,1024,true);
         }
     }//GEN-LAST:event_chk_1002ActionPerformed
 
     private void chk_1003ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1003ActionPerformed
         if(chk_1003.isSelected()){
-            habilitaDeshabilitaComponentesRango(1025,1025,false,componentesSeccionUno);
+            habilitaDeshabilitaComponentesRango(1025,1025,false);
         }else{
-            habilitaDeshabilitaComponentesRango(1025,1025,true,componentesSeccionUno);
+            habilitaDeshabilitaComponentesRango(1025,1025,true);
         }
     }//GEN-LAST:event_chk_1003ActionPerformed
 
     private void chk_1004ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1004ActionPerformed
         if(chk_1004.isSelected()){
-            habilitaDeshabilitaComponentesRango(1026,1026,false,componentesSeccionUno);
+            habilitaDeshabilitaComponentesRango(1026,1026,false);
         }else{
-            habilitaDeshabilitaComponentesRango(1026,1026,true,componentesSeccionUno);
+            habilitaDeshabilitaComponentesRango(1026,1026,true);
         }
     }//GEN-LAST:event_chk_1004ActionPerformed
 
     private void chk_1005ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1005ActionPerformed
         if(chk_1005.isSelected()){
-            habilitaDeshabilitaComponentesRango(1027,1027,false,componentesSeccionUno);
+            habilitaDeshabilitaComponentesRango(1027,1027,false);
         }else{
-            habilitaDeshabilitaComponentesRango(1027,1027,true,componentesSeccionUno);
+            habilitaDeshabilitaComponentesRango(1027,1027,true);
         }
     }//GEN-LAST:event_chk_1005ActionPerformed
 
     private void chk_1006ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1006ActionPerformed
         if(chk_1006.isSelected()){
-            habilitaDeshabilitaComponentesRango(1028,1028,false,componentesSeccionUno);
+            habilitaDeshabilitaComponentesRango(1028,1028,false);
         }else{
-            habilitaDeshabilitaComponentesRango(1028,1028,true,componentesSeccionUno);
+            habilitaDeshabilitaComponentesRango(1028,1028,true);
         }
     }//GEN-LAST:event_chk_1006ActionPerformed
 
@@ -1978,9 +1993,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
     private void chk_1008ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1008ActionPerformed
         if(chk_1008.isSelected()){
-            habilitaDeshabilitaComponentesRango(1029,1029,false,componentesSeccionUno);
+            habilitaDeshabilitaComponentesRango(1029,1029,false);
         }else{
-            habilitaDeshabilitaComponentesRango(1029,1029,true,componentesSeccionUno);
+            habilitaDeshabilitaComponentesRango(1029,1029,true);
         }
     }//GEN-LAST:event_chk_1008ActionPerformed
 
@@ -2142,6 +2157,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
             HashMap<String,Component> componentMap = new HashMap<>();
             for (int i = 0; i < componentes.length; i++) {
                 if (componentes[i] instanceof JPanel) {
+                    componentMap.put(componentes[i].getName(), componentes[i]);
                     Component[] auxiliar = ((JPanel)componentes[i]).getComponents();
                     for (int a = 0; a < auxiliar.length; a++) {
                         componentMap.put(auxiliar[a].getName(), auxiliar[a]);
@@ -2158,9 +2174,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
     /**
      * 
      */
-    public Component obtenerComponentePorName(String name, HashMap<String,Component> componentes) {
-        if (componentes.containsKey(name)) {
-            return (Component) componentes.get(name);
+    public Component obtenerComponentePorName(String name) {
+        if (allComponents.containsKey(name)) {
+            return (Component) allComponents.get(name);
         }else{
              return null;
         }
@@ -2188,16 +2204,32 @@ public class EncuestaContexto extends javax.swing.JFrame {
         }
     }
     
-    public void casita(){
+    public void fileChooser(){
+        javax.swing.JFileChooser jF1 = new javax.swing.JFileChooser(); 
+        //Creamos el filtro
+        FileNameExtensionFilter filtro = new FileNameExtensionFilter("*.XML", "xml");
+        //Le indicamos el filtro
+        jF1.setFileFilter(filtro);
+        //Nombre por defecto
+        jF1.setSelectedFile(new File("respuestas.XML"));
+        try{ 
+            if(jF1.showSaveDialog(null)==jF1.APPROVE_OPTION){ 
+                ruta = jF1.getSelectedFile().getAbsolutePath();
+                System.out.println(ruta);
+                //Aqui ya tiens la ruta,,,ahora puedes crear un fichero n esa ruta y escribir lo k kieras... 
+            } 
+        }catch (Exception ex){ 
+            ex.printStackTrace(); 
+        }
     }
     /**
      * 
      */
-    public void habilitaDeshabilitaComponentesRango(int inicio,int fin, boolean opcion, HashMap<String,Component> componentes){
+    public void habilitaDeshabilitaComponentesRango(int inicio,int fin, boolean opcion){
         Component componente;
         for(int i=inicio;i<=fin;i++){
             String nombre = ""+i;
-            componente = obtenerComponentePorName(nombre,componentes);
+            componente = obtenerComponentePorName(nombre);
             if(componente instanceof JRadioButton){
                 ((JRadioButton)componente).setEnabled(opcion);
                 ((JRadioButton)componente).setSelected(false);
@@ -2222,15 +2254,19 @@ public class EncuestaContexto extends javax.swing.JFrame {
             HashMap<String,Component> componentMap = new HashMap<>();
             for (int i = 0; i < componentes.length; i++) {
                 if (componentes[i] instanceof JPanel) {
+                    componentMap.put(componentes[i].getName(), componentes[i]);
                     Component[] componentes1 = ((JPanel)componentes[i]).getComponents();
                     for (int a = 0; a < componentes1.length; a++) {
-                        if(componentes1[a] instanceof JRadioButton && ((JRadioButton)componentes1[a]).isSelected()){
+//                        if(componentes1[a] instanceof JPanel){
+//                            componentMap.put(componentes1[a].getName(), componentes1[a]);
+//                        }
+                        if(componentes1[a] instanceof JRadioButton){
                             componentMap.put(componentes1[a].getName(), componentes1[a]);
                         }
-                        if(componentes1[a] instanceof JCheckBox && ((JCheckBox)componentes1[a]).isSelected()){
+                        if(componentes1[a] instanceof JCheckBox){
                             componentMap.put(componentes1[a].getName(), componentes1[a]);
                         }
-                        if(componentes1[a] instanceof JTextField && !((JTextField)componentes1[a]).getText().isEmpty()){
+                        if(componentes1[a] instanceof JTextField){
                             componentMap.put(componentes1[a].getName(), componentes1[a]);
                         }
                     }
@@ -2247,7 +2283,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
      */
     public static void generateXML(HashMap<String,Component> respuestas) throws Exception{
         String name = "RespuestasEncuestaContexto";
-        String valor;
+        String valor = "";
         if(respuestas.isEmpty()){
             System.out.println("ERROR empty ArrayList");
             return;
@@ -2255,19 +2291,32 @@ public class EncuestaContexto extends javax.swing.JFrame {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             DOMImplementation implementation = builder.getDOMImplementation();
-            Document document = implementation.createDocument(null, name, null);
+            org.w3c.dom.Document document = implementation.createDocument(null, name, null);
             document.setXmlVersion("1.0");
- 
             //Main Node
-            Element raiz = document.getDocumentElement();
-            Element itemNode = document.createElement("LISTA_RESPUESTAS"); 
+            org.w3c.dom.Element raiz = document.getDocumentElement();
+            org.w3c.dom.Element itemNode = document.createElement("LISTA_RESPUESTAS"); 
             for(Map.Entry<String,Component> b: respuestas.entrySet()){
-                Element keyNode = document.createElement("RESPUESTA"); 
-                keyNode.setAttribute("name", b.getKey());
+                org.w3c.dom.Element keyNode = document.createElement("COMPONENTE"); 
+                keyNode.setAttribute("NAME", b.getKey());
+                if(b.getValue() instanceof JPanel){
+                    keyNode.setAttribute("VISIBLE", (((JPanel)b.getValue()).isVisible())?"1":"0");
+                    valor = "jPanel";
+                }
+                if(b.getValue() instanceof JRadioButton){
+                    keyNode.setAttribute("ENABLED", (((JRadioButton)b.getValue()).isEnabled())?"1":"0");
+                    keyNode.setAttribute("SELECTED", (((JRadioButton)b.getValue()).isSelected())?"1":"0");
+                    valor = (((JRadioButton)b.getValue()).isSelected())?"1":"0";
+                }
+                if(b.getValue() instanceof JCheckBox){
+                    keyNode.setAttribute("ENABLED", (((JCheckBox)b.getValue()).isEnabled())?"1":"0");
+                    keyNode.setAttribute("SELECTED", (((JCheckBox)b.getValue()).isSelected())?"1":"0");
+                    valor = (((JCheckBox)b.getValue()).isSelected())?"1":"0";
+                }
                 if(b.getValue() instanceof JTextField){
+                    keyNode.setAttribute("ENABLED", (((JTextField)b.getValue()).isEnabled())?"1":"0");
+                    keyNode.setAttribute("VALUE", ((JTextField)b.getValue()).getText());
                     valor = ((JTextField)b.getValue()).getText();
-                }else{
-                    valor = "1";
                 }
                 Text nodeKeyValue = document.createTextNode(valor);
                 keyNode.appendChild(nodeKeyValue);      
@@ -2283,6 +2332,56 @@ public class EncuestaContexto extends javax.swing.JFrame {
         }
     }
     
+    /**
+     * 
+     */
+    public void cargarXml(){
+        //Se crea un SAXBuilder para poder parsear el archivo
+        SAXBuilder builder = new SAXBuilder();
+        File xmlFile = new File( "./xml/RespuestasEncuestaContexto.xml" );
+        try
+        {
+            //Se crea el documento a traves del archivo
+            Document document = (Document) builder.build( xmlFile );
+            //Se obtiene la raiz 'tables'
+            Element rootNode = document.getRootElement();
+            //Se obtiene la lista de hijos de la raiz 'tables'
+            List list = rootNode.getChildren( "LISTA_RESPUESTAS" );
+            //Se obtiene el elemento 'tabla'
+            Element respuestas = (Element) list.get(0);
+            //Se obtiene la lista de hijos del tag 'tabla'
+            List lista_componentes = respuestas.getChildren();
+            //Se recorre la lista de campos
+            for ( int j = 0; j < lista_componentes.size(); j++ )
+            {
+                //Se obtiene el elemento 'campo'
+                Element componente = (Element)lista_componentes.get(j);
+//                if(componente.getAttributeValue("NAME").equalsIgnoreCase("109"))
+//                {
+//                System.out.println("xxxx");
+//                }
+                Component componenteGui = obtenerComponentePorName(componente.getAttributeValue("NAME"));
+                 if(componenteGui instanceof JPanel){
+                    ((JPanel)componenteGui).setVisible(componente.getAttributeValue("VISIBLE").equalsIgnoreCase("1"));
+                }
+                if(componenteGui instanceof JRadioButton){
+                    ((JRadioButton)componenteGui).setEnabled(componente.getAttributeValue("ENABLED").equalsIgnoreCase("1"));
+                    ((JRadioButton)componenteGui).setSelected(componente.getAttributeValue("SELECTED").equalsIgnoreCase("1"));
+                }
+                if(componenteGui instanceof JCheckBox){
+                    ((JCheckBox)componenteGui).setEnabled(componente.getAttributeValue("ENABLED").equalsIgnoreCase("1"));
+                    ((JCheckBox)componenteGui).setSelected(componente.getAttributeValue("SELECTED").equalsIgnoreCase("1"));
+                }
+                if(componenteGui instanceof JTextField){
+                    ((JTextField)componenteGui).setEnabled(componente.getAttributeValue("ENABLED").equalsIgnoreCase("1"));
+                    if(componente.getContent().size()>0)
+                        ((JTextField)componenteGui).setText(componente.getAttributeValue("VALUE").toString());
+                }
+            } 
+        }catch ( Exception e ) {
+            System.out.println( e.getMessage() );
+        }
+    }
     /**
      * @param args the command line arguments
      */
