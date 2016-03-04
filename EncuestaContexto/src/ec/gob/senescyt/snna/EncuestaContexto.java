@@ -6,6 +6,8 @@
 package ec.gob.senescyt.snna;
 
 import java.awt.Component;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -45,6 +47,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
     HashMap<String,Component> componentesSeccionUno = new HashMap<>();
     HashMap<String,Component> allComponents = new HashMap<>();
     String ruta = "";
+    static String fileConfig = "config";
     
     /**
      * Creates new form Encuesta
@@ -60,7 +63,15 @@ public class EncuestaContexto extends javax.swing.JFrame {
         /*-----Carga respuestas almacenadas----------*/
         cargarXml();
     }
-
+    /**
+     * 
+     */
+    @Override
+    public Image getIconImage() {
+        Image icon = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("ec/gob/senescyt/snna/resources/bender.png"));
+        return icon;
+    }
+    
     /**
      * 
      */
@@ -379,6 +390,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jButton_Atras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Prototipo ecuesta");
+        setIconImage(getIconImage());
         setLocationByPlatform(true);
         setResizable(false);
 
@@ -2282,7 +2295,6 @@ public class EncuestaContexto extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void generateXML(HashMap<String,Component> respuestas) throws Exception{
-        String name = "RespuestasEncuestaContexto";
         String valor = "";
         if(respuestas.isEmpty()){
             System.out.println("ERROR empty ArrayList");
@@ -2291,7 +2303,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             DOMImplementation implementation = builder.getDOMImplementation();
-            org.w3c.dom.Document document = implementation.createDocument(null, name, null);
+            org.w3c.dom.Document document = implementation.createDocument(null, fileConfig, null);
             document.setXmlVersion("1.0");
             //Main Node
             org.w3c.dom.Element raiz = document.getDocumentElement();
@@ -2326,7 +2338,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
             //Generate XML
             Source source = new DOMSource(document);
             //Indicamos donde lo queremos almacenar
-            Result result = new StreamResult(new java.io.File("./xml/"+name+".xml")); //nombre del archivo
+            //Result result = new StreamResult(new java.io.File("./xml/"+name+".xml")); //nombre del archivo
+            Result result = new StreamResult(new java.io.File("./src/ec/gob/senescyt/snna/xml/"+fileConfig+".xml"));
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
             transformer.transform(source, result);
         }
@@ -2338,7 +2351,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
     public void cargarXml(){
         //Se crea un SAXBuilder para poder parsear el archivo
         SAXBuilder builder = new SAXBuilder();
-        File xmlFile = new File( "./xml/RespuestasEncuestaContexto.xml" );
+        File xmlFile = new File( "./src/ec/gob/senescyt/snna/xml/"+fileConfig+".xml" );
         try
         {
             //Se crea el documento a traves del archivo
