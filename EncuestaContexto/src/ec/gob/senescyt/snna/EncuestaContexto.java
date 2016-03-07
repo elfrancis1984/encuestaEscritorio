@@ -47,7 +47,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
     HashMap<String,Component> componentesSeccionUno = new HashMap<>();
     HashMap<String,Component> allComponents = new HashMap<>();
     String ruta = "";
-    static String fileConfig = "config";
+    String fileConfig = "config";
+    Integer index;
     
     /**
      * Creates new form Encuesta
@@ -390,10 +391,16 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jButton_Atras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Prototipo ecuesta");
+        setTitle("Prototipo encuesta");
         setIconImage(getIconImage());
         setLocationByPlatform(true);
         setResizable(false);
+
+        jTabbedPane1.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jTabbedPane1StateChanged(evt);
+            }
+        });
 
         jPanel_100.setName("100"); // NOI18N
 
@@ -2161,6 +2168,12 @@ public class EncuestaContexto extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_rad_1088ActionPerformed
 
+    private void jTabbedPane1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane1StateChanged
+        // TODO add your handling code here:
+        index = jTabbedPane1.getSelectedIndex();
+        System.out.println(index.intValue());
+    }//GEN-LAST:event_jTabbedPane1StateChanged
+
     /** 
      * @param args the command line arguments
      */
@@ -2294,7 +2307,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
      /**
      * @param args the command line arguments
      */
-    public static void generateXML(HashMap<String,Component> respuestas) throws Exception{
+    public void generateXML(HashMap<String,Component> respuestas) throws Exception{
         String valor = "";
         if(respuestas.isEmpty()){
             System.out.println("ERROR empty ArrayList");
@@ -2307,7 +2320,14 @@ public class EncuestaContexto extends javax.swing.JFrame {
             document.setXmlVersion("1.0");
             //Main Node
             org.w3c.dom.Element raiz = document.getDocumentElement();
-            org.w3c.dom.Element itemNode = document.createElement("LISTA_RESPUESTAS"); 
+            org.w3c.dom.Element itemNode = document.createElement("LISTA_RESPUESTAS");
+            /*Para registrar la seccion actual*/
+            org.w3c.dom.Element itemNode1 = document.createElement("SECCIONES");
+            org.w3c.dom.Element keyNode1 = document.createElement("SECCION_ACTUAL");
+            keyNode1.setAttribute("index", index.toString());
+            itemNode1.appendChild(keyNode1);
+            raiz.appendChild(itemNode1);
+            /*--------------------------------*/
             for(Map.Entry<String,Component> b: respuestas.entrySet()){
                 org.w3c.dom.Element keyNode = document.createElement("COMPONENTE"); 
                 keyNode.setAttribute("NAME", b.getKey());
@@ -2359,7 +2379,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
             Document document = (Document) builder.build( xmlFile );
             //Se obtiene la raiz 'tables'
             Element rootNode = document.getRootElement();
-            //Se obtiene la lista de hijos de la raiz 'tables'
+            //Se obtiene la lista de hijos de la raiz 'config'
             List list = rootNode.getChildren( "LISTA_RESPUESTAS" );
             //Se obtiene el elemento 'tabla'
             Element respuestas = (Element) list.get(0);
