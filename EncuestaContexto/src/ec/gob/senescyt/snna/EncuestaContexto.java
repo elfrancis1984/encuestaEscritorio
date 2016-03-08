@@ -2395,7 +2395,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 //                System.out.println("xxxx");
 //                }
                 Component componenteGui = obtenerComponentePorName(componente.getAttributeValue("NAME"));
-                 if(componenteGui instanceof JPanel){
+                if(componenteGui instanceof JPanel){
                     ((JPanel)componenteGui).setVisible(componente.getAttributeValue("VISIBLE").equalsIgnoreCase("1"));
                 }
                 if(componenteGui instanceof JRadioButton){
