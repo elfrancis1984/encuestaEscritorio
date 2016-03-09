@@ -5,6 +5,8 @@
  */
 package ec.gob.senescyt.snna;
 
+import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -16,6 +18,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.BorderFactory;
 import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
@@ -55,7 +58,6 @@ public class EncuestaContexto extends javax.swing.JFrame {
     String ruta = "";
     String fileConfig = "config";
     Integer index = 0;
-    
     /**
      * Creates new form Encuesta
      */
@@ -80,7 +82,27 @@ public class EncuestaContexto extends javax.swing.JFrame {
         allComponents.putAll(componentesSeccionSeis);
         /*-----Carga respuestas almacenadas----------*/
         cargarXml();
+        //seguridadPanel();
     }
+    /**
+     * 
+     */
+    private void seguridadPanel(){
+        login panelLogin = new login();
+        //JPanel panelLogin = new JPanel();
+        //panelLogin.setBounds(130, 200, 400, 200);
+        panelLogin.setSize(400, 200);
+        //panelLogin.setBorder(BorderFactory.createLineBorder(Color.black, 1));
+        //JLabel texto = new JLabel("xxxxxxxxxxxxxx");
+        //panelLogin.add(texto, BorderLayout.CENTER);
+        jTabbedPane1.setVisible(false);
+        jButton_Atras.setVisible(false);
+        jButton_Sigueinte.setVisible(false);
+        add(panelLogin, BorderLayout.CENTER);
+        //this.pack();
+        setSize(400, 250);
+    }
+    
     /**
      * 
      */
@@ -428,6 +450,14 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jPanelSec_6 = new javax.swing.JPanel();
         jButton_Sigueinte = new javax.swing.JButton();
         jButton_Atras = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
+        txt_cedula = new javax.swing.JTextField();
+        jLabel23 = new javax.swing.JLabel();
+        txt_nombres = new javax.swing.JTextField();
+        jLabel24 = new javax.swing.JLabel();
+        txt_apellidos = new javax.swing.JTextField();
+        jButton_activarEncuesta = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Prototipo encuesta");
@@ -1986,32 +2016,89 @@ public class EncuestaContexto extends javax.swing.JFrame {
             }
         });
 
+        jLabel20.setText("Cédula:");
+
+        jLabel23.setText("Nombres:");
+
+        jLabel24.setText("Apellidos:");
+
+        jButton_activarEncuesta.setText("Activar Encuesta");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txt_nombres, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_cedula, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel24)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txt_apellidos)))
+                .addGap(106, 106, 106)
+                .addComponent(jButton_activarEncuesta)
+                .addContainerGap(97, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20)
+                    .addComponent(txt_cedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel23)
+                    .addComponent(txt_nombres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton_activarEncuesta))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txt_apellidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel24))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton_Atras, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton_Sigueinte)
-                        .addGap(58, 58, 58))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 644, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 644, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jButton_Atras, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton_Sigueinte)
+                                .addGap(58, 58, 58))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(75, 75, 75)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 514, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton_Sigueinte)
                     .addComponent(jButton_Atras))
-                .addContainerGap())
+                .addGap(10, 10, 10))
         );
 
         pack();
@@ -2034,22 +2121,205 @@ public class EncuestaContexto extends javax.swing.JFrame {
         //obtenerRespuestasPorSeccion(jPanelSec_1);
     }//GEN-LAST:event_jButton_AtrasActionPerformed
 
-    private void chk_1025ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1025ActionPerformed
+    private void jTabbedPane1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane1StateChanged
+        //index = jTabbedPane1.getSelectedIndex();
+    }//GEN-LAST:event_jTabbedPane1StateChanged
+
+    private void jTabbedPane1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MousePressed
         // TODO add your handling code here:
-    }//GEN-LAST:event_chk_1025ActionPerformed
+        jTabbedPane1.setSelectedIndex(index);
+    }//GEN-LAST:event_jTabbedPane1MousePressed
+
+    private void jTabbedPane1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTabbedPane1MouseEntered
+
+    private void jTabbedPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseClicked
+        // TODO add your handling code here:
+        //jTabbedPane1.setSelectedIndex(index);
+    }//GEN-LAST:event_jTabbedPane1MouseClicked
+
+    private void jScrollPane1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jScrollPane1FocusLost
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jScrollPane1FocusLost
 
     private void rad_1102ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1102ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_rad_1102ActionPerformed
 
-    private void chk_1000ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1000ActionPerformed
-        if(chk_1000.isSelected()){
-            habilitaDeshabilitaComponentesRango(1001,1009,false);
-        }else{
-            habilitaDeshabilitaComponentesRango(1001,1009,true);
+    private void rad_1088ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1088ActionPerformed
+        if(rad_1088.isSelected()){
+            muestraOcultaPanel(jPanel_113, false);
+            muestraOcultaPanel(jPanel_115, false);
         }
-        
-    }//GEN-LAST:event_chk_1000ActionPerformed
+    }//GEN-LAST:event_rad_1088ActionPerformed
+
+    private void rad_1087ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1087ActionPerformed
+        if(rad_1087.isSelected()){
+            muestraOcultaPanel(jPanel_113, false);
+            muestraOcultaPanel(jPanel_115, true);
+        }
+    }//GEN-LAST:event_rad_1087ActionPerformed
+
+    private void rad_1086ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1086ActionPerformed
+        if(rad_1086.isSelected()){
+            muestraOcultaPanel(jPanel_113, false);
+            muestraOcultaPanel(jPanel_115, true);
+        }
+    }//GEN-LAST:event_rad_1086ActionPerformed
+
+    private void rad_1085ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1085ActionPerformed
+        if(rad_1085.isSelected()){
+            muestraOcultaPanel(jPanel_113, false);
+            muestraOcultaPanel(jPanel_115, true);
+        }
+    }//GEN-LAST:event_rad_1085ActionPerformed
+
+    private void rad_1084ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1084ActionPerformed
+        if(rad_1084.isSelected()){
+            muestraOcultaPanel(jPanel_113, false);
+            muestraOcultaPanel(jPanel_115, true);
+        }
+    }//GEN-LAST:event_rad_1084ActionPerformed
+
+    private void rad_1083ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1083ActionPerformed
+        if(rad_1083.isSelected()){
+            muestraOcultaPanel(jPanel_113, false);
+            muestraOcultaPanel(jPanel_115, true);
+        }
+    }//GEN-LAST:event_rad_1083ActionPerformed
+
+    private void rad_1082ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1082ActionPerformed
+        if(rad_1082.isSelected()){
+            muestraOcultaPanel(jPanel_113, false);
+            muestraOcultaPanel(jPanel_115, true);
+        }
+    }//GEN-LAST:event_rad_1082ActionPerformed
+
+    private void rad_1081ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1081ActionPerformed
+        if(rad_1081.isSelected()){
+            muestraOcultaPanel(jPanel_113, true);
+            muestraOcultaPanel(jPanel_115, true);
+        }
+    }//GEN-LAST:event_rad_1081ActionPerformed
+
+    private void rad_1052ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1052ActionPerformed
+        if(rad_1052.isSelected()){
+            muestraOcultaPanel(jPanel_111, false);
+            muestraOcultaPanel(jPanel_114, false);
+        }
+    }//GEN-LAST:event_rad_1052ActionPerformed
+
+    private void rad_1051ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1051ActionPerformed
+        if(rad_1051.isSelected()){
+            muestraOcultaPanel(jPanel_111, false);
+            muestraOcultaPanel(jPanel_114, true);
+        }
+    }//GEN-LAST:event_rad_1051ActionPerformed
+
+    private void rad_1050ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1050ActionPerformed
+        if(rad_1050.isSelected()){
+            muestraOcultaPanel(jPanel_111, false);
+            muestraOcultaPanel(jPanel_114, true);
+        }
+    }//GEN-LAST:event_rad_1050ActionPerformed
+
+    private void rad_1049ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1049ActionPerformed
+        if(rad_1049.isSelected()){
+            muestraOcultaPanel(jPanel_111, false);
+            muestraOcultaPanel(jPanel_114, true);
+        }
+    }//GEN-LAST:event_rad_1049ActionPerformed
+
+    private void rad_1048ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1048ActionPerformed
+        if(rad_1048.isSelected()){
+            muestraOcultaPanel(jPanel_111, false);
+            muestraOcultaPanel(jPanel_114, true);
+        }
+    }//GEN-LAST:event_rad_1048ActionPerformed
+
+    private void rad_1047ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1047ActionPerformed
+        if(rad_1047.isSelected()){
+            muestraOcultaPanel(jPanel_111, false);
+            muestraOcultaPanel(jPanel_114, true);
+        }
+    }//GEN-LAST:event_rad_1047ActionPerformed
+
+    private void rad_1046ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1046ActionPerformed
+        if(rad_1046.isSelected()){
+            muestraOcultaPanel(jPanel_111, false);
+            muestraOcultaPanel(jPanel_114, true);
+        }
+    }//GEN-LAST:event_rad_1046ActionPerformed
+
+    private void rad_1045ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1045ActionPerformed
+        if(rad_1045.isSelected()){
+            muestraOcultaPanel(jPanel_111, true);
+            muestraOcultaPanel(jPanel_114, true);
+        }
+    }//GEN-LAST:event_rad_1045ActionPerformed
+
+    private void rad_1043ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1043ActionPerformed
+        if(rad_1043.isSelected()){
+            muestraOcultaPanel(jPanel_109, false);
+        }
+    }//GEN-LAST:event_rad_1043ActionPerformed
+
+    private void rad_1042ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1042ActionPerformed
+        if(rad_1042.isSelected()){
+            muestraOcultaPanel(jPanel_109, true);
+        }
+    }//GEN-LAST:event_rad_1042ActionPerformed
+
+    private void rad_1033ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1033ActionPerformed
+        if(rad_1033.isSelected()){
+            muestraOcultaPanel(jPanel_106, true);
+        }
+    }//GEN-LAST:event_rad_1033ActionPerformed
+
+    private void rad_1032ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1032ActionPerformed
+        if(rad_1032.isSelected()){
+            muestraOcultaPanel(jPanel_106, true);
+        }
+    }//GEN-LAST:event_rad_1032ActionPerformed
+
+    private void rad_1031ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1031ActionPerformed
+        if(rad_1031.isSelected()){
+            muestraOcultaPanel(jPanel_106, true);
+        }
+    }//GEN-LAST:event_rad_1031ActionPerformed
+
+    private void rad_1030ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1030ActionPerformed
+        if(rad_1030.isSelected()){
+            muestraOcultaPanel(jPanel_106, false);
+            muestraOcultaPanel(jPanel_107, true);
+        }
+    }//GEN-LAST:event_rad_1030ActionPerformed
+
+    private void chk_1025ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1025ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chk_1025ActionPerformed
+
+    private void rad_1021ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1021ActionPerformed
+        if(rad_1021.isSelected()){
+            muestraOcultaPanel(jPanel_104, false);
+            muestraOcultaPanel(jPanel_105, false);
+            muestraOcultaPanel(jPanel_106, false);
+            muestraOcultaPanel(jPanel_107, false);
+            muestraOcultaPanel(jPanel_108, false);
+            muestraOcultaPanel(jPanel_109, false);
+        }
+    }//GEN-LAST:event_rad_1021ActionPerformed
+
+    private void rad_1020ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1020ActionPerformed
+        if(rad_1020.isSelected()){
+            muestraOcultaPanel(jPanel_104, true);
+            muestraOcultaPanel(jPanel_105, true);
+            muestraOcultaPanel(jPanel_107, true);
+            muestraOcultaPanel(jPanel_108, true);
+        }
+    }//GEN-LAST:event_rad_1020ActionPerformed
 
     private void rad_1011ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1011ActionPerformed
         if(rad_1011.isSelected()){
@@ -2063,34 +2333,49 @@ public class EncuestaContexto extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_rad_1010ActionPerformed
 
-    private void rad_1020ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1020ActionPerformed
-        if(rad_1020.isSelected()){
-            muestraOcultaPanel(jPanel_104, true);
-            muestraOcultaPanel(jPanel_105, true);
-            muestraOcultaPanel(jPanel_107, true);
-            muestraOcultaPanel(jPanel_108, true);
-        }
-    }//GEN-LAST:event_rad_1020ActionPerformed
-
-    private void rad_1021ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1021ActionPerformed
-        if(rad_1021.isSelected()){
-            muestraOcultaPanel(jPanel_104, false);
-            muestraOcultaPanel(jPanel_105, false);
-            muestraOcultaPanel(jPanel_106, false);
-            muestraOcultaPanel(jPanel_107, false);
-            muestraOcultaPanel(jPanel_108, false);
-            muestraOcultaPanel(jPanel_109, false);
-        }
-    }//GEN-LAST:event_rad_1021ActionPerformed
-
-    private void chk_1001ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1001ActionPerformed
-        if(chk_1001.isSelected()){
-            habilitaDeshabilitaComponentesRango(1023,1023,false);
-            habilitaDeshabilitaComponentesRango(1052,1052,false);
+    private void chk_1008ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1008ActionPerformed
+        if(chk_1008.isSelected()){
+            habilitaDeshabilitaComponentesRango(1029,1029,false);
         }else{
-            habilitaDeshabilitaComponentesRango(1023,1023,true);
+            habilitaDeshabilitaComponentesRango(1029,1029,true);
         }
-    }//GEN-LAST:event_chk_1001ActionPerformed
+    }//GEN-LAST:event_chk_1008ActionPerformed
+
+    private void chk_1007ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1007ActionPerformed
+
+    }//GEN-LAST:event_chk_1007ActionPerformed
+
+    private void chk_1006ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1006ActionPerformed
+        if(chk_1006.isSelected()){
+            habilitaDeshabilitaComponentesRango(1028,1028,false);
+        }else{
+            habilitaDeshabilitaComponentesRango(1028,1028,true);
+        }
+    }//GEN-LAST:event_chk_1006ActionPerformed
+
+    private void chk_1005ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1005ActionPerformed
+        if(chk_1005.isSelected()){
+            habilitaDeshabilitaComponentesRango(1027,1027,false);
+        }else{
+            habilitaDeshabilitaComponentesRango(1027,1027,true);
+        }
+    }//GEN-LAST:event_chk_1005ActionPerformed
+
+    private void chk_1004ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1004ActionPerformed
+        if(chk_1004.isSelected()){
+            habilitaDeshabilitaComponentesRango(1026,1026,false);
+        }else{
+            habilitaDeshabilitaComponentesRango(1026,1026,true);
+        }
+    }//GEN-LAST:event_chk_1004ActionPerformed
+
+    private void chk_1003ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1003ActionPerformed
+        if(chk_1003.isSelected()){
+            habilitaDeshabilitaComponentesRango(1025,1025,false);
+        }else{
+            habilitaDeshabilitaComponentesRango(1025,1025,true);
+        }
+    }//GEN-LAST:event_chk_1003ActionPerformed
 
     private void chk_1002ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1002ActionPerformed
         if(chk_1002.isSelected()){
@@ -2101,221 +2386,23 @@ public class EncuestaContexto extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_chk_1002ActionPerformed
 
-    private void chk_1003ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1003ActionPerformed
-        if(chk_1003.isSelected()){
-            habilitaDeshabilitaComponentesRango(1025,1025,false);
+    private void chk_1001ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1001ActionPerformed
+        if(chk_1001.isSelected()){
+            habilitaDeshabilitaComponentesRango(1023,1023,false);
+            habilitaDeshabilitaComponentesRango(1052,1052,false);
         }else{
-            habilitaDeshabilitaComponentesRango(1025,1025,true);
+            habilitaDeshabilitaComponentesRango(1023,1023,true);
         }
-    }//GEN-LAST:event_chk_1003ActionPerformed
+    }//GEN-LAST:event_chk_1001ActionPerformed
 
-    private void chk_1004ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1004ActionPerformed
-        if(chk_1004.isSelected()){
-            habilitaDeshabilitaComponentesRango(1026,1026,false);
+    private void chk_1000ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1000ActionPerformed
+        if(chk_1000.isSelected()){
+            habilitaDeshabilitaComponentesRango(1001,1009,false);
         }else{
-            habilitaDeshabilitaComponentesRango(1026,1026,true);
+            habilitaDeshabilitaComponentesRango(1001,1009,true);
         }
-    }//GEN-LAST:event_chk_1004ActionPerformed
 
-    private void chk_1005ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1005ActionPerformed
-        if(chk_1005.isSelected()){
-            habilitaDeshabilitaComponentesRango(1027,1027,false);
-        }else{
-            habilitaDeshabilitaComponentesRango(1027,1027,true);
-        }
-    }//GEN-LAST:event_chk_1005ActionPerformed
-
-    private void chk_1006ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1006ActionPerformed
-        if(chk_1006.isSelected()){
-            habilitaDeshabilitaComponentesRango(1028,1028,false);
-        }else{
-            habilitaDeshabilitaComponentesRango(1028,1028,true);
-        }
-    }//GEN-LAST:event_chk_1006ActionPerformed
-
-    private void chk_1007ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1007ActionPerformed
-
-    }//GEN-LAST:event_chk_1007ActionPerformed
-
-    private void chk_1008ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1008ActionPerformed
-        if(chk_1008.isSelected()){
-            habilitaDeshabilitaComponentesRango(1029,1029,false);
-        }else{
-            habilitaDeshabilitaComponentesRango(1029,1029,true);
-        }
-    }//GEN-LAST:event_chk_1008ActionPerformed
-
-    private void rad_1030ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1030ActionPerformed
-        if(rad_1030.isSelected()){
-            muestraOcultaPanel(jPanel_106, false);
-            muestraOcultaPanel(jPanel_107, true);
-        }
-    }//GEN-LAST:event_rad_1030ActionPerformed
-
-    private void rad_1031ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1031ActionPerformed
-        if(rad_1031.isSelected()){
-            muestraOcultaPanel(jPanel_106, true);
-        }
-    }//GEN-LAST:event_rad_1031ActionPerformed
-
-    private void rad_1032ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1032ActionPerformed
-        if(rad_1032.isSelected()){
-            muestraOcultaPanel(jPanel_106, true);
-        }
-    }//GEN-LAST:event_rad_1032ActionPerformed
-
-    private void rad_1033ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1033ActionPerformed
-        if(rad_1033.isSelected()){
-            muestraOcultaPanel(jPanel_106, true);
-        }
-    }//GEN-LAST:event_rad_1033ActionPerformed
-
-    private void rad_1042ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1042ActionPerformed
-        if(rad_1042.isSelected()){
-            muestraOcultaPanel(jPanel_109, true);
-        }
-    }//GEN-LAST:event_rad_1042ActionPerformed
-
-    private void rad_1043ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1043ActionPerformed
-        if(rad_1043.isSelected()){
-            muestraOcultaPanel(jPanel_109, false);
-        }
-    }//GEN-LAST:event_rad_1043ActionPerformed
-
-    private void rad_1045ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1045ActionPerformed
-        if(rad_1045.isSelected()){
-            muestraOcultaPanel(jPanel_111, true);
-            muestraOcultaPanel(jPanel_114, true);
-        }
-    }//GEN-LAST:event_rad_1045ActionPerformed
-
-    private void rad_1046ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1046ActionPerformed
-        if(rad_1046.isSelected()){
-            muestraOcultaPanel(jPanel_111, false);
-            muestraOcultaPanel(jPanel_114, true);
-        }
-    }//GEN-LAST:event_rad_1046ActionPerformed
-
-    private void rad_1047ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1047ActionPerformed
-        if(rad_1047.isSelected()){
-            muestraOcultaPanel(jPanel_111, false);
-            muestraOcultaPanel(jPanel_114, true);
-        }
-    }//GEN-LAST:event_rad_1047ActionPerformed
-
-    private void rad_1048ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1048ActionPerformed
-        if(rad_1048.isSelected()){
-            muestraOcultaPanel(jPanel_111, false);
-            muestraOcultaPanel(jPanel_114, true);
-        }
-    }//GEN-LAST:event_rad_1048ActionPerformed
-
-    private void rad_1049ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1049ActionPerformed
-        if(rad_1049.isSelected()){
-            muestraOcultaPanel(jPanel_111, false);
-            muestraOcultaPanel(jPanel_114, true);
-        }
-    }//GEN-LAST:event_rad_1049ActionPerformed
-
-    private void rad_1050ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1050ActionPerformed
-        if(rad_1050.isSelected()){
-            muestraOcultaPanel(jPanel_111, false);
-            muestraOcultaPanel(jPanel_114, true);
-        }
-    }//GEN-LAST:event_rad_1050ActionPerformed
-
-    private void rad_1051ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1051ActionPerformed
-        if(rad_1051.isSelected()){
-            muestraOcultaPanel(jPanel_111, false);
-            muestraOcultaPanel(jPanel_114, true);
-        }
-    }//GEN-LAST:event_rad_1051ActionPerformed
-
-    private void rad_1052ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1052ActionPerformed
-        if(rad_1052.isSelected()){
-            muestraOcultaPanel(jPanel_111, false);
-            muestraOcultaPanel(jPanel_114, false);
-        }
-    }//GEN-LAST:event_rad_1052ActionPerformed
-
-    private void rad_1081ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1081ActionPerformed
-        if(rad_1081.isSelected()){
-            muestraOcultaPanel(jPanel_113, true);
-            muestraOcultaPanel(jPanel_115, true);
-        }
-    }//GEN-LAST:event_rad_1081ActionPerformed
-
-    private void rad_1082ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1082ActionPerformed
-        if(rad_1082.isSelected()){
-            muestraOcultaPanel(jPanel_113, false);
-            muestraOcultaPanel(jPanel_115, true);
-        }
-    }//GEN-LAST:event_rad_1082ActionPerformed
-
-    private void rad_1083ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1083ActionPerformed
-        if(rad_1083.isSelected()){
-            muestraOcultaPanel(jPanel_113, false);
-            muestraOcultaPanel(jPanel_115, true);
-        }
-    }//GEN-LAST:event_rad_1083ActionPerformed
-
-    private void rad_1084ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1084ActionPerformed
-        if(rad_1084.isSelected()){
-            muestraOcultaPanel(jPanel_113, false);
-            muestraOcultaPanel(jPanel_115, true);
-        }
-    }//GEN-LAST:event_rad_1084ActionPerformed
-
-    private void rad_1085ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1085ActionPerformed
-        if(rad_1085.isSelected()){
-            muestraOcultaPanel(jPanel_113, false);
-            muestraOcultaPanel(jPanel_115, true);
-        }
-    }//GEN-LAST:event_rad_1085ActionPerformed
-
-    private void rad_1086ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1086ActionPerformed
-        if(rad_1086.isSelected()){
-            muestraOcultaPanel(jPanel_113, false);
-            muestraOcultaPanel(jPanel_115, true);
-        }
-    }//GEN-LAST:event_rad_1086ActionPerformed
-
-    private void rad_1087ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1087ActionPerformed
-        if(rad_1087.isSelected()){
-            muestraOcultaPanel(jPanel_113, false);
-            muestraOcultaPanel(jPanel_115, true);
-        }
-    }//GEN-LAST:event_rad_1087ActionPerformed
-
-    private void rad_1088ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1088ActionPerformed
-        if(rad_1088.isSelected()){
-            muestraOcultaPanel(jPanel_113, false);
-            muestraOcultaPanel(jPanel_115, false);
-        }
-    }//GEN-LAST:event_rad_1088ActionPerformed
-
-    private void jTabbedPane1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane1StateChanged
-        //index = jTabbedPane1.getSelectedIndex();
-    }//GEN-LAST:event_jTabbedPane1StateChanged
-
-    private void jScrollPane1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jScrollPane1FocusLost
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jScrollPane1FocusLost
-
-    private void jTabbedPane1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTabbedPane1MouseEntered
-
-    private void jTabbedPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseClicked
-        // TODO add your handling code here:
-        //jTabbedPane1.setSelectedIndex(index);
-    }//GEN-LAST:event_jTabbedPane1MouseClicked
-
-    private void jTabbedPane1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MousePressed
-        // TODO add your handling code here:
-        jTabbedPane1.setSelectedIndex(index);
-    }//GEN-LAST:event_jTabbedPane1MousePressed
+    }//GEN-LAST:event_chk_1000ActionPerformed
 
     /** 
      * @param args the command line arguments
@@ -2724,6 +2811,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
     private javax.swing.JCheckBox chk_1029;
     private javax.swing.JButton jButton_Atras;
     private javax.swing.JButton jButton_Sigueinte;
+    private javax.swing.JButton jButton_activarEncuesta;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -2735,8 +2823,11 @@ public class EncuestaContexto extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -2745,6 +2836,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel_100;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelSec_1;
     private javax.swing.JPanel jPanelSec_2;
     private javax.swing.JPanel jPanelSec_3;
@@ -2875,5 +2967,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
     private javax.swing.JRadioButton rad_1124;
     private javax.swing.JTextField txt_1034;
     private javax.swing.JTextField txt_1044;
+    private javax.swing.JTextField txt_apellidos;
+    private javax.swing.JTextField txt_cedula;
+    private javax.swing.JTextField txt_nombres;
     // End of variables declaration//GEN-END:variables
 }
