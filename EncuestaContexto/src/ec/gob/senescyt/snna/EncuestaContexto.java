@@ -19,6 +19,7 @@ import java.util.logging.Logger;
 import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
@@ -45,10 +46,15 @@ import org.w3c.dom.Text;
 public class EncuestaContexto extends javax.swing.JFrame {
   
     HashMap<String,Component> componentesSeccionUno = new HashMap<>();
+    HashMap<String,Component> componentesSeccionDos = new HashMap<>();
+    HashMap<String,Component> componentesSeccionTres = new HashMap<>();
+    HashMap<String,Component> componentesSeccionCuatro = new HashMap<>();
+    HashMap<String,Component> componentesSeccionCinco = new HashMap<>();
+    HashMap<String,Component> componentesSeccionSeis = new HashMap<>();
     HashMap<String,Component> allComponents = new HashMap<>();
     String ruta = "";
     String fileConfig = "config";
-    Integer index;
+    Integer index = 0;
     
     /**
      * Creates new form Encuesta
@@ -58,11 +64,32 @@ public class EncuestaContexto extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         /* -------- Seccion 1 ---------- */
         initSeccionUno();
+        /*--------Lee todos los componentes de todas las secciones-------------------------*/
         componentesSeccionUno = obtenerComponentesPorPanel(jPanelSec_1);
+        componentesSeccionDos = obtenerComponentesPorPanel(jPanelSec_2);
+        componentesSeccionTres = obtenerComponentesPorPanel(jPanelSec_3);
+        componentesSeccionCuatro = obtenerComponentesPorPanel(jPanelSec_4);
+        componentesSeccionCinco = obtenerComponentesPorPanel(jPanelSec_5);
+        componentesSeccionSeis = obtenerComponentesPorPanel(jPanelSec_6);
         /*---------Uno todos los componentes de todas las secciones------------------------*/
         allComponents.putAll(componentesSeccionUno);
+        allComponents.putAll(componentesSeccionDos);
+        allComponents.putAll(componentesSeccionTres);
+        allComponents.putAll(componentesSeccionCuatro);
+        allComponents.putAll(componentesSeccionCinco);
+        allComponents.putAll(componentesSeccionSeis);
         /*-----Carga respuestas almacenadas----------*/
         cargarXml();
+    }
+    /**
+     * 
+     */
+    private void bloqueaPestanias(){
+        int inicio = index+1;
+        int fin = jTabbedPane1.getTabCount()-1;
+        for(int i=inicio;i<=fin;i++){
+            jTabbedPane1.setEnabledAt(i,false);
+        }
     }
     /**
      * 
@@ -196,6 +223,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jPanel_113.setVisible(false);
         jPanel_114.setVisible(false);
         jPanel_115.setVisible(false);
+        
+        jLabel_100.setVisible(false);
 
     }
 
@@ -386,7 +415,17 @@ public class EncuestaContexto extends javax.swing.JFrame {
         rad_1122 = new javax.swing.JRadioButton();
         rad_1123 = new javax.swing.JRadioButton();
         rad_1124 = new javax.swing.JRadioButton();
-        jPanel2 = new javax.swing.JPanel();
+        jLabel_100 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jPanelSec_2 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jPanelSec_3 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jPanelSec_4 = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jPanelSec_5 = new javax.swing.JPanel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jPanelSec_6 = new javax.swing.JPanel();
         jButton_Sigueinte = new javax.swing.JButton();
         jButton_Atras = new javax.swing.JButton();
 
@@ -396,9 +435,26 @@ public class EncuestaContexto extends javax.swing.JFrame {
         setLocationByPlatform(true);
         setResizable(false);
 
+        jTabbedPane1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTabbedPane1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jTabbedPane1MouseEntered(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jTabbedPane1MousePressed(evt);
+            }
+        });
         jTabbedPane1.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 jTabbedPane1StateChanged(evt);
+            }
+        });
+
+        jScrollPane1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jScrollPane1FocusLost(evt);
             }
         });
 
@@ -1761,6 +1817,11 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jLabel_100.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel_100.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel_100.setText("* Esta pregunta es obligatoria.");
+        jLabel_100.setName("lbl_100"); // NOI18N
+
         javax.swing.GroupLayout jPanelSec_1Layout = new javax.swing.GroupLayout(jPanelSec_1);
         jPanelSec_1.setLayout(jPanelSec_1Layout);
         jPanelSec_1Layout.setHorizontalGroup(
@@ -1768,7 +1829,10 @@ public class EncuestaContexto extends javax.swing.JFrame {
             .addGroup(jPanelSec_1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelSec_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel_100, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanelSec_1Layout.createSequentialGroup()
+                        .addComponent(jPanel_100, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel_100))
                     .addComponent(jPanel_101, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel_102, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel_103, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1789,8 +1853,13 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jPanelSec_1Layout.setVerticalGroup(
             jPanelSec_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelSec_1Layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(jPanel_100, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanelSec_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelSec_1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jPanel_100, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelSec_1Layout.createSequentialGroup()
+                        .addGap(134, 134, 134)
+                        .addComponent(jLabel_100)))
                 .addGap(10, 10, 10)
                 .addComponent(jPanel_101, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
@@ -1828,18 +1897,80 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("INFORMACIÓN FAMILIAR", jScrollPane1);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 898, Short.MAX_VALUE)
+        javax.swing.GroupLayout jPanelSec_2Layout = new javax.swing.GroupLayout(jPanelSec_2);
+        jPanelSec_2.setLayout(jPanelSec_2Layout);
+        jPanelSec_2Layout.setHorizontalGroup(
+            jPanelSec_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 637, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 3325, Short.MAX_VALUE)
+        jPanelSec_2Layout.setVerticalGroup(
+            jPanelSec_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 484, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Sección Dos", jPanel2);
+        jScrollPane2.setViewportView(jPanelSec_2);
+
+        jTabbedPane1.addTab("TIPOLOGIA DE LA VIVIENDA", jScrollPane2);
+
+        javax.swing.GroupLayout jPanelSec_3Layout = new javax.swing.GroupLayout(jPanelSec_3);
+        jPanelSec_3.setLayout(jPanelSec_3Layout);
+        jPanelSec_3Layout.setHorizontalGroup(
+            jPanelSec_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 637, Short.MAX_VALUE)
+        );
+        jPanelSec_3Layout.setVerticalGroup(
+            jPanelSec_3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 484, Short.MAX_VALUE)
+        );
+
+        jScrollPane3.setViewportView(jPanelSec_3);
+
+        jTabbedPane1.addTab("CAPITAL ECONOMICO, SOCIAL Y CULTURAL", jScrollPane3);
+
+        javax.swing.GroupLayout jPanelSec_4Layout = new javax.swing.GroupLayout(jPanelSec_4);
+        jPanelSec_4.setLayout(jPanelSec_4Layout);
+        jPanelSec_4Layout.setHorizontalGroup(
+            jPanelSec_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 637, Short.MAX_VALUE)
+        );
+        jPanelSec_4Layout.setVerticalGroup(
+            jPanelSec_4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 484, Short.MAX_VALUE)
+        );
+
+        jScrollPane4.setViewportView(jPanelSec_4);
+
+        jTabbedPane1.addTab("PREPARACIÓN PARA RENDIR EL ENES", jScrollPane4);
+
+        javax.swing.GroupLayout jPanelSec_5Layout = new javax.swing.GroupLayout(jPanelSec_5);
+        jPanelSec_5.setLayout(jPanelSec_5Layout);
+        jPanelSec_5Layout.setHorizontalGroup(
+            jPanelSec_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 637, Short.MAX_VALUE)
+        );
+        jPanelSec_5Layout.setVerticalGroup(
+            jPanelSec_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 468, Short.MAX_VALUE)
+        );
+
+        jScrollPane5.setViewportView(jPanelSec_5);
+
+        jTabbedPane1.addTab("ACCESO A TECNOLOGÍA DE LA INFORMACIÓN Y COMUNICACIÓN", jScrollPane5);
+
+        javax.swing.GroupLayout jPanelSec_6Layout = new javax.swing.GroupLayout(jPanelSec_6);
+        jPanelSec_6.setLayout(jPanelSec_6Layout);
+        jPanelSec_6Layout.setHorizontalGroup(
+            jPanelSec_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 637, Short.MAX_VALUE)
+        );
+        jPanelSec_6Layout.setVerticalGroup(
+            jPanelSec_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 468, Short.MAX_VALUE)
+        );
+
+        jScrollPane6.setViewportView(jPanelSec_6);
+
+        jTabbedPane1.addTab("PERCEPCIONES", jScrollPane6);
 
         jButton_Sigueinte.setText("Siguiente");
         jButton_Sigueinte.addActionListener(new java.awt.event.ActionListener() {
@@ -1888,13 +2019,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
     private void jButton_SigueinteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SigueinteActionPerformed
         // TODO add your handling code here:
-        int i = jTabbedPane1.getSelectedIndex() + 1;
-        int total = jTabbedPane1.getTabCount();
-        if (i < total) {
-            jTabbedPane1.setSelectedIndex(i++);
-        }
-        //OPTIMIZAR
-        obtenerRespuestasPorSeccion(jPanelSec_1);
+        validaSiguiente();
     }//GEN-LAST:event_jButton_SigueinteActionPerformed
 
     private void jButton_AtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_AtrasActionPerformed
@@ -1904,8 +2029,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
             i--;
         }
         jTabbedPane1.setSelectedIndex(i);
+        index = i;
         //OPTIMIZAR
-        obtenerRespuestasPorSeccion(jPanelSec_1);
+        //obtenerRespuestasPorSeccion(jPanelSec_1);
     }//GEN-LAST:event_jButton_AtrasActionPerformed
 
     private void chk_1025ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1025ActionPerformed
@@ -2169,10 +2295,27 @@ public class EncuestaContexto extends javax.swing.JFrame {
     }//GEN-LAST:event_rad_1088ActionPerformed
 
     private void jTabbedPane1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane1StateChanged
-        // TODO add your handling code here:
-        index = jTabbedPane1.getSelectedIndex();
-        System.out.println(index.intValue());
+        //index = jTabbedPane1.getSelectedIndex();
     }//GEN-LAST:event_jTabbedPane1StateChanged
+
+    private void jScrollPane1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jScrollPane1FocusLost
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jScrollPane1FocusLost
+
+    private void jTabbedPane1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTabbedPane1MouseEntered
+
+    private void jTabbedPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseClicked
+        // TODO add your handling code here:
+        //jTabbedPane1.setSelectedIndex(index);
+    }//GEN-LAST:event_jTabbedPane1MouseClicked
+
+    private void jTabbedPane1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MousePressed
+        // TODO add your handling code here:
+        jTabbedPane1.setSelectedIndex(index);
+    }//GEN-LAST:event_jTabbedPane1MousePressed
 
     /** 
      * @param args the command line arguments
@@ -2188,6 +2331,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
                     for (int a = 0; a < auxiliar.length; a++) {
                         componentMap.put(auxiliar[a].getName(), auxiliar[a]);
                     }
+                }
+                if (componentes[i] instanceof JLabel) {
+                    componentMap.put(componentes[i].getName(), componentes[i]);
                 }
             }
             return componentMap;
@@ -2274,35 +2420,35 @@ public class EncuestaContexto extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public void obtenerRespuestasPorSeccion(JPanel j) {
-        try {
-            Component[] componentes = j.getComponents();
-            HashMap<String,Component> componentMap = new HashMap<>();
-            for (int i = 0; i < componentes.length; i++) {
-                if (componentes[i] instanceof JPanel) {
-                    componentMap.put(componentes[i].getName(), componentes[i]);
-                    Component[] componentes1 = ((JPanel)componentes[i]).getComponents();
-                    for (int a = 0; a < componentes1.length; a++) {
-//                        if(componentes1[a] instanceof JPanel){
+//    public void obtenerRespuestasPorSeccion(JPanel j) {
+//        try {
+//            Component[] componentes = j.getComponents();
+//            HashMap<String,Component> componentMap = new HashMap<>();
+//            for (int i = 0; i < componentes.length; i++) {
+//                if (componentes[i] instanceof JPanel) {
+//                    componentMap.put(componentes[i].getName(), componentes[i]);
+//                    Component[] componentes1 = ((JPanel)componentes[i]).getComponents();
+//                    for (int a = 0; a < componentes1.length; a++) {
+////                        if(componentes1[a] instanceof JPanel){
+////                            componentMap.put(componentes1[a].getName(), componentes1[a]);
+////                        }
+//                        if(componentes1[a] instanceof JRadioButton){
 //                            componentMap.put(componentes1[a].getName(), componentes1[a]);
 //                        }
-                        if(componentes1[a] instanceof JRadioButton){
-                            componentMap.put(componentes1[a].getName(), componentes1[a]);
-                        }
-                        if(componentes1[a] instanceof JCheckBox){
-                            componentMap.put(componentes1[a].getName(), componentes1[a]);
-                        }
-                        if(componentes1[a] instanceof JTextField){
-                            componentMap.put(componentes1[a].getName(), componentes1[a]);
-                        }
-                    }
-                }
-            }
-            generateXML(componentMap);
-        } catch (Exception ex) {
-            Logger.getLogger(EncuestaContexto.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
+//                        if(componentes1[a] instanceof JCheckBox){
+//                            componentMap.put(componentes1[a].getName(), componentes1[a]);
+//                        }
+//                        if(componentes1[a] instanceof JTextField){
+//                            componentMap.put(componentes1[a].getName(), componentes1[a]);
+//                        }
+//                    }
+//                }
+//            }
+//            generateXML(componentMap);
+//        } catch (Exception ex) {
+//            Logger.getLogger(EncuestaContexto.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//    }
 
      /**
      * @param args the command line arguments
@@ -2324,7 +2470,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
             /*Para registrar la seccion actual*/
             org.w3c.dom.Element itemNode1 = document.createElement("SECCIONES");
             org.w3c.dom.Element keyNode1 = document.createElement("SECCION_ACTUAL");
-            keyNode1.setAttribute("index", index.toString());
+            keyNode1.setAttribute("INDEX", index.toString());
             itemNode1.appendChild(keyNode1);
             raiz.appendChild(itemNode1);
             /*--------------------------------*/
@@ -2377,13 +2523,22 @@ public class EncuestaContexto extends javax.swing.JFrame {
         {
             //Se crea el documento a traves del archivo
             Document document = (Document) builder.build( xmlFile );
-            //Se obtiene la raiz 'tables'
+            //Se obtiene la raiz
             Element rootNode = document.getRootElement();
             //Se obtiene la lista de hijos de la raiz 'config'
+            /*------------------------------------------------*/
+            List listaSecciones = rootNode.getChildren( "SECCIONES" );
+            Element secciones = (Element) listaSecciones.get(0);
+            List hijosSecciones = secciones.getChildren();
+            Element seccionActual = (Element)hijosSecciones.get(0);
+            jTabbedPane1.setSelectedIndex(Integer.parseInt(seccionActual.getAttributeValue("INDEX")));
+            index = jTabbedPane1.getSelectedIndex();
+            bloqueaPestanias();
+            /*------------------------------------------------*/
             List list = rootNode.getChildren( "LISTA_RESPUESTAS" );
-            //Se obtiene el elemento 'tabla'
+            //Se obtiene el elemento 'LISTA_RESPUESTAS'
             Element respuestas = (Element) list.get(0);
-            //Se obtiene la lista de hijos del tag 'tabla'
+            //Se obtiene la lista de hijos del tag 'LISTA_RESPUESTAS'
             List lista_componentes = respuestas.getChildren();
             //Se recorre la lista de campos
             for ( int j = 0; j < lista_componentes.size(); j++ )
@@ -2411,11 +2566,88 @@ public class EncuestaContexto extends javax.swing.JFrame {
                     if(componente.getContent().size()>0)
                         ((JTextField)componenteGui).setText(componente.getAttributeValue("VALUE").toString());
                 }
-            } 
+            }
         }catch ( Exception e ) {
             System.out.println( e.getMessage() );
         }
     }
+    
+    /** 
+     * @param args the command line arguments
+     */
+    public boolean validarPreguntasPorPanel(JPanel j) {
+        try {
+            int bandera=0;
+            int banderaAux=0;
+            Component[] componentes = j.getComponents();
+            for (int i = 0; i < componentes.length; i++) {
+                if (componentes[i] instanceof JPanel && ((JPanel)componentes[i]).isVisible()) {
+                    Component[] auxiliar = ((JPanel)componentes[i]).getComponents();
+                    bandera=0;
+                    Component label = obtenerComponentePorName("lbl_"+ ((JPanel)componentes[i]).getName());
+                    for (int a = 0; a < auxiliar.length; a++) {
+                        if(auxiliar[a] instanceof JRadioButton && ((JRadioButton)auxiliar[a]).isSelected()){
+                            bandera++;
+                        }
+                        if(auxiliar[a] instanceof JCheckBox && ((JCheckBox)auxiliar[a]).isSelected()){
+                            bandera++;
+                        }
+                        if(auxiliar[a] instanceof JTextField && !((JTextField)auxiliar[a]).getText().isEmpty()){
+                            bandera++;
+                        }
+                    }
+                    if(label != null)//CAMBIAR!!!!
+                        if(bandera == 0){
+                            ((JLabel)label).setVisible(true);
+                            banderaAux++;
+                        }else{
+                            ((JLabel)label).setVisible(false);
+                        }
+                }
+            }
+            if(banderaAux > 0){
+                JOptionPane.showMessageDialog(this, "Revisa los campos alertados","Error",JOptionPane.ERROR_MESSAGE);
+                return false;
+            }else{
+                return true;
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(EncuestaContexto.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+    }
+    /**
+     * 
+     */
+    public void validaSiguiente(){
+        int i = jTabbedPane1.getSelectedIndex() + 1;
+        int total = jTabbedPane1.getTabCount();
+        boolean bandera;
+        switch(i){
+            case 1:
+                bandera = validarPreguntasPorPanel(jPanelSec_1);
+            break;
+            default:
+                bandera = false;
+            break;
+        }
+        
+        if(bandera){
+            try {
+                if (i < total) {
+                    jTabbedPane1.setSelectedIndex(i++);
+                    jTabbedPane1.setEnabledAt(i-1,true);
+                    index = jTabbedPane1.getSelectedIndex();
+                }
+                generateXML(allComponents);
+            } catch (Exception ex) {
+                Logger.getLogger(EncuestaContexto.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }else{
+            //jTabbedPane1.setSelectedIndex(i-2);
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -2512,8 +2744,13 @@ public class EncuestaContexto extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel jLabel_100;
     private javax.swing.JPanel jPanelSec_1;
+    private javax.swing.JPanel jPanelSec_2;
+    private javax.swing.JPanel jPanelSec_3;
+    private javax.swing.JPanel jPanelSec_4;
+    private javax.swing.JPanel jPanelSec_5;
+    private javax.swing.JPanel jPanelSec_6;
     private javax.swing.JPanel jPanel_100;
     private javax.swing.JPanel jPanel_101;
     private javax.swing.JPanel jPanel_102;
@@ -2531,6 +2768,11 @@ public class EncuestaContexto extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel_114;
     private javax.swing.JPanel jPanel_115;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTabbedPane jTabbedPane1;
