@@ -2312,7 +2312,7 @@
                   </Group>
                   <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
                   <Component id="jButton_activarEncuesta" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="97" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -2347,6 +2347,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txt_cedula">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_cedulaKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel23">
           <Properties>
@@ -2354,6 +2357,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txt_nombres">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_nombresKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel24">
           <Properties>
@@ -2361,11 +2367,17 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txt_apellidos">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_apellidosKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton_activarEncuesta">
           <Properties>
             <Property name="text" type="java.lang.String" value="Activar Encuesta"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_activarEncuestaActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
