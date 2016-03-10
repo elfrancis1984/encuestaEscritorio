@@ -2442,15 +2442,15 @@ public class EncuestaContexto extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_activarEncuestaActionPerformed
 
     private void txt_cedulaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_cedulaKeyTyped
-       soloNumeros(evt);
+       soloNumeros(evt,10);
     }//GEN-LAST:event_txt_cedulaKeyTyped
 
     private void txt_nombresKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_nombresKeyTyped
-        soloLetras(evt);
+        soloLetras(evt,20);
     }//GEN-LAST:event_txt_nombresKeyTyped
 
     private void txt_apellidosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_apellidosKeyTyped
-        soloLetras(evt);
+        soloLetras(evt,20);
     }//GEN-LAST:event_txt_apellidosKeyTyped
 
     /** 
@@ -2812,27 +2812,37 @@ public class EncuestaContexto extends javax.swing.JFrame {
     /**
      * 
      */
-    private void soloNumeros(java.awt.event.KeyEvent evt){
+    private void soloNumeros(java.awt.event.KeyEvent evt, int max){
         char c = evt.getKeyChar(); 
-        if(c >= '0' && c <= '9'){
+        if(((JTextField)evt.getComponent()).getText().length() <= max){
+            if(c >= '0' && c <= '9'){
+            }else{
+                getToolkit().beep();
+                evt.consume();
+            }
         }else{
-            getToolkit().beep();
-            evt.consume();
+                getToolkit().beep();
+                evt.consume();
         }
     }
     /**
      * 
      */
-    private void soloLetras(java.awt.event.KeyEvent evt){
+    private void soloLetras(java.awt.event.KeyEvent evt, int max){
         String caracteresPermitidos = "ÁÉÍÓÚÑÄËÏÖÜ áéíóúñäëïöü";
         char c = evt.getKeyChar(); 
-        if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (caracteresPermitidos.indexOf(c) != -1)){
-            if (Character.isLowerCase(c)) {
-              evt.setKeyChar(Character.toUpperCase(c));
+        if(((JTextField)evt.getComponent()).getText().length() <= max){
+            if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (caracteresPermitidos.indexOf(c) != -1)){
+                if (Character.isLowerCase(c)) {
+                  evt.setKeyChar(Character.toUpperCase(c));
+                }
+            }else{
+                getToolkit().beep();
+                evt.consume();
             }
         }else{
-            getToolkit().beep();
-            evt.consume();
+                getToolkit().beep();
+                evt.consume();
         }
     }
     /**
