@@ -8,8 +8,10 @@ package ec.gob.senescyt.snna;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
+import java.awt.Event;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -19,6 +21,7 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.BorderFactory;
+import javax.swing.InputMap;
 import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
@@ -26,6 +29,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
+import javax.swing.KeyStroke;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.text.AbstractDocument;
 import javax.xml.parsers.DocumentBuilder;
@@ -65,6 +69,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
     public EncuestaContexto() {
         initComponents();
         this.setLocationRelativeTo(null);
+        /*--------Bloquea el ctrl + v ---------------------------*/
+        bloquearPegar(); //No es eficiente Optimizar
         /* -------- Seccion 1 ---------- */
         initSeccionUno();
         /*--------Lee todos los componentes de todas las secciones-------------------------*/
@@ -83,6 +89,17 @@ public class EncuestaContexto extends javax.swing.JFrame {
         allComponents.putAll(componentesSeccionSeis);
         /*-----Carga respuestas almacenadas----------*/
         cargarXml();
+    }
+    /**
+     * 
+     */
+    private void bloquearPegar(){
+        InputMap mapCedula = txt_cedula.getInputMap(txt_cedula.WHEN_FOCUSED);
+        mapCedula.put(KeyStroke.getKeyStroke(KeyEvent.VK_V, Event.CTRL_MASK), "null");
+        InputMap mapNombres = txt_nombres.getInputMap(txt_nombres.WHEN_FOCUSED);
+        mapNombres.put(KeyStroke.getKeyStroke(KeyEvent.VK_V, Event.CTRL_MASK), "null");
+        InputMap mapApellidos = txt_apellidos.getInputMap(txt_apellidos.WHEN_FOCUSED);
+        mapApellidos.put(KeyStroke.getKeyStroke(KeyEvent.VK_V, Event.CTRL_MASK), "null");
     }
     /**
      * 
