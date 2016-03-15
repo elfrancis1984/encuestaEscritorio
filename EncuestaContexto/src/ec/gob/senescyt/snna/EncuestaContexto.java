@@ -126,10 +126,27 @@ public class EncuestaContexto extends javax.swing.JFrame {
     private void bloquearPegar(){
         InputMap mapCedula = txt_cedula.getInputMap(txt_cedula.WHEN_FOCUSED);
         mapCedula.put(KeyStroke.getKeyStroke(KeyEvent.VK_V, Event.CTRL_MASK), "null");
+        
         InputMap mapNombres = txt_nombres.getInputMap(txt_nombres.WHEN_FOCUSED);
         mapNombres.put(KeyStroke.getKeyStroke(KeyEvent.VK_V, Event.CTRL_MASK), "null");
+        
         InputMap mapApellidos = txt_apellidos.getInputMap(txt_apellidos.WHEN_FOCUSED);
         mapApellidos.put(KeyStroke.getKeyStroke(KeyEvent.VK_V, Event.CTRL_MASK), "null");
+        
+        InputMap map2094 = txt_2094.getInputMap(txt_2094.WHEN_FOCUSED);
+        map2094.put(KeyStroke.getKeyStroke(KeyEvent.VK_V, Event.CTRL_MASK), "null");
+        
+        InputMap map2191 = txt_2191.getInputMap(txt_2191.WHEN_FOCUSED);
+        map2191.put(KeyStroke.getKeyStroke(KeyEvent.VK_V, Event.CTRL_MASK), "null");
+        
+        InputMap map2192 = txt_2192.getInputMap(txt_2192.WHEN_FOCUSED);
+        map2192.put(KeyStroke.getKeyStroke(KeyEvent.VK_V, Event.CTRL_MASK), "null");
+        
+        InputMap map2467 = txt_2467.getInputMap(txt_2467.WHEN_FOCUSED);
+        map2467.put(KeyStroke.getKeyStroke(KeyEvent.VK_V, Event.CTRL_MASK), "null");
+        
+        InputMap map2250 = txt_2250.getInputMap(txt_2250.WHEN_FOCUSED);
+        map2250.put(KeyStroke.getKeyStroke(KeyEvent.VK_V, Event.CTRL_MASK), "null");
     }
     /**
      * 
