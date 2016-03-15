@@ -32,6 +32,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.KeyStroke;
+import javax.swing.border.TitledBorder;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.text.AbstractDocument;
 import javax.xml.parsers.DocumentBuilder;
@@ -79,6 +80,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
     
     private static String[] lenguaIndigenaMadre = {"Cha`palaa","A`ingae","Zia pedee","Paicoca","Shiwiar chicham","Tsa`fiqui","Achuar chicham","Awapít","Shuar chicham","Waotededo","Kichwa amazónico","Kichwa región interandina"};
     private static String[] codigoLenguaIndigenaMadre = {"2480","2481","2482","2483","2484","2485","2486","2487","2488","2489","2490","2491"};
+    
+    private boolean encuestaTerminada;
     /**
      * Creates new form Encuesta
      */
@@ -139,6 +142,41 @@ public class EncuestaContexto extends javax.swing.JFrame {
         }
         if(indice == -1){
             for(Component c: jPanelSec_1.getComponents()){
+                if(c instanceof JPanel && ((JPanel)c).isVisible()){
+                    for(Component d: ((JPanel)c).getComponents()){
+                        d.setEnabled(false);
+                    }
+                }
+            }
+            for(Component c: jPanelSec_2.getComponents()){
+                if(c instanceof JPanel && ((JPanel)c).isVisible()){
+                    for(Component d: ((JPanel)c).getComponents()){
+                        d.setEnabled(false);
+                    }
+                }
+            }
+            for(Component c: jPanelSec_3.getComponents()){
+                if(c instanceof JPanel && ((JPanel)c).isVisible()){
+                    for(Component d: ((JPanel)c).getComponents()){
+                        d.setEnabled(false);
+                    }
+                }
+            }
+            for(Component c: jPanelSec_4.getComponents()){
+                if(c instanceof JPanel && ((JPanel)c).isVisible()){
+                    for(Component d: ((JPanel)c).getComponents()){
+                        d.setEnabled(false);
+                    }
+                }
+            }
+            for(Component c: jPanelSec_5.getComponents()){
+                if(c instanceof JPanel && ((JPanel)c).isVisible()){
+                    for(Component d: ((JPanel)c).getComponents()){
+                        d.setEnabled(false);
+                    }
+                }
+            }
+            for(Component c: jPanelSec_6.getComponents()){
                 if(c instanceof JPanel && ((JPanel)c).isVisible()){
                     for(Component d: ((JPanel)c).getComponents()){
                         d.setEnabled(false);
@@ -1479,7 +1517,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jLabel_353 = new javax.swing.JLabel();
         jButton_Sigueinte = new javax.swing.JButton();
         jButton_Atras = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        jPanel_DatosPersonales = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
         txt_cedula = new javax.swing.JTextField();
         jLabel23 = new javax.swing.JLabel();
@@ -7498,6 +7536,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
             }
         });
 
+        jPanel_DatosPersonales.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Personales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, null, new java.awt.Color(153, 153, 153)));
+
         jLabel20.setText("Cédula:");
 
         txt_cedula.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -7529,22 +7569,22 @@ public class EncuestaContexto extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel_DatosPersonalesLayout = new javax.swing.GroupLayout(jPanel_DatosPersonales);
+        jPanel_DatosPersonales.setLayout(jPanel_DatosPersonalesLayout);
+        jPanel_DatosPersonalesLayout.setHorizontalGroup(
+            jPanel_DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel_DatosPersonalesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel_DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel_DatosPersonalesLayout.createSequentialGroup()
+                        .addGroup(jPanel_DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel_DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txt_nombres, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txt_cedula, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(jPanel_DatosPersonalesLayout.createSequentialGroup()
                         .addComponent(jLabel24)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txt_apellidos)))
@@ -7552,23 +7592,26 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 .addComponent(jButton_activarEncuesta)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+        jPanel_DatosPersonalesLayout.setVerticalGroup(
+            jPanel_DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel_DatosPersonalesLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jButton_activarEncuesta)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel_DatosPersonalesLayout.createSequentialGroup()
+                .addGap(7, 7, 7)
+                .addGroup(jPanel_DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
                     .addComponent(txt_cedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel23)
+                .addGap(3, 3, 3)
+                .addGroup(jPanel_DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txt_nombres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton_activarEncuesta))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel23))
+                .addGap(3, 3, 3)
+                .addGroup(jPanel_DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_apellidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel24))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(7, 7, 7))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -7590,13 +7633,14 @@ public class EncuestaContexto extends javax.swing.JFrame {
                                 .addComponent(jButton_Sigueinte)
                                 .addGap(58, 58, 58))))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel_DatosPersonales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jPanel_DatosPersonales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -7673,20 +7717,71 @@ public class EncuestaContexto extends javax.swing.JFrame {
         if(txt_cedula.getText().isEmpty() || txt_nombres.getText().isEmpty() || txt_apellidos.getText().isEmpty()){
             JOptionPane.showMessageDialog(this, "Todos los campos son obligatorios","Error",JOptionPane.ERROR_MESSAGE);
         }else{
-            for(Component c: jPanelSec_1.getComponents()){
-                if(c instanceof JPanel && ((JPanel)c).isVisible()){
-                    for(Component d: ((JPanel)c).getComponents()){
-                        d.setEnabled(true);
+            switch(jButton_activarEncuesta.getText()){
+                case "Activar Encuesta":
+                    for(Component c: jPanelSec_1.getComponents()){
+                        if(c instanceof JPanel && ((JPanel)c).isVisible()){
+                            for(Component d: ((JPanel)c).getComponents()){
+                                d.setEnabled(true);
+                            }
+                        }
                     }
-                }
+                    for(Component c: jPanelSec_2.getComponents()){
+                        if(c instanceof JPanel && ((JPanel)c).isVisible()){
+                            for(Component d: ((JPanel)c).getComponents()){
+                                d.setEnabled(true);
+                            }
+                        }
+                    }
+                    for(Component c: jPanelSec_3.getComponents()){
+                        if(c instanceof JPanel && ((JPanel)c).isVisible()){
+                            for(Component d: ((JPanel)c).getComponents()){
+                                d.setEnabled(true);
+                            }
+                        }
+                    }
+                    for(Component c: jPanelSec_4.getComponents()){
+                        if(c instanceof JPanel && ((JPanel)c).isVisible()){
+                            for(Component d: ((JPanel)c).getComponents()){
+                                d.setEnabled(true);
+                            }
+                        }
+                    }
+                    for(Component c: jPanelSec_5.getComponents()){
+                        if(c instanceof JPanel && ((JPanel)c).isVisible()){
+                            for(Component d: ((JPanel)c).getComponents()){
+                                d.setEnabled(true);
+                            }
+                        }
+                    }
+                    for(Component c: jPanelSec_6.getComponents()){
+                        if(c instanceof JPanel && ((JPanel)c).isVisible()){
+                            for(Component d: ((JPanel)c).getComponents()){
+                                d.setEnabled(true);
+                            }
+                        }
+                    }
+                    jButton_Atras.setEnabled(true);
+                    jButton_Sigueinte.setEnabled(true);
+                    txt_cedula.setEnabled(false);
+                    txt_nombres.setEnabled(false);
+                    txt_apellidos.setEnabled(false);
+                    jButton_activarEncuesta.setText("Editar");
+                    if(index > 0){
+                        cargarXml();
+                    }
+                    for(int i=0;i<=index;i++){
+                        jTabbedPane1.setEnabledAt(i,true);
+                    }
+                break;
+                case "Editar":
+                    txt_cedula.setEnabled(true);
+                    txt_nombres.setEnabled(true);
+                    txt_apellidos.setEnabled(true);
+                    bloqueaPestanias(-1);
+                    jButton_activarEncuesta.setText("Activar Encuesta");
+                break;
             }
-            jButton_Atras.setEnabled(true);
-            jButton_Sigueinte.setEnabled(true);
-            jTabbedPane1.setEnabledAt(0,true);
-            txt_cedula.setEnabled(false);
-            txt_nombres.setEnabled(false);
-            txt_apellidos.setEnabled(false);
-            jButton_activarEncuesta.setVisible(false);
         }
     }//GEN-LAST:event_jButton_activarEncuestaActionPerformed
 
@@ -8028,6 +8123,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
             habilitaDeshabilitaComponentesRango(1803,1811,false);
             habilitaDeshabilitaComponentesRango(1824,1831,true);
             habilitaDeshabilitaComponentesRango(2215,2221,true);
+            habilitaDeshabilitaComponentesRango(2095,2102,true);
+            habilitaDeshabilitaComponentesRango(2131,2138,true);
         }else{
             habilitaDeshabilitaComponentesRango(1803,1811,true);
         }
@@ -8864,10 +8961,11 @@ public class EncuestaContexto extends javax.swing.JFrame {
             if(jF1.showSaveDialog(null)==jF1.APPROVE_OPTION){ 
                 ruta = jF1.getSelectedFile().getAbsolutePath();
                 System.out.println(ruta);
-                //Aqui ya tiens la ruta,,,ahora puedes crear un fichero n esa ruta y escribir lo k kieras... 
+                encuestaTerminada = true;
             } 
         }catch (Exception ex){ 
             ex.printStackTrace(); 
+            encuestaTerminada = false;
         }
     }
     /**
@@ -8956,6 +9054,11 @@ public class EncuestaContexto extends javax.swing.JFrame {
             keyNode2.setAttribute("ID", txt_cedula.getText());
             keyNode2.setAttribute("NOMBRES", txt_nombres.getText());
             keyNode2.setAttribute("APELLIDOS", txt_apellidos.getText());
+            if(jButton_Sigueinte.getText().equalsIgnoreCase("Finalizar")){
+                keyNode2.setAttribute("FINALIZADO","1");
+            }else{
+                keyNode2.setAttribute("FINALIZADO","0");
+            }
             itemNode2.appendChild(keyNode2);
             raiz.appendChild(itemNode2);
             /*-----------------------------------------------------------------------------*/
@@ -9041,6 +9144,12 @@ public class EncuestaContexto extends javax.swing.JFrame {
             //Result result = new StreamResult(new java.io.File("./src/ec/gob/senescyt/snna/xml/"+fileConfig+".xml"));
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
             transformer.transform(source, result);
+            if(encuestaTerminada){
+                Result resultFinal = new StreamResult(new java.io.File(ruta)); //nombre del archivo
+                Transformer transformerFinal = TransformerFactory.newInstance().newTransformer();
+                transformerFinal.transform(source, resultFinal);
+                encuestaTerminada = false;
+            }
         }
     }
     
@@ -9080,7 +9189,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 txt_nombres.setEnabled(false);
                 txt_apellidos.setText(loginActual.getAttributeValue("APELLIDOS"));
                 txt_apellidos.setEnabled(false);
-                jButton_activarEncuesta.setVisible(false);
+                jButton_activarEncuesta.setText("Editar");
             }else{
                 bloqueaPestanias(-1);
             }
@@ -9262,6 +9371,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
                     jTabbedPane1.setSelectedIndex(i++);
                     jTabbedPane1.setEnabledAt(i-1,true);
                     index = jTabbedPane1.getSelectedIndex();
+                }else{
+                    fileChooser();
                 }
                 generateXML(allComponents);
             } catch (Exception ex) {
@@ -9642,7 +9753,6 @@ public class EncuestaContexto extends javax.swing.JFrame {
     private javax.swing.JList<String> jList_358;
     private javax.swing.JList<String> jList_360;
     private javax.swing.JList<String> jList_362;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelSec_1;
     private javax.swing.JPanel jPanelSec_2;
     private javax.swing.JPanel jPanelSec_3;
@@ -9725,6 +9835,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel_358;
     private javax.swing.JPanel jPanel_360;
     private javax.swing.JPanel jPanel_362;
+    private javax.swing.JPanel jPanel_DatosPersonales;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
