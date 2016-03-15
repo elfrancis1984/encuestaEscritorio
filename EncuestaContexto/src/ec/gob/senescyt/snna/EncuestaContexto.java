@@ -587,6 +587,14 @@ public class EncuestaContexto extends javax.swing.JFrame {
         bgSec4_331.add(rad_2361);
         bgSec4_331.add(rad_2362);
         bgSec4_331.add(rad_2363);
+        
+        jPanel_331.setVisible(false);
+        
+        jLabel_327.setVisible(false);
+        jLabel_328.setVisible(false);
+        jLabel_329.setVisible(false);
+        jLabel_330.setVisible(false);
+        jLabel_331.setVisible(false);
     }
     /**
      * 
@@ -613,6 +621,13 @@ public class EncuestaContexto extends javax.swing.JFrame {
         bgSec5_337.add(rad_2387);
         bgSec5_337.add(rad_2388);
         bgSec5_337.add(rad_2389);
+        
+        jLabel_332.setVisible(false);
+        jLabel_333.setVisible(false);
+        jLabel_334.setVisible(false);
+        jLabel_335.setVisible(false);
+        jLabel_336.setVisible(false);
+        jLabel_337.setVisible(false);
     }
     /**
      * 
@@ -706,6 +721,21 @@ public class EncuestaContexto extends javax.swing.JFrame {
         bgSec6_353.add(rad_2464);
         bgSec6_353.add(rad_2465);
         bgSec6_353.add(rad_2466);
+        
+        jLabel_338.setVisible(false);
+        jLabel_339.setVisible(false);
+        jLabel_340.setVisible(false);
+        jLabel_342.setVisible(false);
+        jLabel_343.setVisible(false);
+        jLabel_344.setVisible(false);
+        jLabel_345.setVisible(false);
+        jLabel_346.setVisible(false);
+        jLabel_348.setVisible(false);
+        jLabel_349.setVisible(false);
+        jLabel_350.setVisible(false);
+        jLabel_351.setVisible(false);
+        jLabel_352.setVisible(false);
+        jLabel_353.setVisible(false);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -1161,11 +1191,11 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jLabel_317 = new javax.swing.JLabel();
         jPanel_318 = new javax.swing.JPanel();
         jLabel48 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jCheckBox5 = new javax.swing.JCheckBox();
+        chk_2289 = new javax.swing.JCheckBox();
+        chk_2290 = new javax.swing.JCheckBox();
+        chk_2291 = new javax.swing.JCheckBox();
+        chk_2292 = new javax.swing.JCheckBox();
+        chk_2293 = new javax.swing.JCheckBox();
         jLabel_318 = new javax.swing.JLabel();
         jPanel_319 = new javax.swing.JPanel();
         jLabel49 = new javax.swing.JLabel();
@@ -2493,7 +2523,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
                                 .addComponent(jLabel14))
                             .addComponent(rad_2118)))
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(94, Short.MAX_VALUE))
         );
         jPanel_293Layout.setVerticalGroup(
             jPanel_293Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3249,30 +3279,30 @@ public class EncuestaContexto extends javax.swing.JFrame {
             jPanelSec_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelSec_1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanelSec_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel_358, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel_295, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel_292, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel_291, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanelSec_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel_293, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelSec_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jPanel_290, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel_289, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel_288, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jPanel_287, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel_286, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel_285, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel_284, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel_282, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel_283, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelSec_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jPanel_293, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jPanel_294, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel_296, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel_297, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel_356, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel_360, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel_362, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(100, Short.MAX_VALUE))
+                        .addComponent(jPanel_358, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel_295, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel_292, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel_291, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelSec_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jPanel_290, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel_289, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel_288, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jPanel_287, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel_286, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel_285, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel_284, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel_282, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel_283, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel_294, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel_296, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel_297, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel_356, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel_360, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel_362, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(168, Short.MAX_VALUE))
         );
         jPanelSec_1Layout.setVerticalGroup(
             jPanelSec_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3616,7 +3646,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jLabel28.setText("<html><b>2.3. Número de cuartos exclusivos  para dormir que tiene la vivienda</b></html>");
         jLabel28.setName("1"); // NOI18N
 
-        txt_2192.setName("2191"); // NOI18N
+        txt_2192.setName("2192"); // NOI18N
         txt_2192.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txt_2192KeyTyped(evt);
@@ -3668,8 +3698,10 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jLabel30.setName("1"); // NOI18N
 
         rad_2193.setText("<html>área urbana (Es aquella en la cual se permiten usos urbanos y cuentan, o se hallan<br/>dentro del radio de servicio de infraestructura de: agua, luz eléctrica, aseo de calles<br/>y de otros de naturaleza semejante)</html>");
+        rad_2193.setName("2193"); // NOI18N
 
         rad_2194.setText("<html>área rural (Es una extensión razonable de territorio conformada por localidades<br/>identificadas por un nombre donde se encuentra un asentamiento de viviendas las<br/>mismas que pueden estar dispersas o agrupadas)</html>");
+        rad_2194.setName("2194"); // NOI18N
 
         jLabel_302.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel_302.setForeground(new java.awt.Color(255, 51, 51));
@@ -3767,7 +3799,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel_304.setName("303"); // NOI18N
+        jPanel_304.setName("304"); // NOI18N
 
         jLabel32.setText("<html><b>2.6. Selecciona el material predominante del piso de la vivienda.</b><br/>(selecciona una opción)</html>");
         jLabel32.setName("1"); // NOI18N
@@ -3832,7 +3864,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel_305.setName("303"); // NOI18N
+        jPanel_305.setName("305"); // NOI18N
 
         jLabel33.setText("<html><b>2.7. El tipo de servicio higiénico con que cuenta tu vivienda es: </b><br/>(selecciona una opción)</html>");
         jLabel33.setName("1"); // NOI18N
@@ -3858,7 +3890,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jLabel_305.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel_305.setForeground(new java.awt.Color(255, 51, 51));
         jLabel_305.setText("* Esta pregunta es obligatoria.");
-        jLabel_305.setName("lbl_304"); // NOI18N
+        jLabel_305.setName("lbl_305"); // NOI18N
 
         javax.swing.GroupLayout jPanel_305Layout = new javax.swing.GroupLayout(jPanel_305);
         jPanel_305.setLayout(jPanel_305Layout);
@@ -4945,15 +4977,20 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jLabel48.setText("<html><b>3.10. Hábitos de consumo</b><br/>(selecciona la opción o las opciones que se adecuen a tu realidad)</html>");
         jLabel48.setName("1"); // NOI18N
 
-        jCheckBox1.setText("En mi  hogar compran vestimenta en centros comerciales");
+        chk_2289.setText("En mi  hogar compran vestimenta en centros comerciales");
+        chk_2289.setName("2289"); // NOI18N
 
-        jCheckBox2.setText("En mi hogar alguien ha usado internet durante los últimos 6 meses ");
+        chk_2290.setText("En mi hogar alguien ha usado internet durante los últimos 6 meses ");
+        chk_2290.setName("2290"); // NOI18N
 
-        jCheckBox3.setText("En mi hogar alguien utiliza correo electrónico que no sea del trabajo");
+        chk_2291.setText("En mi hogar alguien utiliza correo electrónico que no sea del trabajo");
+        chk_2291.setName("2291"); // NOI18N
 
-        jCheckBox4.setText("En mi hogar alguien esta registrado en una red social");
+        chk_2292.setText("En mi hogar alguien esta registrado en una red social");
+        chk_2292.setName("2292"); // NOI18N
 
-        jCheckBox5.setText("<html>En mi hogar alguien ha leído un libro completo en los últimos tres meses<br/>(exceptuar libros o manuales de estudio y lecturas de trabajo)</html>");
+        chk_2293.setText("<html>En mi hogar alguien ha leído un libro completo en los últimos tres meses<br/>(exceptuar libros o manuales de estudio y lecturas de trabajo)</html>");
+        chk_2293.setName("2293"); // NOI18N
 
         jLabel_318.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel_318.setForeground(new java.awt.Color(255, 51, 51));
@@ -4967,15 +5004,15 @@ public class EncuestaContexto extends javax.swing.JFrame {
             .addGroup(jPanel_318Layout.createSequentialGroup()
                 .addGap(10, 10, 10)
                 .addGroup(jPanel_318Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox5)
+                    .addComponent(chk_2293)
                     .addGroup(jPanel_318Layout.createSequentialGroup()
                         .addGroup(jPanel_318Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel_318)
-                            .addComponent(jCheckBox1)
+                            .addComponent(chk_2289)
                             .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jCheckBox2)
-                            .addComponent(jCheckBox3)
-                            .addComponent(jCheckBox4))
+                            .addComponent(chk_2290)
+                            .addComponent(chk_2291)
+                            .addComponent(chk_2292))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -4987,15 +5024,15 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel_318)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox1)
+                .addComponent(chk_2289)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox2)
+                .addComponent(chk_2290)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox3)
+                .addComponent(chk_2291)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox4)
+                .addComponent(chk_2292)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(chk_2293, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6))
         );
 
@@ -5830,24 +5867,59 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         rad_2353.setText("Curso preuniversitario privado");
         rad_2353.setName("2353"); // NOI18N
+        rad_2353.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rad_2353ActionPerformed(evt);
+            }
+        });
 
         rad_2354.setText("Curso de nivelación general SNNA");
         rad_2354.setName("2354"); // NOI18N
+        rad_2354.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rad_2354ActionPerformed(evt);
+            }
+        });
 
         rad_2355.setText("Preparación a través de la plataforma Jóvenes");
         rad_2355.setName("2355"); // NOI18N
+        rad_2355.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rad_2355ActionPerformed(evt);
+            }
+        });
 
         rad_2356.setText("Auto preparación en casa");
         rad_2356.setName("2356"); // NOI18N
+        rad_2356.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rad_2356ActionPerformed(evt);
+            }
+        });
 
         rad_2357.setText("Ninguna");
         rad_2357.setName("2357"); // NOI18N
+        rad_2357.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rad_2357ActionPerformed(evt);
+            }
+        });
 
         rad_2358.setText("En tu colegio");
         rad_2358.setName("2358"); // NOI18N
+        rad_2358.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rad_2358ActionPerformed(evt);
+            }
+        });
 
         rad_2359.setText("Otro");
         rad_2359.setName("2359"); // NOI18N
+        rad_2359.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rad_2359ActionPerformed(evt);
+            }
+        });
 
         jLabel_330.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel_330.setForeground(new java.awt.Color(255, 51, 51));
@@ -6603,7 +6675,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jPanel_341Layout.setHorizontalGroup(
             jPanel_341Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_341Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
+                .addGap(10, 10, 10)
                 .addComponent(jLabel71, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(33, Short.MAX_VALUE))
         );
@@ -7538,7 +7610,6 @@ public class EncuestaContexto extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_SigueinteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SigueinteActionPerformed
-        // TODO add your handling code here:
         validaSiguiente();
     }//GEN-LAST:event_jButton_SigueinteActionPerformed
 
@@ -7555,7 +7626,27 @@ public class EncuestaContexto extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_AtrasActionPerformed
 
     private void jTabbedPane1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane1StateChanged
-        //index = jTabbedPane1.getSelectedIndex();
+        index = jTabbedPane1.getSelectedIndex() + 1;
+        switch(index){
+            case 1:
+                jButton_Sigueinte.setText("Siguiente");
+            break;
+            case 2:
+                jButton_Sigueinte.setText("Siguiente");
+            break;
+            case 3:
+                jButton_Sigueinte.setText("Siguiente");
+            break;
+            case 4:
+                jButton_Sigueinte.setText("Siguiente");
+            break;
+            case 5:
+                jButton_Sigueinte.setText("Siguiente");
+            break;
+            case 6:
+                jButton_Sigueinte.setText("Finalizar");
+            break;
+        }
     }//GEN-LAST:event_jTabbedPane1StateChanged
 
     private void jTabbedPane1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MousePressed
@@ -8466,6 +8557,48 @@ public class EncuestaContexto extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_rad_2319ActionPerformed
 
+    private void rad_2353ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_2353ActionPerformed
+        if(rad_2353.isSelected()){
+            muestraOcultaPanel(jPanel_331,true);
+        }
+    }//GEN-LAST:event_rad_2353ActionPerformed
+
+    private void rad_2354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_2354ActionPerformed
+        if(rad_2354.isSelected()){
+            muestraOcultaPanel(jPanel_331,false);
+        }
+    }//GEN-LAST:event_rad_2354ActionPerformed
+
+    private void rad_2355ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_2355ActionPerformed
+        if(rad_2355.isSelected()){
+            muestraOcultaPanel(jPanel_331,false);
+        }
+    }//GEN-LAST:event_rad_2355ActionPerformed
+
+    private void rad_2356ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_2356ActionPerformed
+        if(rad_2356.isSelected()){
+            muestraOcultaPanel(jPanel_331,false);
+        }
+    }//GEN-LAST:event_rad_2356ActionPerformed
+
+    private void rad_2357ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_2357ActionPerformed
+        if(rad_2357.isSelected()){
+            muestraOcultaPanel(jPanel_331,false);
+        }
+    }//GEN-LAST:event_rad_2357ActionPerformed
+
+    private void rad_2358ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_2358ActionPerformed
+        if(rad_2358.isSelected()){
+            muestraOcultaPanel(jPanel_331,false);
+        }
+    }//GEN-LAST:event_rad_2358ActionPerformed
+
+    private void rad_2359ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_2359ActionPerformed
+        if(rad_2359.isSelected()){
+            muestraOcultaPanel(jPanel_331,false);
+        }
+    }//GEN-LAST:event_rad_2359ActionPerformed
+
     /** 
      * @param args the command line arguments
      */
@@ -8506,13 +8639,190 @@ public class EncuestaContexto extends javax.swing.JFrame {
     /**
      * 
      */
+    private void limpiaSeleccionRadio(String name){
+        switch(name){
+            case "283":
+                bgSec1_283.clearSelection();
+                break;
+            case "285":
+                bgSec1_285.clearSelection();
+                break;
+            case "287":
+                bgSec1_287.clearSelection();
+                break;
+            case "289":
+                bgSec1_289.clearSelection();
+                break;
+            case "290":
+                bgSec1_290.clearSelection();
+                break;
+            case "292":
+                bgSec1_292.clearSelection();
+                break;
+            case "293":
+                bgSec1_293.clearSelection();
+                break;
+            case "294":
+                bgSec1_294.clearSelection();
+                break;
+            case "295":
+                bgSec1_295.clearSelection();
+                break;
+            case "296":
+                bgSec1_296.clearSelection();
+                break;
+            case "297":
+                bgSec1_297.clearSelection();
+                break;
+            case "298":
+                bgSec2_298.clearSelection();
+                break;
+            case "302":
+                bgSec2_302.clearSelection();
+                break;
+            case "303":
+                bgSec2_303.clearSelection();
+                break;
+            case "304":
+                bgSec2_304.clearSelection();
+                break;
+            case "305":
+                bgSec2_305.clearSelection();
+                break;
+            case "306":
+                bgSec2_306.clearSelection();
+                break;
+            case "307":
+                bgSec3_307.clearSelection();
+                break;
+            case "308":
+                bgSec3_308.clearSelection();
+                break;
+            case "309":
+                bgSec3_309.clearSelection();
+                break;
+            case "311":
+                bgSec3_311.clearSelection();
+                break;
+            case "313":
+                bgSec3_313.clearSelection();
+                break;
+            case "314":
+                bgSec3_314.clearSelection();
+                break;
+            case "315":
+                bgSec3_315.clearSelection();
+                break;
+            case "316":
+                bgSec3_316.clearSelection();
+                break;
+            case "317":
+                bgSec3_317.clearSelection();
+                break;
+            case "319":
+                bgSec3_319.clearSelection();
+                break;
+            case "321":
+                bgSec3_321.clearSelection();
+                break;
+            case "322":
+                bgSec3_322.clearSelection();
+                break;
+            case "323":
+                bgSec3_323.clearSelection();
+                break;
+            case "324":
+                bgSec3_324.clearSelection();
+                break;
+            case "325":
+                bgSec3_325.clearSelection();
+                break;
+            case "326":
+                bgSec3_326.clearSelection();
+                break;
+            case "327":
+                bgSec4_327.clearSelection();
+                break;
+            case "328":
+                bgSec4_328.clearSelection();
+                break;
+            case "329":
+                bgSec4_329.clearSelection();
+                break;
+            case "330":
+                bgSec4_330.clearSelection();
+                break;
+            case "331":
+                bgSec4_331.clearSelection();
+                break;
+            case "333":
+                bgSec5_333.clearSelection();
+                break;
+            case "334":
+                bgSec5_334.clearSelection();
+                break;
+            case "336":
+                bgSec5_336.clearSelection();
+                break;
+            case "337":
+                bgSec5_337.clearSelection();
+                break;
+            case "338":
+                bgSec6_338.clearSelection();
+                break;
+            case "339":
+                bgSec6_339.clearSelection();
+                break;
+            case "340":
+                bgSec6_340.clearSelection();
+                break;
+            case "342":
+                bgSec6_342.clearSelection();
+                break;
+            case "343":
+                bgSec6_343.clearSelection();
+                break;
+            case "344":
+                bgSec6_344.clearSelection();
+                break;
+            case "345":
+                bgSec6_345.clearSelection();
+                break;
+            case "346":
+                bgSec6_346.clearSelection();
+                break;
+            case "348":
+                bgSec6_348.clearSelection();
+                break;
+            case "349":
+                bgSec6_349.clearSelection();
+                break;
+            case "350":
+                bgSec6_350.clearSelection();
+                break;
+            case "351":
+                bgSec6_351.clearSelection();
+                break;
+            case "352":
+                bgSec6_352.clearSelection();
+                break;
+            case "353":
+                bgSec6_353.clearSelection();
+                break;
+        }
+    }
+    /**
+     * 
+     * @param panel
+     * @param opcion 
+     */
     private void muestraOcultaPanel(JPanel panel,boolean opcion){
         panel.setVisible(opcion);
         Component[] componentes1 = panel.getComponents();
         for (int a = 0; a < componentes1.length; a++) {
             if(componentes1[a] instanceof JRadioButton){
-//                ((JRadioButton)componentes1[a]).setEnabled(opcion);
-                ((JRadioButton)componentes1[a]).setSelected(false);
+                String name = ((JRadioButton)componentes1[a]).getParent().getName();
+                limpiaSeleccionRadio(name);
             }
             if(componentes1[a] instanceof JCheckBox){
 //                ((JCheckBox)componentes1[a]).setEnabled(opcion);
@@ -8650,7 +8960,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
             raiz.appendChild(itemNode2);
             /*-----------------------------------------------------------------------------*/
             for(Map.Entry<String,Component> b: respuestas.entrySet()){
-                org.w3c.dom.Element keyNode = document.createElement("COMPONENTE"); 
+                org.w3c.dom.Element keyNode = document.createElement("COMPONENTE");
+//                System.out.println(b.getKey());
                 keyNode.setAttribute("NAME", b.getKey());
                 if(b.getValue() instanceof JPanel){
                     keyNode.setAttribute("VISIBLE", (((JPanel)b.getValue()).isVisible())?"1":"0");
@@ -8784,9 +9095,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
             {
                 //Se obtiene el elemento 'campo'
                 Element componente = (Element)lista_componentes.get(j);
-//                if(componente.getAttributeValue("NAME").equalsIgnoreCase("109"))
+//                if(componente.getAttributeValue("NAME").equalsIgnoreCase("lista_358"))
 //                {
-//                System.out.println("xxxx");
+//                System.out.println(componente.getAttributeValue("NAME"));
 //                }
                 Component componenteGui = obtenerComponentePorName(componente.getAttributeValue("NAME"));
                 if(componenteGui instanceof JPanel){
@@ -8807,24 +9118,34 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 }
                 if(componenteGui instanceof JScrollPane){
                     if(((JScrollPane)componenteGui).getName().equalsIgnoreCase("lista_288") && jList_288 != null){
-                        jList_288.setEnabled(componente.getAttributeValue("ENABLED").equalsIgnoreCase("1"));
-                        jList_288.setSelectedIndex(Integer.parseInt(componente.getAttributeValue("INDEX")));
+                        if(componente.getAttributeValue("ENABLED") != null && componente.getAttributeValue("INDEX") != null){
+                            jList_288.setEnabled(componente.getAttributeValue("ENABLED").equalsIgnoreCase("1"));
+                            jList_288.setSelectedIndex(Integer.parseInt(componente.getAttributeValue("INDEX")));
+                        }
                     }
                     if(((JScrollPane)componenteGui).getName().equalsIgnoreCase("lista_356") && jList_356 != null){
-                        jList_356.setEnabled(componente.getAttributeValue("ENABLED").equalsIgnoreCase("1"));
-                        jList_356.setSelectedIndex(Integer.parseInt(componente.getAttributeValue("INDEX")));
+                        if(componente.getAttributeValue("ENABLED") != null && componente.getAttributeValue("INDEX") != null){
+                            jList_356.setEnabled(componente.getAttributeValue("ENABLED").equalsIgnoreCase("1"));
+                            jList_356.setSelectedIndex(Integer.parseInt(componente.getAttributeValue("INDEX")));
+                        }
                     }
                     if(((JScrollPane)componenteGui).getName().equalsIgnoreCase("lista_358") && jList_358 != null){
-                        jList_358.setEnabled(componente.getAttributeValue("ENABLED").equalsIgnoreCase("1"));
-                        jList_358.setSelectedIndex(Integer.parseInt(componente.getAttributeValue("INDEX")));
+                        if(componente.getAttributeValue("ENABLED") != null && componente.getAttributeValue("INDEX") != null){
+                            jList_358.setEnabled(componente.getAttributeValue("ENABLED").equalsIgnoreCase("1"));
+                            jList_358.setSelectedIndex(Integer.parseInt(componente.getAttributeValue("INDEX")));
+                        }
                     }
                     if(((JScrollPane)componenteGui).getName().equalsIgnoreCase("lista_360") && jList_360 != null){
-                        jList_360.setEnabled(componente.getAttributeValue("ENABLED").equalsIgnoreCase("1"));
-                        jList_360.setSelectedIndex(Integer.parseInt(componente.getAttributeValue("INDEX")));
+                        if(componente.getAttributeValue("ENABLED") != null && componente.getAttributeValue("INDEX") != null){
+                            jList_360.setEnabled(componente.getAttributeValue("ENABLED").equalsIgnoreCase("1"));
+                            jList_360.setSelectedIndex(Integer.parseInt(componente.getAttributeValue("INDEX")));
+                        }
                     }
                     if(((JScrollPane)componenteGui).getName().equalsIgnoreCase("lista_362") && jList_362 != null){
-                        jList_362.setEnabled(componente.getAttributeValue("ENABLED").equalsIgnoreCase("1"));
-                        jList_362.setSelectedIndex(Integer.parseInt(componente.getAttributeValue("INDEX")));
+                        if(componente.getAttributeValue("ENABLED") != null && componente.getAttributeValue("INDEX") != null){
+                            jList_362.setEnabled(componente.getAttributeValue("ENABLED").equalsIgnoreCase("1"));
+                            jList_362.setSelectedIndex(Integer.parseInt(componente.getAttributeValue("INDEX")));
+                        }
                     }
                 }
             }
@@ -8917,6 +9238,18 @@ public class EncuestaContexto extends javax.swing.JFrame {
             break;
             case 2:
                 bandera = validarPreguntasPorPanel(jPanelSec_2);
+            break;
+            case 3:
+                bandera = validarPreguntasPorPanel(jPanelSec_3);
+            break;
+            case 4:
+                bandera = validarPreguntasPorPanel(jPanelSec_4);
+            break;
+            case 5:
+                bandera = validarPreguntasPorPanel(jPanelSec_5);
+            break;
+            case 6:
+                bandera = validarPreguntasPorPanel(jPanelSec_6);
             break;
             default:
                 bandera = false;
@@ -9119,6 +9452,11 @@ public class EncuestaContexto extends javax.swing.JFrame {
     private javax.swing.JCheckBox chk_1829;
     private javax.swing.JCheckBox chk_1830;
     private javax.swing.JCheckBox chk_1831;
+    private javax.swing.JCheckBox chk_2289;
+    private javax.swing.JCheckBox chk_2290;
+    private javax.swing.JCheckBox chk_2291;
+    private javax.swing.JCheckBox chk_2292;
+    private javax.swing.JCheckBox chk_2293;
     private javax.swing.JCheckBox chk_2296;
     private javax.swing.JCheckBox chk_2297;
     private javax.swing.JCheckBox chk_2298;
@@ -9137,11 +9475,6 @@ public class EncuestaContexto extends javax.swing.JFrame {
     private javax.swing.JButton jButton_Atras;
     private javax.swing.JButton jButton_Sigueinte;
     private javax.swing.JButton jButton_activarEncuesta;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
