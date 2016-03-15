@@ -3929,7 +3929,7 @@
                           <Component id="jPanel_311" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           <Component id="jPanel_312" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           <Component id="jPanel_313" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           <Component id="jPanel_314" min="-2" max="-2" attributes="0"/>
@@ -4435,10 +4435,13 @@
                       <Properties>
                         <Property name="name" type="java.lang.String" value="2467" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_2467KeyTyped"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel39">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="A&#xf1;o"/>
+                        <Property name="text" type="java.lang.String" value="A&#xf1;o(s)"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel_310">
@@ -4527,60 +4530,90 @@
                         <Property name="text" type="java.lang.String" value="Ninguno"/>
                         <Property name="name" type="java.lang.String" value="2240" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rad_2240ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2241">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Centro de alfabetizaci&#xf3;n/(EBA)"/>
                         <Property name="name" type="java.lang.String" value="2241" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rad_2241ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2242">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Jard&#xed;n de infante"/>
                         <Property name="name" type="java.lang.String" value="2242" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rad_2242ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2243">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Primaria"/>
                         <Property name="name" type="java.lang.String" value="2243" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rad_2243ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2244">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Educaci&#xf3;n b&#xe1;sica"/>
                         <Property name="name" type="java.lang.String" value="2244" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rad_2244ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2245">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Secundaria "/>
                         <Property name="name" type="java.lang.String" value="2245" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rad_2245ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2246">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Educaci&#xf3;n media/ bachillerato"/>
                         <Property name="name" type="java.lang.String" value="2246" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rad_2246ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2247">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Superior no universitaria"/>
                         <Property name="name" type="java.lang.String" value="2247" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rad_2247ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2248">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Superior universitaria"/>
                         <Property name="name" type="java.lang.String" value="2248" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rad_2248ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2249">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Postgrado"/>
                         <Property name="name" type="java.lang.String" value="2249" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rad_2249ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel_311">
                       <Properties>
@@ -4607,13 +4640,11 @@
                           <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel41" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel_312" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="jLabel41" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel_312" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="txt_2250" min="-2" pref="43" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="jLabel85" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -4624,21 +4655,16 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                      <Component id="jLabel_312" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                      <Component id="jLabel41" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                              <Component id="jLabel41" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                              <Component id="jLabel_312" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="txt_2250" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel85" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -4654,6 +4680,9 @@
                       <Properties>
                         <Property name="name" type="java.lang.String" value="2250" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_2250KeyTyped"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel_312">
                       <Properties>
@@ -4669,7 +4698,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel85">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="A&#xf1;o"/>
+                        <Property name="text" type="java.lang.String" value="A&#xf1;o(s)"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -5436,12 +5465,18 @@
                         <Property name="text" type="java.lang.String" value="S&#xed;"/>
                         <Property name="name" type="java.lang.String" value="2294" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rad_2294ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2295">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="No"/>
                         <Property name="name" type="java.lang.String" value="2295" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rad_2295ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel_319">
                       <Properties>
@@ -5884,12 +5919,18 @@
                         <Property name="text" type="java.lang.String" value="S&#xed;"/>
                         <Property name="name" type="java.lang.String" value="2318" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rad_2318ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2319">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="No"/>
                         <Property name="name" type="java.lang.String" value="2319" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rad_2319ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel_323">
                       <Properties>

@@ -4315,8 +4315,13 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jLabel38.setName("1"); // NOI18N
 
         txt_2467.setName("2467"); // NOI18N
+        txt_2467.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_2467KeyTyped(evt);
+            }
+        });
 
-        jLabel39.setText("Año");
+        jLabel39.setText("Año(s)");
 
         jLabel_310.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel_310.setForeground(new java.awt.Color(255, 51, 51));
@@ -4358,33 +4363,83 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         rad_2240.setText("Ninguno");
         rad_2240.setName("2240"); // NOI18N
+        rad_2240.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rad_2240ActionPerformed(evt);
+            }
+        });
 
         rad_2241.setText("Centro de alfabetización/(EBA)");
         rad_2241.setName("2241"); // NOI18N
+        rad_2241.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rad_2241ActionPerformed(evt);
+            }
+        });
 
         rad_2242.setText("Jardín de infante");
         rad_2242.setName("2242"); // NOI18N
+        rad_2242.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rad_2242ActionPerformed(evt);
+            }
+        });
 
         rad_2243.setText("Primaria");
         rad_2243.setName("2243"); // NOI18N
+        rad_2243.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rad_2243ActionPerformed(evt);
+            }
+        });
 
         rad_2244.setText("Educación básica");
         rad_2244.setName("2244"); // NOI18N
+        rad_2244.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rad_2244ActionPerformed(evt);
+            }
+        });
 
         rad_2245.setText("Secundaria ");
         rad_2245.setName("2245"); // NOI18N
+        rad_2245.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rad_2245ActionPerformed(evt);
+            }
+        });
 
         rad_2246.setText("Educación media/ bachillerato");
         rad_2246.setName("2246"); // NOI18N
+        rad_2246.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rad_2246ActionPerformed(evt);
+            }
+        });
 
         rad_2247.setText("Superior no universitaria");
         rad_2247.setName("2247"); // NOI18N
+        rad_2247.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rad_2247ActionPerformed(evt);
+            }
+        });
 
         rad_2248.setText("Superior universitaria");
         rad_2248.setName("2248"); // NOI18N
+        rad_2248.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rad_2248ActionPerformed(evt);
+            }
+        });
 
         rad_2249.setText("Postgrado");
         rad_2249.setName("2249"); // NOI18N
+        rad_2249.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rad_2249ActionPerformed(evt);
+            }
+        });
 
         jLabel_311.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel_311.setForeground(new java.awt.Color(255, 51, 51));
@@ -4448,13 +4503,18 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jLabel41.setName("1"); // NOI18N
 
         txt_2250.setName("2250"); // NOI18N
+        txt_2250.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_2250KeyTyped(evt);
+            }
+        });
 
         jLabel_312.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel_312.setForeground(new java.awt.Color(255, 51, 51));
         jLabel_312.setText("* Esta pregunta es obligatoria.");
         jLabel_312.setName("lbl_312"); // NOI18N
 
-        jLabel85.setText("Año");
+        jLabel85.setText("Año(s)");
 
         javax.swing.GroupLayout jPanel_312Layout = new javax.swing.GroupLayout(jPanel_312);
         jPanel_312.setLayout(jPanel_312Layout);
@@ -4463,29 +4523,26 @@ public class EncuestaContexto extends javax.swing.JFrame {
             .addGroup(jPanel_312Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel_312Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel_312Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel_312))
+                    .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_312)
                     .addGroup(jPanel_312Layout.createSequentialGroup()
                         .addComponent(txt_2250, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel85)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel_312Layout.setVerticalGroup(
             jPanel_312Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_312Layout.createSequentialGroup()
-                .addGroup(jPanel_312Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel_312Layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(jLabel_312))
-                    .addGroup(jPanel_312Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(17, 17, 17)))
+                .addGap(0, 0, 0)
+                .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(2, 2, 2)
+                .addComponent(jLabel_312)
+                .addGap(0, 0, 0)
                 .addGroup(jPanel_312Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_2250, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel85)))
+                    .addComponent(jLabel85))
+                .addGap(6, 6, 6))
         );
 
         jPanel_313.setName("313"); // NOI18N
@@ -4949,9 +5006,19 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         rad_2294.setText("Sí");
         rad_2294.setName("2294"); // NOI18N
+        rad_2294.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rad_2294ActionPerformed(evt);
+            }
+        });
 
         rad_2295.setText("No");
         rad_2295.setName("2295"); // NOI18N
+        rad_2295.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rad_2295ActionPerformed(evt);
+            }
+        });
 
         jLabel_319.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel_319.setForeground(new java.awt.Color(255, 51, 51));
@@ -5229,9 +5296,19 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         rad_2318.setText("Sí");
         rad_2318.setName("2318"); // NOI18N
+        rad_2318.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rad_2318ActionPerformed(evt);
+            }
+        });
 
         rad_2319.setText("No");
         rad_2319.setName("2319"); // NOI18N
+        rad_2319.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rad_2319ActionPerformed(evt);
+            }
+        });
 
         jLabel_323.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel_323.setForeground(new java.awt.Color(255, 51, 51));
@@ -5502,7 +5579,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 .addComponent(jPanel_311, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jPanel_312, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0)
                 .addComponent(jPanel_313, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(jPanel_314, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -7542,6 +7619,10 @@ public class EncuestaContexto extends javax.swing.JFrame {
         if(rad_2138.isSelected()){
             muestraOcultaPanel(jPanel_295, false);
             muestraOcultaPanel(jPanel_297, false);
+            muestraOcultaPanel(jPanel_311, false);
+            muestraOcultaPanel(jPanel_312, false);
+            muestraOcultaPanel(jPanel_315, false);
+            habilitaDeshabilitaComponentesRango(2297, 2297, false);
         }
     }//GEN-LAST:event_rad_2138ActionPerformed
 
@@ -7549,6 +7630,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
         if(rad_2137.isSelected()){
             muestraOcultaPanel(jPanel_295, false);
             muestraOcultaPanel(jPanel_297, true);
+            muestraOcultaPanel(jPanel_311, true);
+            muestraOcultaPanel(jPanel_315, true);
+            habilitaDeshabilitaComponentesRango(2297, 2297, true);
         }
     }//GEN-LAST:event_rad_2137ActionPerformed
 
@@ -7556,6 +7640,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
         if(rad_2136.isSelected()){
             muestraOcultaPanel(jPanel_295, false);
             muestraOcultaPanel(jPanel_297, true);
+            muestraOcultaPanel(jPanel_311, true);
+            muestraOcultaPanel(jPanel_315, true);
+            habilitaDeshabilitaComponentesRango(2297, 2297, true);
         }
     }//GEN-LAST:event_rad_2136ActionPerformed
 
@@ -7563,6 +7650,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
         if(rad_2135.isSelected()){
             muestraOcultaPanel(jPanel_295, false);
             muestraOcultaPanel(jPanel_297, true);
+            muestraOcultaPanel(jPanel_311, true);
+            muestraOcultaPanel(jPanel_315, true);
+            habilitaDeshabilitaComponentesRango(2297, 2297, true);
         }
     }//GEN-LAST:event_rad_2135ActionPerformed
 
@@ -7570,6 +7660,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
         if(rad_2134.isSelected()){
             muestraOcultaPanel(jPanel_295, false);
             muestraOcultaPanel(jPanel_297, true);
+            muestraOcultaPanel(jPanel_311, true);
+            muestraOcultaPanel(jPanel_315, true);
+            habilitaDeshabilitaComponentesRango(2297, 2297, true);
         }
     }//GEN-LAST:event_rad_2134ActionPerformed
 
@@ -7577,6 +7670,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
         if(rad_2133.isSelected()){
             muestraOcultaPanel(jPanel_295, false);
             muestraOcultaPanel(jPanel_297, true);
+            muestraOcultaPanel(jPanel_311, true);
+            muestraOcultaPanel(jPanel_315, true);
+            habilitaDeshabilitaComponentesRango(2297, 2297, true);
         }
     }//GEN-LAST:event_rad_2133ActionPerformed
 
@@ -7584,6 +7680,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
         if(rad_2132.isSelected()){
             muestraOcultaPanel(jPanel_295, false);
             muestraOcultaPanel(jPanel_297, true);
+            muestraOcultaPanel(jPanel_311, true);
+            muestraOcultaPanel(jPanel_315, true);
+            habilitaDeshabilitaComponentesRango(2297, 2297, true);
         }
     }//GEN-LAST:event_rad_2132ActionPerformed
 
@@ -7591,6 +7690,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
         if(rad_2131.isSelected()){
             muestraOcultaPanel(jPanel_295, true);
             muestraOcultaPanel(jPanel_297, true);
+            muestraOcultaPanel(jPanel_311, true);
+            muestraOcultaPanel(jPanel_315, true);
+            habilitaDeshabilitaComponentesRango(2297, 2297, true);
         }
     }//GEN-LAST:event_rad_2131ActionPerformed
 
@@ -7598,6 +7700,10 @@ public class EncuestaContexto extends javax.swing.JFrame {
         if(rad_2102.isSelected()){
             muestraOcultaPanel(jPanel_293, false);
             muestraOcultaPanel(jPanel_296, false);
+            muestraOcultaPanel(jPanel_309,false);
+            muestraOcultaPanel(jPanel_310,false);
+            muestraOcultaPanel(jPanel_314,false);
+            habilitaDeshabilitaComponentesRango(2296, 2296, false);
         }
     }//GEN-LAST:event_rad_2102ActionPerformed
 
@@ -7605,6 +7711,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
         if(rad_2101.isSelected()){
             muestraOcultaPanel(jPanel_293, false);
             muestraOcultaPanel(jPanel_296, true);
+            muestraOcultaPanel(jPanel_309,true);
+            muestraOcultaPanel(jPanel_314,true);
+            habilitaDeshabilitaComponentesRango(2296, 2296, true);
         }
     }//GEN-LAST:event_rad_2101ActionPerformed
 
@@ -7612,6 +7721,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
         if(rad_2100.isSelected()){
             muestraOcultaPanel(jPanel_293, false);
             muestraOcultaPanel(jPanel_296, true);
+            muestraOcultaPanel(jPanel_309,true);
+            muestraOcultaPanel(jPanel_314,true);
+            habilitaDeshabilitaComponentesRango(2296, 2296, true);
         }
     }//GEN-LAST:event_rad_2100ActionPerformed
 
@@ -7619,6 +7731,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
         if(rad_2099.isSelected()){
             muestraOcultaPanel(jPanel_293, false);
             muestraOcultaPanel(jPanel_296, true);
+            muestraOcultaPanel(jPanel_309,true);
+            muestraOcultaPanel(jPanel_314,true);
+            habilitaDeshabilitaComponentesRango(2296, 2296, true);
         }
     }//GEN-LAST:event_rad_2099ActionPerformed
 
@@ -7626,6 +7741,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
         if(rad_2098.isSelected()){
             muestraOcultaPanel(jPanel_293, false);
             muestraOcultaPanel(jPanel_296, true);
+            muestraOcultaPanel(jPanel_309,true);
+            muestraOcultaPanel(jPanel_314,true);
+            habilitaDeshabilitaComponentesRango(2296, 2296, true);
         }
     }//GEN-LAST:event_rad_2098ActionPerformed
 
@@ -7633,6 +7751,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
         if(rad_2097.isSelected()){
             muestraOcultaPanel(jPanel_293, false);
             muestraOcultaPanel(jPanel_296, true);
+            muestraOcultaPanel(jPanel_309,true);
+            muestraOcultaPanel(jPanel_314,true);
+            habilitaDeshabilitaComponentesRango(2296, 2296, true);
         }
     }//GEN-LAST:event_rad_2097ActionPerformed
 
@@ -7640,6 +7761,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
         if(rad_2096.isSelected()){
             muestraOcultaPanel(jPanel_293, false);
             muestraOcultaPanel(jPanel_296, true);
+            muestraOcultaPanel(jPanel_309,true);
+            muestraOcultaPanel(jPanel_314,true);
+            habilitaDeshabilitaComponentesRango(2296, 2296, true);
         }
     }//GEN-LAST:event_rad_2096ActionPerformed
 
@@ -7647,6 +7771,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
         if(rad_2095.isSelected()){
             muestraOcultaPanel(jPanel_293, true);
             muestraOcultaPanel(jPanel_296, true);
+            muestraOcultaPanel(jPanel_309,true);
+            muestraOcultaPanel(jPanel_314,true);
+            habilitaDeshabilitaComponentesRango(2296, 2296, true);
         }
     }//GEN-LAST:event_rad_2095ActionPerformed
 
@@ -7738,11 +7865,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
     }//GEN-LAST:event_chk_1810ActionPerformed
 
     private void chk_1809ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1809ActionPerformed
-        if(chk_1809.isSelected()){
-            muestraOcultaPanel(jPanel_309,false);
-        }else{
-            muestraOcultaPanel(jPanel_309,true);
-        }
+
     }//GEN-LAST:event_chk_1809ActionPerformed
 
     private void chk_1808ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1808ActionPerformed
@@ -8198,6 +8321,150 @@ public class EncuestaContexto extends javax.swing.JFrame {
             muestraOcultaPanel(jPanel_310,false);
         }
     }//GEN-LAST:event_rad_2230ActionPerformed
+
+    private void txt_2467KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_2467KeyTyped
+        if(rad_2231.isSelected()){
+            soloNumerosRango(evt, 1, 1, 3);
+        }
+        if(rad_2232.isSelected()){
+            soloNumerosRango(evt, 1, 1, 2);
+        }
+        if(rad_2233.isSelected()){
+            soloNumerosRango(evt, 1, 1, 6);
+        }
+        if(rad_2234.isSelected()){
+            soloNumerosRango(evt, 1, 1, 6);
+        }
+        if(rad_2235.isSelected()){
+            soloNumerosRango(evt, 1, 1, 6);
+        }
+        if(rad_2236.isSelected()){
+            soloNumerosRango(evt, 1, 1, 6);
+        }
+        if(rad_2237.isSelected()){
+            soloNumerosRango(evt, 1, 1, 4);
+        }
+        if(rad_2238.isSelected()){
+            soloNumerosRango(evt, 1, 1, 7);
+        }
+        if(rad_2239.isSelected()){
+            soloNumerosRango(evt, 1, 1, 5);
+        }
+    }//GEN-LAST:event_txt_2467KeyTyped
+
+    private void txt_2250KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_2250KeyTyped
+        if(rad_2241.isSelected()){
+            soloNumerosRango(evt, 1, 1, 3);
+        }
+        if(rad_2242.isSelected()){
+            soloNumerosRango(evt, 1, 1, 2);
+        }
+        if(rad_2243.isSelected()){
+            soloNumerosRango(evt, 1, 1, 6);
+        }
+        if(rad_2244.isSelected()){
+            soloNumerosRango(evt, 1, 1, 6);
+        }
+        if(rad_2245.isSelected()){
+            soloNumerosRango(evt, 1, 1, 6);
+        }
+        if(rad_2246.isSelected()){
+            soloNumerosRango(evt, 1, 1, 6);
+        }
+        if(rad_2247.isSelected()){
+            soloNumerosRango(evt, 1, 1, 4);
+        }
+        if(rad_2248.isSelected()){
+            soloNumerosRango(evt, 1, 1, 7);
+        }
+        if(rad_2249.isSelected()){
+            soloNumerosRango(evt, 1, 1, 5);
+        }
+    }//GEN-LAST:event_txt_2250KeyTyped
+
+    private void rad_2241ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_2241ActionPerformed
+        if(rad_2241.isSelected()){
+            muestraOcultaPanel(jPanel_312,true);
+        }
+    }//GEN-LAST:event_rad_2241ActionPerformed
+
+    private void rad_2242ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_2242ActionPerformed
+        if(rad_2242.isSelected()){
+            muestraOcultaPanel(jPanel_312,true);
+        }
+    }//GEN-LAST:event_rad_2242ActionPerformed
+
+    private void rad_2243ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_2243ActionPerformed
+        if(rad_2243.isSelected()){
+            muestraOcultaPanel(jPanel_312,true);
+        }
+    }//GEN-LAST:event_rad_2243ActionPerformed
+
+    private void rad_2244ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_2244ActionPerformed
+        if(rad_2244.isSelected()){
+            muestraOcultaPanel(jPanel_312,true);
+        }
+    }//GEN-LAST:event_rad_2244ActionPerformed
+
+    private void rad_2245ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_2245ActionPerformed
+        if(rad_2245.isSelected()){
+            muestraOcultaPanel(jPanel_312,true);
+        }
+    }//GEN-LAST:event_rad_2245ActionPerformed
+
+    private void rad_2246ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_2246ActionPerformed
+        if(rad_2246.isSelected()){
+            muestraOcultaPanel(jPanel_312,true);
+        }
+    }//GEN-LAST:event_rad_2246ActionPerformed
+
+    private void rad_2247ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_2247ActionPerformed
+        if(rad_2247.isSelected()){
+            muestraOcultaPanel(jPanel_312,true);
+        }
+    }//GEN-LAST:event_rad_2247ActionPerformed
+
+    private void rad_2248ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_2248ActionPerformed
+        if(rad_2248.isSelected()){
+            muestraOcultaPanel(jPanel_312,true);
+        }
+    }//GEN-LAST:event_rad_2248ActionPerformed
+
+    private void rad_2249ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_2249ActionPerformed
+        if(rad_2249.isSelected()){
+            muestraOcultaPanel(jPanel_312,true);
+        }
+    }//GEN-LAST:event_rad_2249ActionPerformed
+
+    private void rad_2240ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_2240ActionPerformed
+        if(rad_2240.isSelected()){
+            muestraOcultaPanel(jPanel_312,false);
+        }
+    }//GEN-LAST:event_rad_2240ActionPerformed
+
+    private void rad_2294ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_2294ActionPerformed
+        if(rad_2294.isSelected()){
+            muestraOcultaPanel(jPanel_320,true);
+        }
+    }//GEN-LAST:event_rad_2294ActionPerformed
+
+    private void rad_2295ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_2295ActionPerformed
+        if(rad_2295.isSelected()){
+            muestraOcultaPanel(jPanel_320,false);
+        }
+    }//GEN-LAST:event_rad_2295ActionPerformed
+
+    private void rad_2318ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_2318ActionPerformed
+        if(rad_2318.isSelected()){
+            muestraOcultaPanel(jPanel_324,true);
+        }
+    }//GEN-LAST:event_rad_2318ActionPerformed
+
+    private void rad_2319ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_2319ActionPerformed
+        if(rad_2319.isSelected()){
+            muestraOcultaPanel(jPanel_324,false);
+        }
+    }//GEN-LAST:event_rad_2319ActionPerformed
 
     /** 
      * @param args the command line arguments
@@ -8695,6 +8962,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
         int valor = 1; 
         if(!((JTextField)evt.getComponent()).getText().isEmpty() && (c >= '0' && c <= '9'))
                valor = Integer.parseInt(((JTextField)evt.getComponent()).getText()+c);
+        if(((JTextField)evt.getComponent()).getText().isEmpty() && (c >= '0' && c <= '9'))
+            valor = Integer.parseInt(""+c);
         if(((JTextField)evt.getComponent()).getText().length() <= max){
             if(valor >= inicio && valor <= fin){
                 if(c >= '0' && c <= '9'){
