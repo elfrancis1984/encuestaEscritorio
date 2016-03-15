@@ -222,33 +222,33 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="jPanel_358" max="32767" attributes="0"/>
-                              <Component id="jPanel_295" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jPanel_292" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jPanel_291" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jPanel_293" alignment="1" min="-2" max="-2" attributes="0"/>
                               <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="jPanel_290" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jPanel_289" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jPanel_288" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jPanel_358" max="32767" attributes="0"/>
+                                  <Component id="jPanel_295" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jPanel_292" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jPanel_291" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="jPanel_290" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jPanel_289" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jPanel_288" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="jPanel_287" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jPanel_286" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="jPanel_285" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jPanel_284" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jPanel_282" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jPanel_283" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jPanel_294" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jPanel_296" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jPanel_297" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jPanel_356" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jPanel_360" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jPanel_362" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="jPanel_287" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jPanel_286" alignment="1" max="32767" attributes="0"/>
-                              <Component id="jPanel_285" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jPanel_284" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jPanel_282" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jPanel_283" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                  <Component id="jPanel_293" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jPanel_294" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="jPanel_296" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jPanel_297" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jPanel_356" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jPanel_360" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jPanel_362" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="100" max="32767" attributes="0"/>
+                          <EmptySpace pref="168" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1555,7 +1555,7 @@
                                   </Group>
                                   <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="44" max="32767" attributes="0"/>
+                              <EmptySpace pref="94" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -3359,7 +3359,7 @@
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt_2192">
                       <Properties>
-                        <Property name="name" type="java.lang.String" value="2191" noResource="true"/>
+                        <Property name="name" type="java.lang.String" value="2192" noResource="true"/>
                       </Properties>
                       <Events>
                         <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_2192KeyTyped"/>
@@ -3429,11 +3429,13 @@
                     <Component class="javax.swing.JRadioButton" name="rad_2193">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xe1;rea urbana (Es aquella en la cual se permiten usos urbanos y cuentan, o se hallan&lt;br/&gt;dentro del radio de servicio de infraestructura de: agua, luz el&#xe9;ctrica, aseo de calles&lt;br/&gt;y de otros de naturaleza semejante)&lt;/html&gt;"/>
+                        <Property name="name" type="java.lang.String" value="2193" noResource="true"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2194">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xe1;rea rural (Es una extensi&#xf3;n razonable de territorio conformada por localidades&lt;br/&gt;identificadas por un nombre donde se encuentra un asentamiento de viviendas las&lt;br/&gt;mismas que pueden estar dispersas o agrupadas)&lt;/html&gt;"/>
+                        <Property name="name" type="java.lang.String" value="2194" noResource="true"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel_302">
@@ -3555,7 +3557,7 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel_304">
                   <Properties>
-                    <Property name="name" type="java.lang.String" value="303" noResource="true"/>
+                    <Property name="name" type="java.lang.String" value="304" noResource="true"/>
                   </Properties>
 
                   <Layout>
@@ -3658,7 +3660,7 @@
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel_305">
                   <Properties>
-                    <Property name="name" type="java.lang.String" value="303" noResource="true"/>
+                    <Property name="name" type="java.lang.String" value="305" noResource="true"/>
                   </Properties>
 
                   <Layout>
@@ -3763,7 +3765,7 @@
                           <Color blue="33" green="33" red="ff" type="rgb"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="* Esta pregunta es obligatoria."/>
-                        <Property name="name" type="java.lang.String" value="lbl_304" noResource="true"/>
+                        <Property name="name" type="java.lang.String" value="lbl_305" noResource="true"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -5332,15 +5334,15 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jCheckBox5" max="32767" attributes="0"/>
+                                  <Component id="chk_2293" max="32767" attributes="0"/>
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabel_318" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="chk_2289" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel48" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jCheckBox2" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jCheckBox3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jCheckBox4" min="-2" max="-2" attributes="0"/>
+                                          <Component id="chk_2290" min="-2" max="-2" attributes="0"/>
+                                          <Component id="chk_2291" min="-2" max="-2" attributes="0"/>
+                                          <Component id="chk_2292" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
@@ -5357,15 +5359,15 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel_318" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
+                              <Component id="chk_2289" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jCheckBox2" min="-2" max="-2" attributes="0"/>
+                              <Component id="chk_2290" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jCheckBox3" min="-2" max="-2" attributes="0"/>
+                              <Component id="chk_2291" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jCheckBox4" min="-2" max="-2" attributes="0"/>
+                              <Component id="chk_2292" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jCheckBox5" min="-2" max="-2" attributes="0"/>
+                              <Component id="chk_2293" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -5378,29 +5380,34 @@
                         <Property name="name" type="java.lang.String" value="1" noResource="true"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+                    <Component class="javax.swing.JCheckBox" name="chk_2289">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="En mi  hogar compran vestimenta en centros comerciales"/>
+                        <Property name="name" type="java.lang.String" value="2289" noResource="true"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JCheckBox" name="jCheckBox2">
+                    <Component class="javax.swing.JCheckBox" name="chk_2290">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="En mi hogar alguien ha usado internet durante los &#xfa;ltimos 6 meses "/>
+                        <Property name="name" type="java.lang.String" value="2290" noResource="true"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JCheckBox" name="jCheckBox3">
+                    <Component class="javax.swing.JCheckBox" name="chk_2291">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="En mi hogar alguien utiliza correo electr&#xf3;nico que no sea del trabajo"/>
+                        <Property name="name" type="java.lang.String" value="2291" noResource="true"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JCheckBox" name="jCheckBox4">
+                    <Component class="javax.swing.JCheckBox" name="chk_2292">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="En mi hogar alguien esta registrado en una red social"/>
+                        <Property name="name" type="java.lang.String" value="2292" noResource="true"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JCheckBox" name="jCheckBox5">
+                    <Component class="javax.swing.JCheckBox" name="chk_2293">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="&lt;html&gt;En mi hogar alguien ha le&#xed;do un libro completo en los &#xfa;ltimos tres meses&lt;br/&gt;(exceptuar libros o manuales de estudio y lecturas de trabajo)&lt;/html&gt;"/>
+                        <Property name="name" type="java.lang.String" value="2293" noResource="true"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel_318">
@@ -6685,42 +6692,63 @@
                         <Property name="text" type="java.lang.String" value="Curso preuniversitario privado"/>
                         <Property name="name" type="java.lang.String" value="2353" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rad_2353ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2354">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Curso de nivelaci&#xf3;n general SNNA"/>
                         <Property name="name" type="java.lang.String" value="2354" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rad_2354ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2355">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Preparaci&#xf3;n a trav&#xe9;s de la plataforma J&#xf3;venes"/>
                         <Property name="name" type="java.lang.String" value="2355" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rad_2355ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2356">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Auto preparaci&#xf3;n en casa"/>
                         <Property name="name" type="java.lang.String" value="2356" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rad_2356ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2357">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Ninguna"/>
                         <Property name="name" type="java.lang.String" value="2357" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rad_2357ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2358">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="En tu colegio"/>
                         <Property name="name" type="java.lang.String" value="2358" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rad_2358ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2359">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Otro"/>
                         <Property name="name" type="java.lang.String" value="2359" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rad_2359ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel_330">
                       <Properties>
@@ -7873,7 +7901,7 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                               <Component id="jLabel71" min="-2" max="-2" attributes="0"/>
                               <EmptySpace pref="33" max="32767" attributes="0"/>
                           </Group>
