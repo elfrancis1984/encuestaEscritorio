@@ -37,6 +37,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.text.AbstractDocument;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.Result;
 import javax.xml.transform.Source;
 import javax.xml.transform.Transformer;
@@ -82,6 +83,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
     private static String[] codigoLenguaIndigenaMadre = {"2480","2481","2482","2483","2484","2485","2486","2487","2488","2489","2490","2491"};
     
     private boolean encuestaTerminada;
+    private String archivoGenerado = "";
     /**
      * Creates new form Encuesta
      */
@@ -113,13 +115,60 @@ public class EncuestaContexto extends javax.swing.JFrame {
         allComponents.putAll(componentesSeccionSeis);
         /*-----Carga respuestas almacenadas----------*/
         cargarXml();
+        if(archivoGenerado.equalsIgnoreCase("1")){
+            int dialogResult = JOptionPane.showConfirmDialog (null, "¿Deseas llenar la encuesta nuevamente?","aaaa",JOptionPane.YES_NO_OPTION);
+            //0 Si  1 No  2 Cancel
+            if(dialogResult == 0){
+                vaciarXML();
+            }
+        }
     }
     /**
      * 
      */
-//    private String[] cargaPaises(){
-//        return paises;
-//    }
+    private void vaciarXML(){
+        try {
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            DOMImplementation implementation = builder.getDOMImplementation();
+            org.w3c.dom.Document document = implementation.createDocument(null, fileConfig, null);
+            document.setXmlVersion("1.0");
+            //Main Node
+            org.w3c.dom.Element raiz = document.getDocumentElement();
+            org.w3c.dom.Element itemNode = document.createElement("LISTA_RESPUESTAS");
+            /*----------Para registrar la seccion actual----------------------------------*/
+            org.w3c.dom.Element itemNode1 = document.createElement("SECCIONES");
+            org.w3c.dom.Element keyNode1 = document.createElement("SECCION_ACTUAL");
+            keyNode1.setAttribute("INDEX", index.toString());
+            itemNode1.appendChild(keyNode1);
+            raiz.appendChild(itemNode1);
+            /*-----------------------------------------------------------------------------*/
+            /*------------------Para registrar el usuario----------------------------------*/
+            org.w3c.dom.Element itemNode2 = document.createElement("LOGIN");
+            org.w3c.dom.Element keyNode2 = document.createElement("USUARIO");
+            keyNode2.setAttribute("ID", txt_cedula.getText());
+            keyNode2.setAttribute("NOMBRES", txt_nombres.getText());
+            keyNode2.setAttribute("APELLIDOS", txt_apellidos.getText());
+            if(jButton_Sigueinte.getText().equalsIgnoreCase("Finalizar")){
+                keyNode2.setAttribute("FINALIZADO","1");
+            }else{
+                keyNode2.setAttribute("FINALIZADO","0");
+            }
+            itemNode2.appendChild(keyNode2);
+            raiz.appendChild(itemNode);
+            raiz.appendChild(itemNode2);
+            //Generate XML
+            Source source = new DOMSource(document);
+            //Indicamos donde lo queremos almacenar
+            Result result = new StreamResult(new java.io.File("./xml/"+fileConfig+".xml")); //nombre del archivo
+            //Result result = new StreamResult(new java.io.File("./src/ec/gob/senescyt/snna/xml/"+fileConfig+".xml"));
+            Transformer transformer = TransformerFactory.newInstance().newTransformer();
+            transformer.transform(source, result);
+            cargarXml();
+        } catch (Exception ex) {
+            Logger.getLogger(EncuestaContexto.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     /**
      * 
      */
@@ -9206,6 +9255,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 txt_nombres.setEnabled(false);
                 txt_apellidos.setText(loginActual.getAttributeValue("APELLIDOS"));
                 txt_apellidos.setEnabled(false);
+                archivoGenerado = loginActual.getAttributeValue("FINALIZADO");
                 jButton_activarEncuesta.setText("Editar");
             }else{
                 bloqueaPestanias(-1);
