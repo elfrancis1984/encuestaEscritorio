@@ -341,7 +341,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
      */
     @Override
     public Image getIconImage() {
-        Image icon = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("ec/gob/senescyt/snna/resources/bender.png"));
+        Image icon = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("ec/gob/senescyt/snna/resources/encuesta_1.png"));
         return icon;
     }
     
@@ -1676,7 +1676,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jButton_activarEncuesta = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Prototipo encuesta");
+        setTitle("Encuesta contexto");
         setIconImage(getIconImage());
         setLocationByPlatform(true);
         setResizable(false);
@@ -9224,8 +9224,10 @@ public class EncuestaContexto extends javax.swing.JFrame {
 //    }
 
      /**
-     * @param args the command line arguments
-     */
+      * 
+      * @param respuestas
+      * @throws Exception 
+      */
     public void generateXML(HashMap<String,Component> respuestas) throws Exception{
         String valor = "";
         if(respuestas.isEmpty()){
@@ -9267,79 +9269,81 @@ public class EncuestaContexto extends javax.swing.JFrame {
             raiz.appendChild(itemNode2);
             /*-----------------------------------------------------------------------------*/
             for(Map.Entry<String,Component> b: respuestas.entrySet()){
-                org.w3c.dom.Element keyNode = document.createElement("COMPONENTE");
-//                System.out.println(b.getKey());
-                keyNode.setAttribute("NAME", b.getKey());
-                if(b.getValue() instanceof JPanel){
-                    keyNode.setAttribute("VISIBLE", (((JPanel)b.getValue()).isVisible())?"1":"0");
-                    valor = "jPanel";
-                }
-                if(b.getValue() instanceof JRadioButton){
-                    keyNode.setAttribute("ENABLED", (((JRadioButton)b.getValue()).isEnabled())?"1":"0");
-                    keyNode.setAttribute("SELECTED", (((JRadioButton)b.getValue()).isSelected())?"1":"0");
-                    valor = (((JRadioButton)b.getValue()).isSelected())?"1":"0";
-                }
-                if(b.getValue() instanceof JCheckBox){
-                    keyNode.setAttribute("ENABLED", (((JCheckBox)b.getValue()).isEnabled())?"1":"0");
-                    keyNode.setAttribute("SELECTED", (((JCheckBox)b.getValue()).isSelected())?"1":"0");
-                    valor = (((JCheckBox)b.getValue()).isSelected())?"1":"0";
-                }
-                if(b.getValue() instanceof JScrollPane){
-                    if(((JScrollPane)b.getValue()).getName().equalsIgnoreCase("lista_288")){
-                        if(!jList_288.isSelectionEmpty()){
-                            keyNode.setAttribute("ENABLED", (jList_288.isEnabled())?"1":"0");
-                            keyNode.setAttribute("SELECTED", !(jList_288.isSelectionEmpty())?"1":"0");
-                            keyNode.setAttribute("INDEX", (""+jList_288.getSelectedIndex()));
-                            keyNode.setAttribute("VALUE", codigoPaises[jList_288.getSelectedIndex()]);
-                            valor = jList_288.getSelectedValue();
+                //if(!b.getKey().contains("lbl_")){
+                    org.w3c.dom.Element keyNode = document.createElement("COMPONENTE");
+    //                System.out.println(b.getKey());
+                    keyNode.setAttribute("NAME", b.getKey());
+                    if(b.getValue() instanceof JPanel){
+                        keyNode.setAttribute("VISIBLE", (((JPanel)b.getValue()).isVisible())?"1":"0");
+                        valor = "jPanel";
+                    }
+                    if(b.getValue() instanceof JRadioButton){
+                        keyNode.setAttribute("ENABLED", (((JRadioButton)b.getValue()).isEnabled())?"1":"0");
+                        keyNode.setAttribute("SELECTED", (((JRadioButton)b.getValue()).isSelected())?"1":"0");
+                        valor = (((JRadioButton)b.getValue()).isSelected())?"1":"0";
+                    }
+                    if(b.getValue() instanceof JCheckBox){
+                        keyNode.setAttribute("ENABLED", (((JCheckBox)b.getValue()).isEnabled())?"1":"0");
+                        keyNode.setAttribute("SELECTED", (((JCheckBox)b.getValue()).isSelected())?"1":"0");
+                        valor = (((JCheckBox)b.getValue()).isSelected())?"1":"0";
+                    }
+                    if(b.getValue() instanceof JScrollPane){
+                        if(((JScrollPane)b.getValue()).getName().equalsIgnoreCase("lista_288")){
+                            if(!jList_288.isSelectionEmpty()){
+                                keyNode.setAttribute("ENABLED", (jList_288.isEnabled())?"1":"0");
+                                keyNode.setAttribute("SELECTED", !(jList_288.isSelectionEmpty())?"1":"0");
+                                keyNode.setAttribute("INDEX", (""+jList_288.getSelectedIndex()));
+                                keyNode.setAttribute("VALUE", codigoPaises[jList_288.getSelectedIndex()]);
+                                valor = jList_288.getSelectedValue();
+                            }
+                        }
+                        if(((JScrollPane)b.getValue()).getName().equalsIgnoreCase("lista_356")){
+                            if(!jList_356.isSelectionEmpty()){
+                                keyNode.setAttribute("ENABLED", (jList_356.isEnabled())?"1":"0");
+                                keyNode.setAttribute("SELECTED", !(jList_356.isSelectionEmpty())?"1":"0");
+                                keyNode.setAttribute("INDEX", (""+jList_356.getSelectedIndex()));
+                                keyNode.setAttribute("VALUE", codigoLenguaIndigenaPadre[jList_356.getSelectedIndex()]);
+                                valor = jList_356.getSelectedValue();
+                            }
+                        }
+                        if(((JScrollPane)b.getValue()).getName().equalsIgnoreCase("lista_358")){
+                            if(!jList_358.isSelectionEmpty()){
+                                keyNode.setAttribute("ENABLED", (jList_358.isEnabled())?"1":"0");
+                                keyNode.setAttribute("SELECTED", !(jList_358.isSelectionEmpty())?"1":"0");
+                                keyNode.setAttribute("INDEX", (""+jList_358.getSelectedIndex()));
+                                keyNode.setAttribute("VALUE", codigoLenguaIndigenaMadre[jList_358.getSelectedIndex()]);
+                                valor = jList_358.getSelectedValue();
+                            }
+                        }
+                        if(((JScrollPane)b.getValue()).getName().equalsIgnoreCase("lista_360")){
+                            if(!jList_360.isSelectionEmpty()){
+                                keyNode.setAttribute("ENABLED", (jList_360.isEnabled())?"1":"0");
+                                keyNode.setAttribute("SELECTED", !(jList_360.isSelectionEmpty())?"1":"0");
+                                keyNode.setAttribute("INDEX", (""+jList_360.getSelectedIndex()));
+                                keyNode.setAttribute("VALUE", codigoLenguaExtranjeraPadre[jList_360.getSelectedIndex()]);
+                                valor = jList_360.getSelectedValue();
+                            }
+                        }
+                        if(((JScrollPane)b.getValue()).getName().equalsIgnoreCase("lista_362")){
+                            if(!jList_362.isSelectionEmpty()){
+                                keyNode.setAttribute("ENABLED", (jList_362.isEnabled())?"1":"0");
+                                keyNode.setAttribute("SELECTED", !(jList_362.isSelectionEmpty())?"1":"0");
+                                keyNode.setAttribute("INDEX", (""+jList_362.getSelectedIndex()));
+                                keyNode.setAttribute("VALUE", codigoLenguaExtrajeraMadre[jList_362.getSelectedIndex()]);
+                                valor = jList_362.getSelectedValue();
+                            }
                         }
                     }
-                    if(((JScrollPane)b.getValue()).getName().equalsIgnoreCase("lista_356")){
-                        if(!jList_356.isSelectionEmpty()){
-                            keyNode.setAttribute("ENABLED", (jList_356.isEnabled())?"1":"0");
-                            keyNode.setAttribute("SELECTED", !(jList_356.isSelectionEmpty())?"1":"0");
-                            keyNode.setAttribute("INDEX", (""+jList_356.getSelectedIndex()));
-                            keyNode.setAttribute("VALUE", codigoLenguaIndigenaPadre[jList_356.getSelectedIndex()]);
-                            valor = jList_356.getSelectedValue();
-                        }
+                    if(b.getValue() instanceof JTextField){
+                        keyNode.setAttribute("ENABLED", (((JTextField)b.getValue()).isEnabled())?"1":"0");
+                        keyNode.setAttribute("VALUE", ((JTextField)b.getValue()).getText());
+                        valor = ((JTextField)b.getValue()).getText();
                     }
-                    if(((JScrollPane)b.getValue()).getName().equalsIgnoreCase("lista_358")){
-                        if(!jList_358.isSelectionEmpty()){
-                            keyNode.setAttribute("ENABLED", (jList_358.isEnabled())?"1":"0");
-                            keyNode.setAttribute("SELECTED", !(jList_358.isSelectionEmpty())?"1":"0");
-                            keyNode.setAttribute("INDEX", (""+jList_358.getSelectedIndex()));
-                            keyNode.setAttribute("VALUE", codigoLenguaIndigenaMadre[jList_358.getSelectedIndex()]);
-                            valor = jList_358.getSelectedValue();
-                        }
-                    }
-                    if(((JScrollPane)b.getValue()).getName().equalsIgnoreCase("lista_360")){
-                        if(!jList_360.isSelectionEmpty()){
-                            keyNode.setAttribute("ENABLED", (jList_360.isEnabled())?"1":"0");
-                            keyNode.setAttribute("SELECTED", !(jList_360.isSelectionEmpty())?"1":"0");
-                            keyNode.setAttribute("INDEX", (""+jList_360.getSelectedIndex()));
-                            keyNode.setAttribute("VALUE", codigoLenguaExtranjeraPadre[jList_360.getSelectedIndex()]);
-                            valor = jList_360.getSelectedValue();
-                        }
-                    }
-                    if(((JScrollPane)b.getValue()).getName().equalsIgnoreCase("lista_362")){
-                        if(!jList_362.isSelectionEmpty()){
-                            keyNode.setAttribute("ENABLED", (jList_362.isEnabled())?"1":"0");
-                            keyNode.setAttribute("SELECTED", !(jList_362.isSelectionEmpty())?"1":"0");
-                            keyNode.setAttribute("INDEX", (""+jList_362.getSelectedIndex()));
-                            keyNode.setAttribute("VALUE", codigoLenguaExtrajeraMadre[jList_362.getSelectedIndex()]);
-                            valor = jList_362.getSelectedValue();
-                        }
-                    }
-                }
-                if(b.getValue() instanceof JTextField){
-                    keyNode.setAttribute("ENABLED", (((JTextField)b.getValue()).isEnabled())?"1":"0");
-                    keyNode.setAttribute("VALUE", ((JTextField)b.getValue()).getText());
-                    valor = ((JTextField)b.getValue()).getText();
-                }
-                Text nodeKeyValue = document.createTextNode(valor);
-                keyNode.appendChild(nodeKeyValue);      
-                itemNode.appendChild(keyNode);
-                raiz.appendChild(itemNode);
+                    Text nodeKeyValue = document.createTextNode(valor);
+                    keyNode.appendChild(nodeKeyValue);      
+                    itemNode.appendChild(keyNode);
+                    raiz.appendChild(itemNode);
+               // }
             }
             //Generate XML
             Source source = new DOMSource(document);
