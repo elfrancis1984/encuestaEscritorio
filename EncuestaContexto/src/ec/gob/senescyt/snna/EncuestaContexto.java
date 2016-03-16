@@ -84,6 +84,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
     
     private boolean encuestaTerminada;
     private String archivoGenerado = "";
+    private boolean banderaEditar = false;
     /**
      * Creates new form Encuesta
      */
@@ -95,7 +96,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         /* -------- Inicializa Secciones ---------- */
         initSeccionUno();
         initSeccionDos();
-        intiSeccionTres();
+        initSeccionTres();
         initSeccionCuatro();
         initSeccionCinco();
         initSeccionSeis();
@@ -139,21 +140,17 @@ public class EncuestaContexto extends javax.swing.JFrame {
             /*----------Para registrar la seccion actual----------------------------------*/
             org.w3c.dom.Element itemNode1 = document.createElement("SECCIONES");
             org.w3c.dom.Element keyNode1 = document.createElement("SECCION_ACTUAL");
-            keyNode1.setAttribute("INDEX", index.toString());
+            keyNode1.setAttribute("INDEX", "0");
             itemNode1.appendChild(keyNode1);
             raiz.appendChild(itemNode1);
             /*-----------------------------------------------------------------------------*/
             /*------------------Para registrar el usuario----------------------------------*/
             org.w3c.dom.Element itemNode2 = document.createElement("LOGIN");
             org.w3c.dom.Element keyNode2 = document.createElement("USUARIO");
-            keyNode2.setAttribute("ID", txt_cedula.getText());
-            keyNode2.setAttribute("NOMBRES", txt_nombres.getText());
-            keyNode2.setAttribute("APELLIDOS", txt_apellidos.getText());
-            if(jButton_Sigueinte.getText().equalsIgnoreCase("Finalizar")){
-                keyNode2.setAttribute("FINALIZADO","1");
-            }else{
-                keyNode2.setAttribute("FINALIZADO","0");
-            }
+            keyNode2.setAttribute("ID", "");
+            keyNode2.setAttribute("NOMBRES", "");
+            keyNode2.setAttribute("APELLIDOS", "");
+            keyNode2.setAttribute("FINALIZADO","0");
             itemNode2.appendChild(keyNode2);
             raiz.appendChild(itemNode);
             raiz.appendChild(itemNode2);
@@ -164,6 +161,68 @@ public class EncuestaContexto extends javax.swing.JFrame {
             //Result result = new StreamResult(new java.io.File("./src/ec/gob/senescyt/snna/xml/"+fileConfig+".xml"));
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
             transformer.transform(source, result);
+            /*-------------------Resetea todos los componentes-----*/
+            for(Component c: jPanelSec_1.getComponents()){
+                if(c instanceof JPanel && ((JPanel)c).isVisible()){
+                    muestraOcultaPanel(((JPanel)c), true);
+                }
+            }
+            for(Component c: jPanelSec_2.getComponents()){
+                if(c instanceof JPanel && ((JPanel)c).isVisible()){
+                    muestraOcultaPanel(((JPanel)c), true);
+                }
+            }
+            for(Component c: jPanelSec_3.getComponents()){
+                if(c instanceof JPanel && ((JPanel)c).isVisible()){
+                    muestraOcultaPanel(((JPanel)c), true);
+                }
+            }
+            for(Component c: jPanelSec_4.getComponents()){
+                if(c instanceof JPanel && ((JPanel)c).isVisible()){
+                    muestraOcultaPanel(((JPanel)c), true);
+                }
+            }
+            for(Component c: jPanelSec_5.getComponents()){
+                if(c instanceof JPanel && ((JPanel)c).isVisible()){
+                    muestraOcultaPanel(((JPanel)c), true);
+                }
+            }
+            for(Component c: jPanelSec_6.getComponents()){
+                if(c instanceof JPanel && ((JPanel)c).isVisible()){
+                    muestraOcultaPanel(((JPanel)c), true);
+                }
+            }
+            /*----------------Inicializa nuevamente las secciones-----------*/
+            allComponents.clear();
+            initSeccionUno();
+            initSeccionDos();
+            initSeccionTres();
+            initSeccionCuatro();
+            initSeccionCinco();
+            initSeccionSeis();
+            /*--------Lee todos los componentes de todas las secciones-------------------------*/
+            componentesSeccionUno = obtenerComponentesPorPanel(jPanelSec_1);
+            componentesSeccionDos = obtenerComponentesPorPanel(jPanelSec_2);
+            componentesSeccionTres = obtenerComponentesPorPanel(jPanelSec_3);
+            componentesSeccionCuatro = obtenerComponentesPorPanel(jPanelSec_4);
+            componentesSeccionCinco = obtenerComponentesPorPanel(jPanelSec_5);
+            componentesSeccionSeis = obtenerComponentesPorPanel(jPanelSec_6);
+            /*---------Uno todos los componentes de todas las secciones------------------------*/
+            allComponents.putAll(componentesSeccionUno);
+            allComponents.putAll(componentesSeccionDos);
+            allComponents.putAll(componentesSeccionTres);
+            allComponents.putAll(componentesSeccionCuatro);
+            allComponents.putAll(componentesSeccionCinco);
+            allComponents.putAll(componentesSeccionSeis);
+            /*-----------------------------------------------------*/
+            txt_cedula.setText("");
+            txt_cedula.setEnabled(true);
+            txt_nombres.setText("");
+            txt_nombres.setEnabled(true);
+            txt_apellidos.setText("");
+            txt_apellidos.setEnabled(true);
+            jButton_activarEncuesta.setText("Activar Encuesta");
+            /*-----------------------------------------------------*/
             cargarXml();
         } catch (Exception ex) {
             Logger.getLogger(EncuestaContexto.class.getName()).log(Level.SEVERE, null, ex);
@@ -503,7 +562,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
     /**
      * 
      */
-    private void intiSeccionTres(){
+    private void initSeccionTres(){
         bgSec3_307.add(rad_2215);
         bgSec3_307.add(rad_2216);
         bgSec3_307.add(rad_2217);
@@ -7846,6 +7905,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
                     txt_apellidos.setEnabled(true);
                     bloqueaPestanias(-1);
                     jButton_activarEncuesta.setText("Activar Encuesta");
+                    banderaEditar = true;
                 break;
             }
         }
@@ -9249,14 +9309,16 @@ public class EncuestaContexto extends javax.swing.JFrame {
             List hijosLogin = login.getChildren();
             Element loginActual = (Element)hijosLogin.get(0);
             if(!loginActual.getAttributeValue("ID").isEmpty()){
-                txt_cedula.setText(loginActual.getAttributeValue("ID"));
-                txt_cedula.setEnabled(false);
-                txt_nombres.setText(loginActual.getAttributeValue("NOMBRES"));
-                txt_nombres.setEnabled(false);
-                txt_apellidos.setText(loginActual.getAttributeValue("APELLIDOS"));
-                txt_apellidos.setEnabled(false);
-                archivoGenerado = loginActual.getAttributeValue("FINALIZADO");
-                jButton_activarEncuesta.setText("Editar");
+                if(!banderaEditar){
+                    txt_cedula.setText(loginActual.getAttributeValue("ID"));
+                    txt_cedula.setEnabled(false);
+                    txt_nombres.setText(loginActual.getAttributeValue("NOMBRES"));
+                    txt_nombres.setEnabled(false);
+                    txt_apellidos.setText(loginActual.getAttributeValue("APELLIDOS"));
+                    txt_apellidos.setEnabled(false);
+                    archivoGenerado = loginActual.getAttributeValue("FINALIZADO");
+                    jButton_activarEncuesta.setText("Editar");
+                }
             }else{
                 bloqueaPestanias(-1);
             }
