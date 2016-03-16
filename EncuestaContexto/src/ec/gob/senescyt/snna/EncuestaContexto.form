@@ -223,31 +223,32 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="jPanel_293" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="jPanel_358" max="32767" attributes="0"/>
-                                  <Component id="jPanel_295" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jPanel_292" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jPanel_291" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jPanel_290" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jPanel_289" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jPanel_288" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jPanel_287" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jPanel_286" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="jPanel_285" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jPanel_284" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jPanel_282" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jPanel_283" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jPanel_294" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jPanel_296" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jPanel_297" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jPanel_356" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jPanel_360" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jPanel_362" max="32767" attributes="0"/>
-                              </Group>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="jPanel_358" max="32767" attributes="0"/>
+                              <Component id="jPanel_295" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jPanel_292" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jPanel_291" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jPanel_290" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jPanel_289" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jPanel_288" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jPanel_287" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jPanel_286" alignment="1" max="32767" attributes="0"/>
+                              <Component id="jPanel_285" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jPanel_284" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jPanel_282" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jPanel_283" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jPanel_296" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jPanel_297" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jPanel_356" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jPanel_360" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jPanel_362" max="32767" attributes="0"/>
+                              <Component id="jPanel_293" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="168" max="32767" attributes="0"/>
+                          <EmptySpace pref="401" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jPanel_294" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -276,11 +277,10 @@
                           <Component id="jPanel_291" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                           <Component id="jPanel_292" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Component id="jPanel_293" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           <Component id="jPanel_294" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           <Component id="jPanel_295" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                           <Component id="jPanel_296" min="-2" max="-2" attributes="0"/>
@@ -1500,7 +1500,7 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -1572,7 +1572,7 @@
                                               <Component id="jLabel_293" min="-2" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="102" attributes="0">
-                                                      <EmptySpace pref="14" max="32767" attributes="0"/>
+                                                      <EmptySpace max="32767" attributes="0"/>
                                                       <Component id="rad_2103" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Component id="rad_2104" min="-2" max="-2" attributes="0"/>
