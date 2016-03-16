@@ -85,6 +85,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
     private boolean encuestaTerminada;
     private String archivoGenerado = "";
     private boolean banderaEditar = false;
+    private int ultimaPestaña = 0;
     /**
      * Creates new form Encuesta
      */
@@ -123,7 +124,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         /*-----Carga respuestas almacenadas----------*/
         cargarXml();
         if(archivoGenerado.equalsIgnoreCase("1")){
-            int dialogResult = JOptionPane.showConfirmDialog (null, "¿Deseas llenar la encuesta nuevamente?","aaaa",JOptionPane.YES_NO_OPTION);
+            int dialogResult = JOptionPane.showConfirmDialog (null, "¿Deseas llenar nuevamente la encuesta?","Encuesta Finalizada",JOptionPane.YES_NO_OPTION);
             //0 Si  1 No  2 Cancel
             if(dialogResult == 0){
                 vaciarXML();
@@ -276,6 +277,23 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 if(c instanceof JPanel && ((JPanel)c).isVisible()){
                     for(Component d: ((JPanel)c).getComponents()){
                         d.setEnabled(false);
+                        if(d instanceof JScrollPane){
+                            if(((JScrollPane)d).getName().equalsIgnoreCase("lista_288") && jList_288 != null){
+                                jList_288.setEnabled(false);
+                            }
+                            if(((JScrollPane)d).getName().equalsIgnoreCase("lista_356") && jList_356 != null){
+                                jList_356.setEnabled(false);
+                            }
+                            if(((JScrollPane)d).getName().equalsIgnoreCase("lista_358") && jList_358 != null){
+                                jList_358.setEnabled(false);
+                            }
+                            if(((JScrollPane)d).getName().equalsIgnoreCase("lista_360") && jList_360 != null){
+                                jList_360.setEnabled(false);
+                            }
+                            if(((JScrollPane)d).getName().equalsIgnoreCase("lista_362") && jList_362 != null){
+                                jList_362.setEnabled(false);
+                            }
+                        }
                     }
                 }
             }
@@ -3468,7 +3486,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
                     .addComponent(jPanel_360, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel_362, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel_293, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(401, Short.MAX_VALUE))
+                .addGap(100, 100, 100))
             .addGroup(jPanelSec_1Layout.createSequentialGroup()
                 .addComponent(jPanel_294, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -7833,8 +7851,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_AtrasActionPerformed
 
     private void jTabbedPane1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane1StateChanged
-        //index = jTabbedPane1.getSelectedIndex() + 1;
-        switch(index){
+        int i = jTabbedPane1.getSelectedIndex() + 1;
+        switch(i){
             case 1:
                 jButton_Sigueinte.setText("Siguiente");
             break;
@@ -7878,7 +7896,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
     private void jButton_activarEncuestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_activarEncuestaActionPerformed
         // TODO add your handling code here:
         if(txt_cedula.getText().isEmpty() || txt_nombres.getText().isEmpty() || txt_apellidos.getText().isEmpty()){
-            JOptionPane.showMessageDialog(this, "Todos los campos son obligatorios","Error",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Todos los campos son obligatorios","¡Atención!",JOptionPane.WARNING_MESSAGE);
         }else{
             switch(jButton_activarEncuesta.getText()){
                 case "Activar Encuesta":
@@ -7886,6 +7904,23 @@ public class EncuestaContexto extends javax.swing.JFrame {
                         if(c instanceof JPanel && ((JPanel)c).isVisible()){
                             for(Component d: ((JPanel)c).getComponents()){
                                 d.setEnabled(true);
+                                if(d instanceof JScrollPane){
+                                    if(((JScrollPane)d).getName().equalsIgnoreCase("lista_288") && jList_288 != null){
+                                        jList_288.setEnabled(true);
+                                    }
+                                    if(((JScrollPane)d).getName().equalsIgnoreCase("lista_356") && jList_356 != null){
+                                        jList_356.setEnabled(true);
+                                    }
+                                    if(((JScrollPane)d).getName().equalsIgnoreCase("lista_358") && jList_358 != null){
+                                        jList_358.setEnabled(true);
+                                    }
+                                    if(((JScrollPane)d).getName().equalsIgnoreCase("lista_360") && jList_360 != null){
+                                        jList_360.setEnabled(true);
+                                    }
+                                    if(((JScrollPane)d).getName().equalsIgnoreCase("lista_362") && jList_362 != null){
+                                        jList_362.setEnabled(true);
+                                    }
+                                }
                             }
                         }
                     }
@@ -9094,22 +9129,22 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 ((JTextField)componentes1[a]).setText("");
             }
             if(componentes1[a] instanceof JScrollPane){
-                    if(((JScrollPane)componentes1[a]).getName().equalsIgnoreCase("lista_288") && jList_288 != null){
-                        jList_288.clearSelection();
-                    }
-                    if(((JScrollPane)componentes1[a]).getName().equalsIgnoreCase("lista_356") && jList_356 != null){
-                        jList_356.clearSelection();
-                    }
-                    if(((JScrollPane)componentes1[a]).getName().equalsIgnoreCase("lista_358") && jList_358 != null){
-                        jList_358.clearSelection();
-                    }
-                    if(((JScrollPane)componentes1[a]).getName().equalsIgnoreCase("lista_360") && jList_360 != null){
-                        jList_360.clearSelection();
-                    }
-                    if(((JScrollPane)componentes1[a]).getName().equalsIgnoreCase("lista_362") && jList_362 != null){
-                        jList_362.clearSelection();
-                    }
+                if(((JScrollPane)componentes1[a]).getName().equalsIgnoreCase("lista_288") && jList_288 != null){
+                    jList_288.clearSelection();
                 }
+                if(((JScrollPane)componentes1[a]).getName().equalsIgnoreCase("lista_356") && jList_356 != null){
+                    jList_356.clearSelection();
+                }
+                if(((JScrollPane)componentes1[a]).getName().equalsIgnoreCase("lista_358") && jList_358 != null){
+                    jList_358.clearSelection();
+                }
+                if(((JScrollPane)componentes1[a]).getName().equalsIgnoreCase("lista_360") && jList_360 != null){
+                    jList_360.clearSelection();
+                }
+                if(((JScrollPane)componentes1[a]).getName().equalsIgnoreCase("lista_362") && jList_362 != null){
+                    jList_362.clearSelection();
+                }
+            }
         }
     }
     
@@ -9124,7 +9159,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         try{ 
             if(jF1.showSaveDialog(null)==jF1.APPROVE_OPTION){ 
                 ruta = jF1.getSelectedFile().getAbsolutePath();
-                System.out.println(ruta);
+                //System.out.println(ruta);
                 encuestaTerminada = true;
             } 
         }catch (Exception ex){ 
@@ -9208,7 +9243,12 @@ public class EncuestaContexto extends javax.swing.JFrame {
             /*----------Para registrar la seccion actual----------------------------------*/
             org.w3c.dom.Element itemNode1 = document.createElement("SECCIONES");
             org.w3c.dom.Element keyNode1 = document.createElement("SECCION_ACTUAL");
-            keyNode1.setAttribute("INDEX", index.toString());
+            int aux = index;
+            if(aux > ultimaPestaña){
+                keyNode1.setAttribute("INDEX", ""+aux);
+            }else{
+                keyNode1.setAttribute("INDEX", (ultimaPestaña<5)?""+(ultimaPestaña+1):""+(ultimaPestaña));
+            }
             itemNode1.appendChild(keyNode1);
             raiz.appendChild(itemNode1);
             /*-----------------------------------------------------------------------------*/
@@ -9313,6 +9353,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 Transformer transformerFinal = TransformerFactory.newInstance().newTransformer();
                 transformerFinal.transform(source, resultFinal);
                 encuestaTerminada = false;
+                JOptionPane.showMessageDialog(this, "La encuesta ha sido finalizada exitosamente","Mensaje",JOptionPane.INFORMATION_MESSAGE);
+                System.exit(0);
             }
         }
     }
@@ -9339,6 +9381,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
             Element seccionActual = (Element)hijosSecciones.get(0);
             jTabbedPane1.setSelectedIndex(Integer.parseInt(seccionActual.getAttributeValue("INDEX")));
             index = jTabbedPane1.getSelectedIndex();
+            ultimaPestaña = index;
             bloqueaPestanias(index);
             /*------------------------------------------------*/
             /*------------------------------------------------*/
