@@ -91,6 +91,12 @@ public class EncuestaContexto extends javax.swing.JFrame {
     public EncuestaContexto() {
         initComponents();
         this.setLocationRelativeTo(null);
+        jScrollPane1.getVerticalScrollBar().setUnitIncrement(16);
+        jScrollPane2.getVerticalScrollBar().setUnitIncrement(16);
+        jScrollPane3.getVerticalScrollBar().setUnitIncrement(16);
+        jScrollPane4.getVerticalScrollBar().setUnitIncrement(16);
+        jScrollPane5.getVerticalScrollBar().setUnitIncrement(16);
+        jScrollPane6.getVerticalScrollBar().setUnitIncrement(16);
         /*--------Bloquea el ctrl + v ---------------------------*/
         bloquearPegar(); //No es eficiente Optimizar
         /* -------- Inicializa Secciones ---------- */
@@ -7783,19 +7789,54 @@ public class EncuestaContexto extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_SigueinteActionPerformed
 
     private void jButton_AtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_AtrasActionPerformed
-        // TODO add your handling code here:
-        int i = jTabbedPane1.getSelectedIndex();
-        if (i > 0) {
-            i--;
-        }
-        jTabbedPane1.setSelectedIndex(i);
-        index = i;
+//        int i = jTabbedPane1.getSelectedIndex();
+//        if (i > 0) {
+//            i--;
+//        }
+//        jTabbedPane1.setSelectedIndex(i);
+//        index = i;
         //OPTIMIZAR
-        //obtenerRespuestasPorSeccion(jPanelSec_1);
+        int i = jTabbedPane1.getSelectedIndex()+1;
+        boolean bandera;
+        switch(i){
+            case 1:
+                bandera = validarPreguntasPorPanel(jPanelSec_1);
+            break;
+            case 2:
+                bandera = validarPreguntasPorPanel(jPanelSec_2);
+            break;
+            case 3:
+                bandera = validarPreguntasPorPanel(jPanelSec_3);
+            break;
+            case 4:
+                bandera = validarPreguntasPorPanel(jPanelSec_4);
+            break;
+            case 5:
+                bandera = validarPreguntasPorPanel(jPanelSec_5);
+            break;
+            case 6:
+                bandera = validarPreguntasPorPanel(jPanelSec_6);
+            break;
+            default:
+                bandera = false;
+            break;
+        }
+        i--;
+        if(bandera){
+            try {
+                if (i > 0) {
+                    jTabbedPane1.setSelectedIndex(--i);
+                    index = jTabbedPane1.getSelectedIndex();
+                }
+                generateXML(allComponents);
+            } catch (Exception ex) {
+                Logger.getLogger(EncuestaContexto.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }//GEN-LAST:event_jButton_AtrasActionPerformed
 
     private void jTabbedPane1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane1StateChanged
-        index = jTabbedPane1.getSelectedIndex() + 1;
+        //index = jTabbedPane1.getSelectedIndex() + 1;
         switch(index){
             case 1:
                 jButton_Sigueinte.setText("Siguiente");
@@ -7819,8 +7860,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
     }//GEN-LAST:event_jTabbedPane1StateChanged
 
     private void jTabbedPane1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MousePressed
-        // TODO add your handling code here:
         jTabbedPane1.setSelectedIndex(index);
+        //System.out.println(index);
     }//GEN-LAST:event_jTabbedPane1MousePressed
 
     private void jTabbedPane1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseEntered
@@ -9453,7 +9494,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 }
             }
             if(banderaAux > 0){
-                JOptionPane.showMessageDialog(this, "Revisa los campos alertados","Error",JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Para continuar debes responder todas las preguntas","¡Atención!",JOptionPane.WARNING_MESSAGE);
                 return false;
             }else{
                 return true;
@@ -9507,8 +9548,6 @@ public class EncuestaContexto extends javax.swing.JFrame {
             } catch (Exception ex) {
                 Logger.getLogger(EncuestaContexto.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }else{
-            //jTabbedPane1.setSelectedIndex(i-2);
         }
     }
     /**
