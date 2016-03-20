@@ -15,6 +15,7 @@ import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -123,6 +124,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         allComponents.putAll(componentesSeccionSeis);
         /*-----Carga respuestas almacenadas----------*/
         cargarXml();
+        //CAMBIAR VERSION ANTIGUA FCO
         if(archivoGenerado.equalsIgnoreCase("1")){
             int dialogResult = JOptionPane.showConfirmDialog (null, "¿Deseas llenar nuevamente la encuesta?","Encuesta Finalizada",JOptionPane.YES_NO_OPTION);
             //0 Si  1 No  2 Cancel
@@ -130,6 +132,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 vaciarXML();
             }
         }
+        //754674371536261507 FRANCISCO
+        //~[/}~[.-~[)%*~||||$; 1713198552 
+        //System.out.println(codificador("0",true));
     }
     /**
      * 
@@ -1674,6 +1679,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jLabel24 = new javax.swing.JLabel();
         txt_apellidos = new javax.swing.JTextField();
         jButton_activarEncuesta = new javax.swing.JButton();
+        jLabel89 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Encuesta contexto");
@@ -3520,6 +3526,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 .addComponent(jPanel_293, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(jPanel_294, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
                 .addComponent(jPanel_295, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(7, 7, 7)
                 .addComponent(jPanel_296, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -7760,6 +7767,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jLabel89.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel89.setText("ENCUESTA DE CONTEXTO SEGUNDO PERIODO 2016");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -7781,13 +7791,19 @@ public class EncuestaContexto extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel_DatosPersonales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(141, 141, 141)
+                .addComponent(jLabel89)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(7, 7, 7)
+                .addComponent(jLabel89)
+                .addGap(0, 0, 0)
                 .addComponent(jPanel_DatosPersonales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -7804,50 +7820,50 @@ public class EncuestaContexto extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_SigueinteActionPerformed
 
     private void jButton_AtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_AtrasActionPerformed
-//        int i = jTabbedPane1.getSelectedIndex();
-//        if (i > 0) {
-//            i--;
+        int i = jTabbedPane1.getSelectedIndex();
+        if (i > 0) {
+            i--;
+        }
+        jTabbedPane1.setSelectedIndex(i);
+        index = i;
+        //CAMBIAR VERSION ANTIGUA FCO
+//        int i = jTabbedPane1.getSelectedIndex()+1;
+//        boolean bandera;
+//        switch(i){
+//            case 1:
+//                bandera = validarPreguntasPorPanel(jPanelSec_1);
+//            break;
+//            case 2:
+//                bandera = validarPreguntasPorPanel(jPanelSec_2);
+//            break;
+//            case 3:
+//                bandera = validarPreguntasPorPanel(jPanelSec_3);
+//            break;
+//            case 4:
+//                bandera = validarPreguntasPorPanel(jPanelSec_4);
+//            break;
+//            case 5:
+//                bandera = validarPreguntasPorPanel(jPanelSec_5);
+//            break;
+//            case 6:
+//                bandera = validarPreguntasPorPanel(jPanelSec_6);
+//            break;
+//            default:
+//                bandera = false;
+//            break;
 //        }
-//        jTabbedPane1.setSelectedIndex(i);
-//        index = i;
-        //OPTIMIZAR
-        int i = jTabbedPane1.getSelectedIndex()+1;
-        boolean bandera;
-        switch(i){
-            case 1:
-                bandera = validarPreguntasPorPanel(jPanelSec_1);
-            break;
-            case 2:
-                bandera = validarPreguntasPorPanel(jPanelSec_2);
-            break;
-            case 3:
-                bandera = validarPreguntasPorPanel(jPanelSec_3);
-            break;
-            case 4:
-                bandera = validarPreguntasPorPanel(jPanelSec_4);
-            break;
-            case 5:
-                bandera = validarPreguntasPorPanel(jPanelSec_5);
-            break;
-            case 6:
-                bandera = validarPreguntasPorPanel(jPanelSec_6);
-            break;
-            default:
-                bandera = false;
-            break;
-        }
-        i--;
-        if(bandera){
-            try {
-                if (i > 0) {
-                    jTabbedPane1.setSelectedIndex(--i);
-                    index = jTabbedPane1.getSelectedIndex();
-                }
-                generateXML(allComponents);
-            } catch (Exception ex) {
-                Logger.getLogger(EncuestaContexto.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
+//        i--;
+//        if(bandera){
+//            try {
+//                if (i > 0) {
+//                    jTabbedPane1.setSelectedIndex(--i);
+//                    index = jTabbedPane1.getSelectedIndex();
+//                }
+//                generateXML(allComponents);
+//            } catch (Exception ex) {
+//                Logger.getLogger(EncuestaContexto.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//        }
     }//GEN-LAST:event_jButton_AtrasActionPerformed
 
     private void jTabbedPane1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jTabbedPane1StateChanged
@@ -7964,7 +7980,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
                     txt_cedula.setEnabled(false);
                     txt_nombres.setEnabled(false);
                     txt_apellidos.setEnabled(false);
+                    //CAMBIAR VERSION ANTIGUA FCO
                     jButton_activarEncuesta.setText("Editar");
+                    //jButton_activarEncuesta.setVisible(false);
                     if(index > 0){
                         cargarXml();
                     }
@@ -8895,8 +8913,10 @@ public class EncuestaContexto extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_rad_2359ActionPerformed
 
-    /** 
-     * @param args the command line arguments
+    /**
+     * 
+     * @param j
+     * @return 
      */
     public HashMap<String,Component> obtenerComponentesPorPanel(JPanel j) {
         try {
@@ -8923,6 +8943,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
     
     /**
      * 
+     * @param name
+     * @return 
      */
     public Component obtenerComponentePorName(String name) {
         if (allComponents.containsKey(name)) {
@@ -8934,6 +8956,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
     
     /**
      * 
+     * @param name 
      */
     private void limpiaSeleccionRadio(String name){
         switch(name){
@@ -9147,7 +9170,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
             }
         }
     }
-    
+    /**
+     * 
+     */
     public void fileChooser(){
         javax.swing.JFileChooser jF1 = new javax.swing.JFileChooser(); 
         //Creamos el filtro
@@ -9155,7 +9180,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         //Le indicamos el filtro
         jF1.setFileFilter(filtro);
         //Nombre por defecto
-        jF1.setSelectedFile(new File("respuestas.XML"));
+        jF1.setSelectedFile(new File(txt_cedula.getText()+".xml"));
         try{ 
             if(jF1.showSaveDialog(null)==jF1.APPROVE_OPTION){ 
                 ruta = jF1.getSelectedFile().getAbsolutePath();
@@ -9169,6 +9194,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
     }
     /**
      * 
+     * @param inicio
+     * @param fin
+     * @param opcion 
      */
     public void habilitaDeshabilitaComponentesRango(int inicio,int fin, boolean opcion){
         Component componente;
@@ -9190,39 +9218,6 @@ public class EncuestaContexto extends javax.swing.JFrame {
         }
     
     }
-    /**
-     * @param args the command line arguments
-     */
-//    public void obtenerRespuestasPorSeccion(JPanel j) {
-//        try {
-//            Component[] componentes = j.getComponents();
-//            HashMap<String,Component> componentMap = new HashMap<>();
-//            for (int i = 0; i < componentes.length; i++) {
-//                if (componentes[i] instanceof JPanel) {
-//                    componentMap.put(componentes[i].getName(), componentes[i]);
-//                    Component[] componentes1 = ((JPanel)componentes[i]).getComponents();
-//                    for (int a = 0; a < componentes1.length; a++) {
-////                        if(componentes1[a] instanceof JPanel){
-////                            componentMap.put(componentes1[a].getName(), componentes1[a]);
-////                        }
-//                        if(componentes1[a] instanceof JRadioButton){
-//                            componentMap.put(componentes1[a].getName(), componentes1[a]);
-//                        }
-//                        if(componentes1[a] instanceof JCheckBox){
-//                            componentMap.put(componentes1[a].getName(), componentes1[a]);
-//                        }
-//                        if(componentes1[a] instanceof JTextField){
-//                            componentMap.put(componentes1[a].getName(), componentes1[a]);
-//                        }
-//                    }
-//                }
-//            }
-//            generateXML(componentMap);
-//        } catch (Exception ex) {
-//            Logger.getLogger(EncuestaContexto.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//    }
-
      /**
       * 
       * @param respuestas
@@ -9247,9 +9242,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
             org.w3c.dom.Element keyNode1 = document.createElement("SECCION_ACTUAL");
             int aux = index;
             if(aux > ultimaPestaña){
-                keyNode1.setAttribute("INDEX", ""+aux);
+                keyNode1.setAttribute("INDEX", codificador(""+aux,true));
             }else{
-                keyNode1.setAttribute("INDEX", (ultimaPestaña<5)?""+(ultimaPestaña+1):""+(ultimaPestaña));
+                keyNode1.setAttribute("INDEX", (ultimaPestaña<5)?codificador(""+(ultimaPestaña+1),true):codificador(""+(ultimaPestaña),true));
             }
             itemNode1.appendChild(keyNode1);
             raiz.appendChild(itemNode1);
@@ -9257,93 +9252,101 @@ public class EncuestaContexto extends javax.swing.JFrame {
             /*------------------Para registrar el usuario----------------------------------*/
             org.w3c.dom.Element itemNode2 = document.createElement("LOGIN");
             org.w3c.dom.Element keyNode2 = document.createElement("USUARIO");
-            keyNode2.setAttribute("ID", txt_cedula.getText());
-            keyNode2.setAttribute("NOMBRES", txt_nombres.getText());
-            keyNode2.setAttribute("APELLIDOS", txt_apellidos.getText());
+            keyNode2.setAttribute("ID", codificador(txt_cedula.getText(),true));
+            keyNode2.setAttribute("NOMBRES", codificador(txt_nombres.getText(),true));
+            keyNode2.setAttribute("APELLIDOS", codificador(txt_apellidos.getText(),true));
             if(jButton_Sigueinte.getText().equalsIgnoreCase("Finalizar")){
-                keyNode2.setAttribute("FINALIZADO","1");
+                keyNode2.setAttribute("FINALIZADO", codificador("1",true));
             }else{
-                keyNode2.setAttribute("FINALIZADO","0");
+                keyNode2.setAttribute("FINALIZADO", codificador("0",true));
             }
             itemNode2.appendChild(keyNode2);
             raiz.appendChild(itemNode2);
             /*-----------------------------------------------------------------------------*/
             for(Map.Entry<String,Component> b: respuestas.entrySet()){
-                //if(!b.getKey().contains("lbl_")){
+                if(b.getKey() != null){
                     org.w3c.dom.Element keyNode = document.createElement("COMPONENTE");
     //                System.out.println(b.getKey());
-                    keyNode.setAttribute("NAME", b.getKey());
+                    keyNode.setAttribute("NAME", codificador(b.getKey(),true));
                     if(b.getValue() instanceof JPanel){
-                        keyNode.setAttribute("VISIBLE", (((JPanel)b.getValue()).isVisible())?"1":"0");
-                        valor = "jPanel";
+                        keyNode.setAttribute("VISIBLE", (((JPanel)b.getValue()).isVisible())?codificador("1",true):codificador("0",true));
+                        valor = codificador("jPanel",true);
                     }
                     if(b.getValue() instanceof JRadioButton){
-                        keyNode.setAttribute("ENABLED", (((JRadioButton)b.getValue()).isEnabled())?"1":"0");
-                        keyNode.setAttribute("SELECTED", (((JRadioButton)b.getValue()).isSelected())?"1":"0");
-                        valor = (((JRadioButton)b.getValue()).isSelected())?"1":"0";
+                        keyNode.setAttribute("ENABLED", (((JRadioButton)b.getValue()).isEnabled())?codificador("1",true):codificador("0",true));
+                        keyNode.setAttribute("SELECTED", (((JRadioButton)b.getValue()).isSelected())?codificador("1",true):codificador("0",true));
+                        keyNode.setAttribute("TYPE",codificador("1",true));
+                        valor = (((JRadioButton)b.getValue()).isSelected())?codificador("1",true):codificador("0",true);
                     }
                     if(b.getValue() instanceof JCheckBox){
-                        keyNode.setAttribute("ENABLED", (((JCheckBox)b.getValue()).isEnabled())?"1":"0");
-                        keyNode.setAttribute("SELECTED", (((JCheckBox)b.getValue()).isSelected())?"1":"0");
-                        valor = (((JCheckBox)b.getValue()).isSelected())?"1":"0";
+                        keyNode.setAttribute("ENABLED", (((JCheckBox)b.getValue()).isEnabled())?codificador("1",true):codificador("0",true));
+                        keyNode.setAttribute("SELECTED", (((JCheckBox)b.getValue()).isSelected())?codificador("1",true):codificador("0",true));
+                        keyNode.setAttribute("TYPE",codificador("1",true));
+                        valor = (((JCheckBox)b.getValue()).isSelected())?codificador("1",true):codificador("0",true);
                     }
                     if(b.getValue() instanceof JScrollPane){
                         if(((JScrollPane)b.getValue()).getName().equalsIgnoreCase("lista_288")){
                             if(!jList_288.isSelectionEmpty()){
-                                keyNode.setAttribute("ENABLED", (jList_288.isEnabled())?"1":"0");
-                                keyNode.setAttribute("SELECTED", !(jList_288.isSelectionEmpty())?"1":"0");
-                                keyNode.setAttribute("INDEX", (""+jList_288.getSelectedIndex()));
-                                keyNode.setAttribute("VALUE", codigoPaises[jList_288.getSelectedIndex()]);
-                                valor = jList_288.getSelectedValue();
+                                keyNode.setAttribute("ENABLED", (jList_288.isEnabled())?codificador("1",true):codificador("0",true));
+                                keyNode.setAttribute("SELECTED", !(jList_288.isSelectionEmpty())?codificador("1",true):codificador("0",true));
+                                keyNode.setAttribute("INDEX", codificador((""+jList_288.getSelectedIndex()),true));
+                                keyNode.setAttribute("VALUE", codificador(codigoPaises[jList_288.getSelectedIndex()],true));
+                                keyNode.setAttribute("TYPE",codificador("1",true));
+                                //valor = jList_288.getSelectedValue();
                             }
                         }
                         if(((JScrollPane)b.getValue()).getName().equalsIgnoreCase("lista_356")){
                             if(!jList_356.isSelectionEmpty()){
-                                keyNode.setAttribute("ENABLED", (jList_356.isEnabled())?"1":"0");
-                                keyNode.setAttribute("SELECTED", !(jList_356.isSelectionEmpty())?"1":"0");
-                                keyNode.setAttribute("INDEX", (""+jList_356.getSelectedIndex()));
-                                keyNode.setAttribute("VALUE", codigoLenguaIndigenaPadre[jList_356.getSelectedIndex()]);
-                                valor = jList_356.getSelectedValue();
+                                keyNode.setAttribute("ENABLED", (jList_356.isEnabled())?codificador("1",true):codificador("0",true));
+                                keyNode.setAttribute("SELECTED", !(jList_356.isSelectionEmpty())?codificador("1",true):codificador("0",true));
+                                keyNode.setAttribute("INDEX", codificador((""+jList_356.getSelectedIndex()),true));
+                                keyNode.setAttribute("VALUE", codificador(codigoLenguaIndigenaPadre[jList_356.getSelectedIndex()],true));
+                                keyNode.setAttribute("TYPE",codificador("1",true));
+                                //valor = jList_356.getSelectedValue();
                             }
                         }
                         if(((JScrollPane)b.getValue()).getName().equalsIgnoreCase("lista_358")){
                             if(!jList_358.isSelectionEmpty()){
-                                keyNode.setAttribute("ENABLED", (jList_358.isEnabled())?"1":"0");
-                                keyNode.setAttribute("SELECTED", !(jList_358.isSelectionEmpty())?"1":"0");
-                                keyNode.setAttribute("INDEX", (""+jList_358.getSelectedIndex()));
-                                keyNode.setAttribute("VALUE", codigoLenguaIndigenaMadre[jList_358.getSelectedIndex()]);
-                                valor = jList_358.getSelectedValue();
+                                keyNode.setAttribute("ENABLED", (jList_358.isEnabled())?codificador("1",true):codificador("0",true));
+                                keyNode.setAttribute("SELECTED", !(jList_358.isSelectionEmpty())?codificador("1",true):codificador("0",true));
+                                keyNode.setAttribute("INDEX",codificador((""+jList_358.getSelectedIndex()),true));
+                                keyNode.setAttribute("VALUE", codificador(codigoLenguaIndigenaMadre[jList_358.getSelectedIndex()],true));
+                                keyNode.setAttribute("TYPE",codificador("1",true));
+                                //valor = jList_358.getSelectedValue();
                             }
                         }
                         if(((JScrollPane)b.getValue()).getName().equalsIgnoreCase("lista_360")){
                             if(!jList_360.isSelectionEmpty()){
-                                keyNode.setAttribute("ENABLED", (jList_360.isEnabled())?"1":"0");
-                                keyNode.setAttribute("SELECTED", !(jList_360.isSelectionEmpty())?"1":"0");
-                                keyNode.setAttribute("INDEX", (""+jList_360.getSelectedIndex()));
-                                keyNode.setAttribute("VALUE", codigoLenguaExtranjeraPadre[jList_360.getSelectedIndex()]);
-                                valor = jList_360.getSelectedValue();
+                                keyNode.setAttribute("ENABLED", (jList_360.isEnabled())?codificador("1",true):codificador("0",true));
+                                keyNode.setAttribute("SELECTED", !(jList_360.isSelectionEmpty())?codificador("1",true):codificador("0",true));
+                                keyNode.setAttribute("INDEX", codificador((""+jList_360.getSelectedIndex()),true));
+                                keyNode.setAttribute("VALUE", codificador(codigoLenguaExtranjeraPadre[jList_360.getSelectedIndex()],true));
+                                keyNode.setAttribute("TYPE",codificador("1",true));
+                                //valor = jList_360.getSelectedValue();
                             }
                         }
                         if(((JScrollPane)b.getValue()).getName().equalsIgnoreCase("lista_362")){
                             if(!jList_362.isSelectionEmpty()){
-                                keyNode.setAttribute("ENABLED", (jList_362.isEnabled())?"1":"0");
-                                keyNode.setAttribute("SELECTED", !(jList_362.isSelectionEmpty())?"1":"0");
-                                keyNode.setAttribute("INDEX", (""+jList_362.getSelectedIndex()));
-                                keyNode.setAttribute("VALUE", codigoLenguaExtrajeraMadre[jList_362.getSelectedIndex()]);
-                                valor = jList_362.getSelectedValue();
+                                keyNode.setAttribute("ENABLED", (jList_362.isEnabled())?codificador("1",true):codificador("0",true));
+                                keyNode.setAttribute("SELECTED", !(jList_362.isSelectionEmpty())?codificador("1",true):codificador("0",true));
+                                keyNode.setAttribute("INDEX", codificador((""+jList_362.getSelectedIndex()),true));
+                                keyNode.setAttribute("VALUE", codificador(codigoLenguaExtrajeraMadre[jList_362.getSelectedIndex()],true));
+                                keyNode.setAttribute("TYPE",codificador("1",true));
+                               //valor = jList_362.getSelectedValue();
                             }
                         }
                     }
                     if(b.getValue() instanceof JTextField){
-                        keyNode.setAttribute("ENABLED", (((JTextField)b.getValue()).isEnabled())?"1":"0");
-                        keyNode.setAttribute("VALUE", ((JTextField)b.getValue()).getText());
-                        valor = ((JTextField)b.getValue()).getText();
+                        keyNode.setAttribute("ENABLED", (((JTextField)b.getValue()).isEnabled())?codificador("1",true):codificador("0",true));
+                        keyNode.setAttribute("VALUE", codificador(((JTextField)b.getValue()).getText(),true));
+                        keyNode.setAttribute("TYPE",codificador("1",true));
+                        valor = codificador(((JTextField)b.getValue()).getText(),true);
                     }
                     Text nodeKeyValue = document.createTextNode(valor);
                     keyNode.appendChild(nodeKeyValue);      
                     itemNode.appendChild(keyNode);
                     raiz.appendChild(itemNode);
-               // }
+                }
             }
             //Generate XML
             Source source = new DOMSource(document);
@@ -9383,7 +9386,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
             Element secciones = (Element) listaSecciones.get(0);
             List hijosSecciones = secciones.getChildren();
             Element seccionActual = (Element)hijosSecciones.get(0);
-            jTabbedPane1.setSelectedIndex(Integer.parseInt(seccionActual.getAttributeValue("INDEX")));
+            jTabbedPane1.setSelectedIndex(Integer.parseInt(codificador(seccionActual.getAttributeValue("INDEX"),false)));
             index = jTabbedPane1.getSelectedIndex();
             ultimaPestaña = index;
             bloqueaPestanias(index);
@@ -9395,14 +9398,16 @@ public class EncuestaContexto extends javax.swing.JFrame {
             Element loginActual = (Element)hijosLogin.get(0);
             if(!loginActual.getAttributeValue("ID").isEmpty()){
                 if(!banderaEditar){
-                    txt_cedula.setText(loginActual.getAttributeValue("ID"));
+                    txt_cedula.setText(codificador(loginActual.getAttributeValue("ID"),false));
                     txt_cedula.setEnabled(false);
-                    txt_nombres.setText(loginActual.getAttributeValue("NOMBRES"));
+                    txt_nombres.setText(codificador(loginActual.getAttributeValue("NOMBRES"),false));
                     txt_nombres.setEnabled(false);
-                    txt_apellidos.setText(loginActual.getAttributeValue("APELLIDOS"));
+                    txt_apellidos.setText(codificador(loginActual.getAttributeValue("APELLIDOS"),false));
                     txt_apellidos.setEnabled(false);
-                    archivoGenerado = loginActual.getAttributeValue("FINALIZADO");
+                    archivoGenerado = codificador(loginActual.getAttributeValue("FINALIZADO"),false);
+                    //CAMBIAR VERSION ANTIGUA FCO
                     jButton_activarEncuesta.setText("Editar");
+                    //jButton_activarEncuesta.setVisible(false);
                 }
             }else{
                 bloqueaPestanias(-1);
@@ -9422,52 +9427,52 @@ public class EncuestaContexto extends javax.swing.JFrame {
 //                {
 //                System.out.println(componente.getAttributeValue("NAME"));
 //                }
-                Component componenteGui = obtenerComponentePorName(componente.getAttributeValue("NAME"));
+                Component componenteGui = obtenerComponentePorName(codificador(componente.getAttributeValue("NAME"),false));
                 if(componenteGui instanceof JPanel){
-                    ((JPanel)componenteGui).setVisible(componente.getAttributeValue("VISIBLE").equalsIgnoreCase("1"));
+                    ((JPanel)componenteGui).setVisible(codificador(componente.getAttributeValue("VISIBLE"),false).equalsIgnoreCase("1"));
                 }
                 if(componenteGui instanceof JRadioButton){
-                    ((JRadioButton)componenteGui).setEnabled(componente.getAttributeValue("ENABLED").equalsIgnoreCase("1"));
-                    ((JRadioButton)componenteGui).setSelected(componente.getAttributeValue("SELECTED").equalsIgnoreCase("1"));
+                    ((JRadioButton)componenteGui).setEnabled(codificador(componente.getAttributeValue("ENABLED"),false).equalsIgnoreCase("1"));
+                    ((JRadioButton)componenteGui).setSelected(codificador(componente.getAttributeValue("SELECTED"),false).equalsIgnoreCase("1"));
                 }
                 if(componenteGui instanceof JCheckBox){
-                    ((JCheckBox)componenteGui).setEnabled(componente.getAttributeValue("ENABLED").equalsIgnoreCase("1"));
-                    ((JCheckBox)componenteGui).setSelected(componente.getAttributeValue("SELECTED").equalsIgnoreCase("1"));
+                    ((JCheckBox)componenteGui).setEnabled(codificador(componente.getAttributeValue("ENABLED"),false).equalsIgnoreCase("1"));
+                    ((JCheckBox)componenteGui).setSelected(codificador(componente.getAttributeValue("SELECTED"),false).equalsIgnoreCase("1"));
                 }
                 if(componenteGui instanceof JTextField){
-                    ((JTextField)componenteGui).setEnabled(componente.getAttributeValue("ENABLED").equalsIgnoreCase("1"));
+                    ((JTextField)componenteGui).setEnabled(codificador(componente.getAttributeValue("ENABLED"),false).equalsIgnoreCase("1"));
                     if(componente.getContent().size()>0)
-                        ((JTextField)componenteGui).setText(componente.getAttributeValue("VALUE").toString());
+                        ((JTextField)componenteGui).setText(codificador(componente.getAttributeValue("VALUE"),false));
                 }
                 if(componenteGui instanceof JScrollPane){
                     if(((JScrollPane)componenteGui).getName().equalsIgnoreCase("lista_288") && jList_288 != null){
                         if(componente.getAttributeValue("ENABLED") != null && componente.getAttributeValue("INDEX") != null){
-                            jList_288.setEnabled(componente.getAttributeValue("ENABLED").equalsIgnoreCase("1"));
-                            jList_288.setSelectedIndex(Integer.parseInt(componente.getAttributeValue("INDEX")));
+                            jList_288.setEnabled(codificador(componente.getAttributeValue("ENABLED"),false).equalsIgnoreCase("1"));
+                            jList_288.setSelectedIndex(Integer.parseInt(codificador(componente.getAttributeValue("INDEX"),false)));
                         }
                     }
                     if(((JScrollPane)componenteGui).getName().equalsIgnoreCase("lista_356") && jList_356 != null){
                         if(componente.getAttributeValue("ENABLED") != null && componente.getAttributeValue("INDEX") != null){
-                            jList_356.setEnabled(componente.getAttributeValue("ENABLED").equalsIgnoreCase("1"));
-                            jList_356.setSelectedIndex(Integer.parseInt(componente.getAttributeValue("INDEX")));
+                            jList_356.setEnabled(codificador(componente.getAttributeValue("ENABLED"),false).equalsIgnoreCase("1"));
+                            jList_356.setSelectedIndex(Integer.parseInt(codificador(componente.getAttributeValue("INDEX"),false)));
                         }
                     }
                     if(((JScrollPane)componenteGui).getName().equalsIgnoreCase("lista_358") && jList_358 != null){
                         if(componente.getAttributeValue("ENABLED") != null && componente.getAttributeValue("INDEX") != null){
-                            jList_358.setEnabled(componente.getAttributeValue("ENABLED").equalsIgnoreCase("1"));
-                            jList_358.setSelectedIndex(Integer.parseInt(componente.getAttributeValue("INDEX")));
+                            jList_358.setEnabled(codificador(componente.getAttributeValue("ENABLED"),false).equalsIgnoreCase("1"));
+                            jList_358.setSelectedIndex(Integer.parseInt(codificador(componente.getAttributeValue("INDEX"),false)));
                         }
                     }
                     if(((JScrollPane)componenteGui).getName().equalsIgnoreCase("lista_360") && jList_360 != null){
                         if(componente.getAttributeValue("ENABLED") != null && componente.getAttributeValue("INDEX") != null){
-                            jList_360.setEnabled(componente.getAttributeValue("ENABLED").equalsIgnoreCase("1"));
-                            jList_360.setSelectedIndex(Integer.parseInt(componente.getAttributeValue("INDEX")));
+                            jList_360.setEnabled(codificador(componente.getAttributeValue("ENABLED"),false).equalsIgnoreCase("1"));
+                            jList_360.setSelectedIndex(Integer.parseInt(codificador(componente.getAttributeValue("INDEX"),false)));
                         }
                     }
                     if(((JScrollPane)componenteGui).getName().equalsIgnoreCase("lista_362") && jList_362 != null){
                         if(componente.getAttributeValue("ENABLED") != null && componente.getAttributeValue("INDEX") != null){
-                            jList_362.setEnabled(componente.getAttributeValue("ENABLED").equalsIgnoreCase("1"));
-                            jList_362.setSelectedIndex(Integer.parseInt(componente.getAttributeValue("INDEX")));
+                            jList_362.setEnabled(codificador(componente.getAttributeValue("ENABLED"),false).equalsIgnoreCase("1"));
+                            jList_362.setSelectedIndex(Integer.parseInt(codificador(componente.getAttributeValue("INDEX"),false)));
                         }
                     }
                 }
@@ -9477,8 +9482,10 @@ public class EncuestaContexto extends javax.swing.JFrame {
         }
     }
     
-    /** 
-     * @param args the command line arguments
+    /**
+     * 
+     * @param j
+     * @return 
      */
     public boolean validarPreguntasPorPanel(JPanel j) {
         try {
@@ -9596,6 +9603,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
     }
     /**
      * 
+     * @param evt
+     * @param max 
      */
     private void soloNumeros(java.awt.event.KeyEvent evt, int max){
         char c = evt.getKeyChar(); 
@@ -9611,8 +9620,12 @@ public class EncuestaContexto extends javax.swing.JFrame {
         }
     }
      /**
-     * 
-     */
+      * 
+      * @param evt
+      * @param max
+      * @param inicio
+      * @param fin 
+      */
     private void soloNumerosRango(java.awt.event.KeyEvent evt, int max,int inicio,int fin){
         char c = evt.getKeyChar();
         int valor = 1; 
@@ -9638,6 +9651,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
     }
     /**
      * 
+     * @param evt
+     * @param max 
      */
     private void soloLetras(java.awt.event.KeyEvent evt, int max){
         String caracteresPermitidos = "ÁÉÍÓÚÑÄËÏÖÜ áéíóúñäëïöü";
@@ -9657,6 +9672,71 @@ public class EncuestaContexto extends javax.swing.JFrame {
         }
     }
     /**
+     * 
+     * @param cadena
+     * @param opcion
+     * @return 
+     */
+    private String codificador(String cadena,boolean opcion){
+	String access="";
+	List<String> simbol = new ArrayList();
+        simbol.add("63");simbol.add("43");simbol.add("23");simbol.add("03");
+        simbol.add("82");simbol.add("62");simbol.add("42");simbol.add("22");
+        simbol.add("02");simbol.add("81");simbol.add("61");simbol.add("41");
+        simbol.add("21");simbol.add("01");simbol.add("11");simbol.add("31");
+        simbol.add("51");simbol.add("71");simbol.add("91");simbol.add("12");
+        simbol.add("32");simbol.add("52");simbol.add("72");simbol.add("92");
+        simbol.add("13");simbol.add("33");simbol.add("53");simbol.add("74");
+        simbol.add("94");simbol.add("15");simbol.add("35");simbol.add("55");
+        simbol.add("75");simbol.add("95");simbol.add("16");simbol.add("36");
+        simbol.add("56");simbol.add("76");simbol.add("96");simbol.add("17");
+        simbol.add("37");simbol.add("27");simbol.add("07");simbol.add("86");
+        simbol.add("66");simbol.add("46");simbol.add("26");simbol.add("06");
+        simbol.add("85");simbol.add("65");simbol.add("45");simbol.add("25");
+        simbol.add("05");simbol.add("84");simbol.add("~[");simbol.add("$;");
+        simbol.add(".-");simbol.add(",]");simbol.add("||");simbol.add("({");
+        simbol.add("/}");simbol.add("*~");simbol.add(")%");simbol.add("{~");
+        simbol.add("!)");simbol.add(":$");simbol.add("%.");simbol.add("~,");
+        simbol.add("}/");simbol.add("{*");simbol.add("[(");simbol.add("]!");
+        simbol.add(";:");simbol.add("-~");simbol.add("~~");simbol.add("..");
+        simbol.add("--");simbol.add(",,");simbol.add("]]");simbol.add("((");
+        simbol.add("{{");
+	List<String> letras  = new ArrayList();
+        letras.add("a");letras.add("b");letras.add("c");letras.add("d");letras.add("e");
+        letras.add("f");letras.add("g");letras.add("h");letras.add("i");letras.add("j");
+        letras.add("k");letras.add("l");letras.add("m");letras.add("n");letras.add("ñ");
+        letras.add("o");letras.add("p");letras.add("q");letras.add("r");letras.add("s");
+        letras.add("t");letras.add("u");letras.add("v");letras.add("w");letras.add("x");
+        letras.add("y");letras.add("z");letras.add("A");letras.add("B");letras.add("C");
+        letras.add("D");letras.add("E");letras.add("F");letras.add("G");letras.add("H");
+        letras.add("I");letras.add("J");letras.add("K");letras.add("L");letras.add("M");
+        letras.add("N");letras.add("Ñ");letras.add("O");letras.add("P");letras.add("Q");
+        letras.add("R");letras.add("S");letras.add("T");letras.add("U");letras.add("V");
+        letras.add("W");letras.add("X");letras.add("Y");letras.add("Z");letras.add("1");
+        letras.add("2");letras.add("3");letras.add("4");letras.add("5");letras.add("6");
+        letras.add("7");letras.add("8");letras.add("9");letras.add("0");letras.add("á");
+        letras.add("é");letras.add("í");letras.add("ó");letras.add("ú");letras.add("Á");
+        letras.add("É");letras.add("Í");letras.add("Ó");letras.add("Ú");letras.add(" ");
+        letras.add("Ä");letras.add("Ë");letras.add("Ï");letras.add("Ö");letras.add("Ü");
+        letras.add("_");
+	List<String> cadenaArray = Arrays.asList(cadena.split(""));
+	if(opcion)
+	{
+            for(int i=1;i<cadenaArray.size();i++)
+            {
+                access+=simbol.get(letras.indexOf(cadenaArray.get(i)));
+            }
+	}
+        else if((cadenaArray.size()/2)==Math.round(cadenaArray.size()/2))
+	{
+            for(int i=1;i<cadenaArray.size();i+=2)
+            {
+                access+=letras.get(simbol.indexOf(cadenaArray.get(i)+cadenaArray.get(i+1)));
+            }
+	}
+	return access;
+}
+    /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -9666,12 +9746,13 @@ public class EncuestaContexto extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Windows".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
+                javax.swing.UIManager.setLookAndFeel(javax.swing.UIManager.getSystemLookAndFeelClassName());
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Windows".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(EncuestaContexto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
@@ -9885,6 +9966,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel86;
     private javax.swing.JLabel jLabel87;
     private javax.swing.JLabel jLabel88;
+    private javax.swing.JLabel jLabel89;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel_282;
     private javax.swing.JLabel jLabel_283;
