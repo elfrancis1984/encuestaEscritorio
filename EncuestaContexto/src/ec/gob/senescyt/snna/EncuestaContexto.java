@@ -12,7 +12,9 @@ import java.awt.Event;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -152,7 +154,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
             /*----------Para registrar la seccion actual----------------------------------*/
             org.w3c.dom.Element itemNode1 = document.createElement("SECCIONES");
             org.w3c.dom.Element keyNode1 = document.createElement("SECCION_ACTUAL");
-            keyNode1.setAttribute("INDEX", "0");
+            keyNode1.setAttribute("INDEX", "{~");
             itemNode1.appendChild(keyNode1);
             raiz.appendChild(itemNode1);
             /*-----------------------------------------------------------------------------*/
@@ -162,14 +164,17 @@ public class EncuestaContexto extends javax.swing.JFrame {
             keyNode2.setAttribute("ID", "");
             keyNode2.setAttribute("NOMBRES", "");
             keyNode2.setAttribute("APELLIDOS", "");
-            keyNode2.setAttribute("FINALIZADO","0");
+            keyNode2.setAttribute("FINALIZADO","{~");
             itemNode2.appendChild(keyNode2);
             raiz.appendChild(itemNode);
             raiz.appendChild(itemNode2);
             //Generate XML
             Source source = new DOMSource(document);
             //Indicamos donde lo queremos almacenar
-            Result result = new StreamResult(new java.io.File("./xml/"+fileConfig+".xml")); //nombre del archivo
+            File f = new java.io.File("./xml/"+fileConfig+".xml");
+            f.setReadable(true);
+            f.setWritable(true);
+            Result result = new StreamResult(f); //nombre del archivo
             //Result result = new StreamResult(new java.io.File("./src/ec/gob/senescyt/snna/xml/"+fileConfig+".xml"));
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
             transformer.transform(source, result);
@@ -7752,7 +7757,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
                         .addGap(26, 26, 26)
                         .addComponent(jButton_activarEncuesta))
                     .addGroup(jPanel_DatosPersonalesLayout.createSequentialGroup()
-                        .addGap(7, 7, 7)
+                        .addGap(0, 0, 0)
                         .addGroup(jPanel_DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel20)
                             .addComponent(txt_cedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -7764,7 +7769,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
                         .addGroup(jPanel_DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txt_apellidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel24))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, 0))
         );
 
         jLabel89.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -7799,17 +7804,17 @@ public class EncuestaContexto extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(7, 7, 7)
+                .addGap(0, 0, 0)
                 .addComponent(jLabel89)
                 .addGap(0, 0, 0)
                 .addComponent(jPanel_DatosPersonales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(0, 0, 0)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 510, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton_Sigueinte)
                     .addComponent(jButton_Atras))
-                .addGap(10, 10, 10))
+                .addGap(3, 3, 3))
         );
 
         pack();
@@ -8003,7 +8008,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_activarEncuestaActionPerformed
 
     private void txt_cedulaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_cedulaKeyTyped
-       soloNumeros(evt,10);
+       //soloNumeros(evt,10);
+       soloLetrasNumeros(evt,10);
     }//GEN-LAST:event_txt_cedulaKeyTyped
 
     private void txt_nombresKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_nombresKeyTyped
@@ -9351,12 +9357,18 @@ public class EncuestaContexto extends javax.swing.JFrame {
             //Generate XML
             Source source = new DOMSource(document);
             //Indicamos donde lo queremos almacenar
-            Result result = new StreamResult(new java.io.File("./xml/"+fileConfig+".xml")); //nombre del archivo
+            File archivo = new java.io.File("./xml/"+fileConfig+".xml");
+            archivo.setReadable(true);
+            archivo.setWritable(true);
+            Result result = new StreamResult(archivo); //nombre del archivo
             //Result result = new StreamResult(new java.io.File("./src/ec/gob/senescyt/snna/xml/"+fileConfig+".xml"));
             Transformer transformer = TransformerFactory.newInstance().newTransformer();
             transformer.transform(source, result);
             if(encuestaTerminada){
-                Result resultFinal = new StreamResult(new java.io.File(ruta)); //nombre del archivo
+                File archivoFinal = new java.io.File(ruta);
+                archivo.setReadable(true);
+                archivo.setReadOnly();
+                Result resultFinal = new StreamResult(archivoFinal); //nombre del archivo
                 Transformer transformerFinal = TransformerFactory.newInstance().newTransformer();
                 transformerFinal.transform(source, resultFinal);
                 encuestaTerminada = false;
@@ -9374,6 +9386,17 @@ public class EncuestaContexto extends javax.swing.JFrame {
         SAXBuilder builder = new SAXBuilder();
         //File xmlFile = new File( "./src/ec/gob/senescyt/snna/xml/"+fileConfig+".xml" );
         File xmlFile = new File( "./xml/"+fileConfig+".xml" );
+        BufferedWriter bw;
+        try {
+            if(!xmlFile.exists()){
+                bw = new BufferedWriter(new FileWriter(xmlFile));
+                bw.write("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><config><LOGIN><USUARIO ID=\"\" NOMBRES=\"\" APELLIDOS=\"\" FINALIZADO=\"{~\"/></LOGIN><SECCIONES><SECCION_ACTUAL INDEX=\"{~\"/></SECCIONES><LISTA_RESPUESTAS></LISTA_RESPUESTAS></config>");
+                bw.close();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
         try
         {
             //Se crea el documento a traves del archivo
@@ -9656,6 +9679,28 @@ public class EncuestaContexto extends javax.swing.JFrame {
      */
     private void soloLetras(java.awt.event.KeyEvent evt, int max){
         String caracteresPermitidos = "ÁÉÍÓÚÑÄËÏÖÜ áéíóúñäëïöü";
+        char c = evt.getKeyChar(); 
+        if(((JTextField)evt.getComponent()).getText().length() <= max){
+            if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (caracteresPermitidos.indexOf(c) != -1)){
+                if (Character.isLowerCase(c)) {
+                  evt.setKeyChar(Character.toUpperCase(c));
+                }
+            }else{
+                getToolkit().beep();
+                evt.consume();
+            }
+        }else{
+                getToolkit().beep();
+                evt.consume();
+        }
+    }
+    /**
+     * 
+     * @param evt
+     * @param max 
+     */
+    private void soloLetrasNumeros(java.awt.event.KeyEvent evt, int max){
+        String caracteresPermitidos = "ÁÉÍÓÚÑÄËÏÖÜ áéíóúñäëïöü0123456789";
         char c = evt.getKeyChar(); 
         if(((JTextField)evt.getComponent()).getText().length() <= max){
             if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (caracteresPermitidos.indexOf(c) != -1)){
