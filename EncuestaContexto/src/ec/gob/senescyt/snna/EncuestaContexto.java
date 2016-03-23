@@ -70,25 +70,29 @@ public class EncuestaContexto extends javax.swing.JFrame {
     private String ruta = "";
     private String fileConfig = "config";
     private Integer index = 0;
-    private static String[] paises = {"Canadá","Colombia","Costa rica","Cuba","Chile","Ecuador","Estados unidos","Guatemala","Haití","Honduras","Jamaica","Malvinas islas","México","Nicaragua","Panamá","Paraguay","Perú","Puerto rico","Dominicana, república","El salvador","Trinidad y tobago","Uruguay","Venezuela","Curazao, isla","Bahamas","Barbados","Granada","Guyana","Surinam","Antigua y barbuda","Belice","Dominica","San cristóbal y nevis","Santa lucía","San vicente y las granadinas","Antillas holandesas","Aruba","Bermudas","Guadalupe","Guayana francesa","Caimán, islas","Vírgenes (británicas), islas","Johnston, islas","Martinica","Montserrat isla","Anguila","Turcas y caicos, islas","Vírgenes (de los estados unidos), islas","Marianas del norte, islas","Pacífico, islas administradas por usa","Pacífico, islas del","Samoa americana","Otras naciones de américa","Albania","Alemania","Austria","Bélgica","Bulgaria","Checa, república (checoslovaquia)","Alboran y perejil","Dinamarca","España","Francia","Finlandia","Reino unido (escocia,gran bretaña,inglaterra, gales)","Grecia","Países bajos (holanda)","Hungría","Irlanda","Islandia","Italia","Luxemburgo","Malta","Noruega","Polonia","Portugal","Rumania","Suecia","Suiza","Ucrania","Rusia, federación de (unión soviética)","Yugoslavia (servia de montenegro)","Andorra","Liechtestein","Mónaco","San marino","Vaticano (santa sede), estado de la ciudad del","Gibraltar","Belarusia","Bosnia y herzegovina","Croacia","Eslovenia","Estonia","Groenlandia","Letonia (latvia)","Lituania","Moldavia, república de (moldova)","Macedonia, república de","Eslovaquia","Feroe, islas","Canal, islas (normandas)","Alemania, república democrática","San pedro y miguelón","Bonaire, isla","Territorio británico del oceáno índico","Otras naciones de europa","Armenia","Georgia","Afganistán","Arabia saudita","Myanmar (burma), birmania.","Camboya (cambodia), kampuchea","Corea, república democrática (rpd)","Taiwan, provincia de china (nacionalista)","Filipinas","India","Indonesia","Irak","Irán, república islámica de","Israel","Japón","Jordania","Kuwait","Laos, república democrática (rpd)","Líbano","Malasia","Mongolia","Pakistán","Siria, república arabe","Tailandia","Bahrein","Bangladesh","Bután","Corea del sur, república de","China república popular (pekin)","Chipre","Emiratos árabes unidos","Qatar","Maldivas","Nepal","Omán","Singapur","Sri lanka (ceilan)","Swazilandia","Viet nam del sur","Yemen","Yemen democrático","Brunei darussalam","Turquía","Azerbaijan","Kazajstán","Kirguistán","Tadjikistán","Turkmenistán","Uzbekistán","Zona neutral (palestina)","Hong kong","Macao","Malasia, península de","Otras naciones de asia","Burkina faso (alto volta)","Argelia","Burundi","Camerún","Congo","Etiopía","Gambia","Guinea","Liberia","Libia","Madagascar","Malawi","Mali","Marruecos","Mauritania","Nigeria","Zimbabwe (rhodesia)","Senegal","Sudan","Sudafrica (ciskei)","Sierra leona","Tanzania, (república unida de)","Uganda","Zambia","Benin","Botswana","Centroafricana, república (r.c.a)","Costa de marfil (cote d. Ivoire)","Chad","Egipto","Gabón","Ghana","Guinea -bissau","Guinea ecuatorial","Kenia","Lesotho","Mauricio","Mozambique","Mayotte","Niger","Rwanda","Seychelles","Sahara occidental","Somalia","Santo tome y principe","Togo","Tunez","Zaire ( república democrática del congo)","Angola","Cabo verde","Comoras","Dyibuti","Namibia","Eritrea","Morocco","Reunión","Santa elena","Otras naciones de äfrica","Australia","Nueva zelandia","Samoa occidental","Fiji","Papua nueva guinea","Tonga","Palau (belau) islas","Kiribati","Marshall, islas","Micronesia, estados federados de","Nauru","Salomón islas","Tuvalu","Vanuato","Guam","Cocos (keeling), islas","Cook, islas","Navidad (christmas), isla","Midway, islas","Niue, isla","Norfolk, isla","Nueva caledonia","Pitcairn, isla","Polinesia francesa","Timor del este","Tokelau","Wake, islas","Wallis y fotuna, islas","Cantón y enderbury, islas","Otras naciones de oceanía","Sin especificar"};
-    private static String[] codigoPaises = {"1836","1837","1838","1839","1840","1841","1842","1843","1844","1845","1846","1847","1848","1849","1850","1851","1852","1853","1854","1855","1856","1857","1858","1859","1860","1861","1862","1863","1864","1865","1866","1867","1868","1869","1870","1871","1872","1873","1874","1875","1876","1877","1878","1879","1880","1881","1882","1883","1884","1885","1886","1887","1888","1889","1890","1891","1892","1893","1894","1895","1896","1897","1898","1899","1900","1901","1902","1903","1904","1905","1906","1907","1908","1909","1910","1911","1912","1913","1914","1915","1916","1917","1918","1919","1920","1921","1922","1923","1924","1925","1926","1927","1928","1929","1930","1931","1932","1933","1934","1935","1936","1937","1938","1939","1940","1941","1942","1943","1944","1945","1946","1947","1948","1949","1950","1951","1952","1953","1954","1955","1956","1957","1958","1959","1960","1961","1962","1963","1964","1965","1966","1967","1968","1969","1970","1971","1972","1973","1974","1975","1976","1977","1978","1979","1980","1981","1982","1983","1984","1985","1986","1987","1988","1989","1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025","2026","2027","2028","2029","2030","2031","2032","2033","2034","2035","2036","2037","2038","2039","2040","2041","2042","2043","2044","2045","2046","2047","2048","2049","2050","2051","2052","2053","2054","2055","2056","2057","2058","2059","2060","2061","2062","2063","2064","2065","2066","2067","2068","2069","2070","2071","2072","2073","2074","2075","2076","2077","2078","2079","2080","2081","2082","2083","2084"};
+    private static String[] paises = {"Afganistán","Albania","Alboran y perejil","Alemania","Alemania, república democrática","Andorra","Angola","Anguila","Antigua y barbuda","Antillas holandesas","Apátrida","Arabia saudita","Argelia","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrein","Bangladesh","Barbados","Belarusia","Bélgica","Belice","Benin","Bermudas","Bolivia","Bonaire, isla","Bosnia y herzegovina","Botswana","Brasil","Brunei darussalam","Bulgaria","Burkina faso (alto volta)","Burundi","Bután","Cabo verde","Caimán, islas","Camboya (cambodia), kampuchea","Camerún","Canadá","Canal, islas (normandas)","Cantón y enderbury, islas","Centroafricana, república (r.c.a)","Chad","Checa, república (checoslovaquia)","Chile","China república popular (pekin)","Chipre","Cocos (keeling), islas","Colombia","Comoras","Congo","Cook, islas","Corea del sur, república de","Corea, república democrática (rpd)","Costa de marfil (cote d. Ivoire)","Costa rica","Croacia","Cuba","Curazao, isla","Dinamarca","Dominica","Dominicana, república","Dyibuti","Ecuador","Egipto","El salvador","Emiratos árabes unidos","Eritrea","Eslovaquia","Eslovenia","España","Estados unidos","Estonia","Etiopía","Feroe, islas","Fiji","Filipinas","Finlandia","Francia","Gabón","Gambia","Georgia","Ghana","Gibraltar","Granada","Grecia","Groenlandia","Guadalupe","Guam","Guatemala","Guayana francesa","Guinea","Guinea -bissau","Guinea ecuatorial","Guyana","Haití","Honduras","Hong kong","Hungría","India","Indonesia","Irak","Irán, república islámica de","Irlanda","Islandia","Israel","Italia","Jamaica","Japón","Johnston, islas","Jordania","Kazajstán","Kenia","Kirguistán","Kiribati","Kuwait","Laos, república democrática (rpd)","Lesotho","Letonia (latvia)","Líbano","Liberia","Libia","Liechtestein","Lituania","Luxemburgo","Macao","Macedonia, república de","Madagascar","Malasia","Malasia, península de","Malawi","Maldivas","Mali","Malta","Malvinas islas","Marianas del norte, islas","Marruecos","Marshall, islas","Martinica","Mauricio","Mauritania","Mayotte","México","Micronesia, estados federados de","Midway, islas","Moldavia, república de (moldova)","Mónaco","Mongolia","Montserrat isla","Morocco","Mozambique","Myanmar (burma), birmania.","Namibia","Nauru","Navidad (christmas), isla","Nepal","Nicaragua","Niger","Nigeria","Niue, isla","Norfolk, isla","Noruega","Nueva caledonia","Nueva zelandia","Omán","Otras naciones de äfrica","Otras naciones de américa","Otras naciones de asia","Otras naciones de europa","Otras naciones de oceanía","Pacífico, islas administradas por usa","Pacífico, islas del","Países bajos (holanda)","Pakistán","Palau (belau) islas","Panamá","Papua nueva guinea","Paraguay","Perú","Pitcairn, isla","Polinesia francesa","Polonia","Portugal","Puerto rico","Qatar","Reino unido (escocia,gran bretaña,inglaterra, gales)","Reunión","Rumania","Rusia, federación de (unión soviética)","Rwanda","Sahara occidental","Salomón islas","Samoa americana","Samoa occidental","San cristóbal y nevis","San marino","San pedro y miguelón","San vicente y las granadinas","Santa elena","Santa lucía","Santo tome y principe","Senegal","Seychelles","Sierra leona","Sin especificar","Singapur","Siria, república arabe","Somalia","Sri lanka (ceilan)","Sudafrica (ciskei)","Sudan","Suecia","Suiza","Surinam","Swazilandia","Tadjikistán","Tailandia","Taiwan, provincia de china (nacionalista)","Tanzania, (república unida de)","Territorio británico del oceáno índico","Timor del este","Togo","Tokelau","Tonga","Trinidad y tobago","Tunez","Turcas y caicos, islas","Turkmenistán","Turquía","Tuvalu","Ucrania","Uganda","Uruguay","Uzbekistán","Vanuato","Vaticano (santa sede), estado de la ciudad del","Venezuela","Viet nam del sur","Vírgenes (británicas), islas","Vírgenes (de los estados unidos), islas","Wake, islas","Wallis y fotuna, islas","Yemen","Yemen democrático","Yugoslavia (servia de montenegro)","Zaire ( república democrática del congo)","Zambia","Zimbabwe (rhodesia)","Zona neutral (palestina)"};
+    private static String[] codigoPaises = {"1944","1889","1895","1890","1937","1918","2044","1881","1865","1871","2832","1945","1997","2833","1942","1872","2054","1891","1985","1860","1966","1967","1861","1924","1892","1866","2020","1873","2834","1939","1925","2021","2835","1983","1893","1996","1998","1968","2045","1876","1947","1999","1836","1936","2082","2022","2024","1894","1840","1970","1971","2069","1837","2046","2000","2070","1969","1948","2023","1838","1926","1839","1859","1896","1867","1854","2047","1841","2025","1855","1972","2049","1934","1927","1897","1842","1928","2001","1935","2057","1950","1899","1898","2026","2002","1943","2027","1923","1862","1901","1929","1874","2068","1843","1875","2003","2028","2029","1863","1844","1845","1992","1903","1951","1952","1953","1954","1904","1905","1955","1906","1846","1956","1878","1957","1986","2030","1987","2061","1958","1959","2031","1930","1960","2004","2005","1919","1931","1907","1993","1933","2006","1961","1994","2007","1974","2008","1908","1847","1884","2009","2062","1879","2032","2010","2034","1848","2063","2072","1932","1920","1962","1880","2050","2033","1946","2048","2064","2071","1975","1849","2035","2011","2073","2074","1909","2075","2055","1976","2053","1888","1995","1941","2083","1885","1886","1902","1963","2060","1850","2058","1851","1852","2076","2077","1910","1911","1853","1973","1900","2051","1912","1916","2036","2038","2065","1887","2056","1868","1921","1938","1870","2052","1869","2040","2013","2037","2016","2084","1977","1964","2039","1978","2015","2014","1913","1914","1864","1979","1988","1965","1949","2017","1940","2078","2041","2079","2059","1856","2042","1882","1989","1984","2066","1915","2018","1857","1990","2067","1922","1858","1980","1877","1883","2080","2081","1981","1982","1917","2043","2019","2012","1991"};
     
-    private static String[] lenguaExtranjeraPadre = {"Achuar","Afrikáans","Aguaruna","Aimara","Albanés","Alemán","Amarakaeri","Amárico","Amuesha","Árabe","Araona","Armenio","Asháninca","Aymara","Azerí","Baure","Bengalí","Bésiro","Bielorruso","Birmano","Bislama","Bora","Bosnio","Búlgaro","Candoshi","Canichana","Capanahua","Caquinte","Cashibo-cacataibo","Cashinahua","Catalán","Cauqui","Cavineño","Cayubaba","Chácobo","Chayahuita","Checo","Chicheua","Chimán","Cingalés","Cocama","Comorense","Coreano","Criollo haitiano","Criollo seychellense","Croata","Culina","Danés","Dzongka","Ese ejja","Eslovaco","Esloveno","Estonio","Filipino","Finés","fiyiano","Francés","Georgiano","Griego","Guaraní","Guarasu’we","Guarayu","Hebreo","Hindi","Hiri motu","Huambisa","Huitoto","Húngaro","Indonesio","Indostano fiyiano","Inglés","Irlandés","Islandés","Italiano","Itonama","Jaqaru","Jébero","Jemer","Kazajo","Kirguís","Kiribatiano","Lao","Latín","Leco","Lengua de signos española","lengua de signos neozelandesa","Letón","Lituano","Luxemburgués","Macedonio","Machajuyai-kallawaya","Machiguenga","Machineri","Malayo","Maldivo","malgache","Maltés","Mandarín","Maorí","Maropa","Marshalés","Matsés","Mojeño-ignaciano","Mojeño-trinitario","Moldavo","Mongol","Moré","Mosetén","Movima","Nauruano","Ndebele meridional","Neerlandés","Nepalí","Noruego","Omagua","Pacawara","palaosiano","Pastún","Persa","Polaco","Portugués","Puquina","Quechua","romanche","ruanda","Rumano","Rundi","Ruso","Serbio","Shipibo-conibo","Sirionó","Somalí","Soto meridional","Soto septentrional","Suahili","Suazi","Sueco","Tacana","Tai","Tamil","Tapiete","Tayiko","Tetum","Ticuna","Tigriña","Tok pisin","Tongano","Toromona","Tsonga","Tsuana","Turco","Turcomano","Tuvaluano","Ucraniano","Urarina","urdu","Uru-chipaya","Uzbeko","Venda","Vietnamita","weenhayek","Xosa","Yagua","yaminawa","Yine","Yuki","Yuracaré","Zamuco","Zulú"};
-    private static String[] codigoLenguaExtranjeraPadre = {"2492","2493","2494","2495","2496","2497","2498","2499","2500","2501","2502","2503","2504","2505","2506","2507","2508","2509","2510","2511","2512","2513","2514","2515","2516","2517","2518","2519","2520","2521","2522","2523","2524","2525","2526","2527","2528","2529","2530","2531","2532","2533","2534","2535","2536","2537","2538","2539","2540","2541","2542","2543","2544","2545","2546","2547","2548","2549","2550","2551","2552","2553","2554","2555","2556","2557","2558","2559","2560","2561","2562","2563","2564","2565","2566","2567","2568","2569","2570","2571","2572","2573","2574","2575","2576","2577","2578","2579","2580","2581","2582","2583","2584","2585","2586","2587","2588","2589","2590","2591","2592","2593","2594","2595","2596","2597","2598","2599","2600","2601","2602","2603","2604","2605","2606","2607","2608","2609","2610","2611","2612","2613","2614","2615","2616","2617","2618","2619","2620","2621","2622","2623","2624","2625","2626","2627","2628","2629","2630","2631","2632","2633","2634","2635","2636","2637","2638","2639","2640","2641","2642","2643","2644","2645","2646","2647","2648","2649","2650","2651","2652","2653","2654","2655","2656","2657","2658","2659","2660"};
+    private static String[] paisesProviene = {"Afganistán","Albania","Alboran y perejil","Alemania","Alemania, república democrática","Andorra","Angola","Anguila","Antigua y barbuda","Antillas holandesas","Apátrida","Arabia saudita","Argelia","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrein","Bangladesh","Barbados","Belarusia","Bélgica","Belice","Benin","Bermudas","Bolivia","Bonaire, isla","Bosnia y herzegovina","Botswana","Brasil","Brunei darussalam","Bulgaria","Burkina faso (alto volta)","Burundi","Bután","Cabo verde","Caimán, islas","Camboya (cambodia), kampuchea","Camerún","Canadá","Canal, islas (normandas)","Cantón y enderbury, islas","Centroafricana, república (r.c.a)","Chad","Checa, república (checoslovaquia)","Chile","China república popular (pekin)","Chipre","Cocos (keeling), islas","Colombia","Comoras","Congo","Cook, islas","Corea del sur, república de","Corea, república democrática (rpd)","Costa de marfil (cote d. Ivoire)","Costa rica","Croacia","Cuba","Curazao, isla","Dinamarca","Dominica","Dominicana, república","Dyibuti","Ecuador","Egipto","El salvador","Emiratos árabes unidos","Eritrea","Eslovaquia","Eslovenia","España","Estados unidos","Estonia","Etiopía","Feroe, islas","Fiji","Filipinas","Finlandia","Francia","Gabón","Gambia","Georgia","Ghana","Gibraltar","Granada","Grecia","Groenlandia","Guadalupe","Guam","Guatemala","Guayana francesa","Guinea","Guinea -bissau","Guinea ecuatorial","Guyana","Haití","Honduras","Hong kong","Hungría","India","Indonesia","Irak","Irán, república islámica de","Irlanda","Islandia","Israel","Italia","Jamaica","Japón","Johnston, islas","Jordania","Kazajstán","Kenia","Kirguistán","Kiribati","Kuwait","Laos, república democrática (rpd)","Lesotho","Letonia (latvia)","Líbano","Liberia","Libia","Liechtestein","Lituania","Luxemburgo","Macao","Macedonia, república de","Madagascar","Malasia","Malasia, península de","Malawi","Maldivas","Mali","Malta","Malvinas islas","Marianas del norte, islas","Marruecos","Marshall, islas","Martinica","Mauricio","Mauritania","Mayotte","México","Micronesia, estados federados de","Midway, islas","Moldavia, república de (moldova)","Mónaco","Mongolia","Montserrat isla","Morocco","Mozambique","Myanmar (burma), birmania.","Namibia","Nauru","Navidad (christmas), isla","Nepal","Nicaragua","Niger","Nigeria","Niue, isla","Norfolk, isla","Noruega","Nueva caledonia","Nueva zelandia","Omán","Otras naciones de äfrica","Otras naciones de américa","Otras naciones de asia","Otras naciones de europa","Otras naciones de oceanía","Pacífico, islas administradas por usa","Pacífico, islas del","Países bajos (holanda)","Pakistán","Palau (belau) islas","Panamá","Papua nueva guinea","Paraguay","Perú","Pitcairn, isla","Polinesia francesa","Polonia","Portugal","Puerto rico","Qatar","Reino unido (escocia,gran bretaña,inglaterra, gales)","Reunión","Rumania","Rusia, federación de (unión soviética)","Rwanda","Sahara occidental","Salomón islas","Samoa americana","Samoa occidental","San cristóbal y nevis","San marino","San pedro y miguelón","San vicente y las granadinas","Santa elena","Santa lucía","Santo tome y principe","Senegal","Seychelles","Sierra leona","Sin especificar","Singapur","Siria, república arabe","Somalia","Sri lanka (ceilan)","Sudafrica (ciskei)","Sudan","Suecia","Suiza","Surinam","Swazilandia","Tadjikistán","Tailandia","Taiwan, provincia de china (nacionalista)","Tanzania, (república unida de)","Territorio británico del oceáno índico","Timor del este","Togo","Tokelau","Tonga","Trinidad y tobago","Tunez","Turcas y caicos, islas","Turkmenistán","Turquía","Tuvalu","Ucrania","Uganda","Uruguay","Uzbekistán","Vanuato","Vaticano (santa sede), estado de la ciudad del","Venezuela","Viet nam del sur","Vírgenes (británicas), islas","Vírgenes (de los estados unidos), islas","Wake, islas","Wallis y fotuna, islas","Yemen","Yemen democrático","Yugoslavia (servia de montenegro)","Zaire ( república democrática del congo)","Zambia","Zimbabwe (rhodesia)","Zona neutral (palestina)"};
+    private static String[] codigoPaisesProviene = {"2836","2837","2838","2839","2840","2841","2842","2843","2844","2845","2846","2847","2848","2849","2850","2851","2852","2853","2854","2855","2856","2857","2858","2859","2860","2861","2862","2863","2864","2865","2866","2867","2868","2869","2870","2871","2872","2873","2874","2875","2876","2877","2878","2879","2880","2881","2882","2883","2884","2885","2886","2887","2888","2889","2890","2891","2892","2893","2894","2895","2896","2897","2898","2899","2900","2901","2902","2903","2904","2905","2906","2907","2908","2909","2910","2911","2912","2913","2914","2915","2916","2917","2918","2919","2920","2921","2922","2923","2924","2925","2926","2927","2928","2929","2930","2931","2932","2933","2934","2935","2936","2937","2938","2939","2940","2941","2942","2943","2944","2945","2946","2947","2948","2949","2950","2951","2952","2953","2954","2955","2956","2957","2958","2959","2960","2961","2962","2963","2964","2965","2966","2967","2968","2969","2970","2971","2972","2973","2974","2975","2976","2977","2978","2979","2980","2981","2982","2983","2984","2985","2986","2987","2988","2989","2990","2991","2992","2993","2994","2995","2996","2997","2998","2999","3000","3001","3002","3003","3004","3005","3006","3007","3008","3009","3010","3011","3012","3013","3014","3015","3016","3017","3018","3019","3020","3021","3022","3023","3024","3025","3026","3027","3028","3029","3030","3031","3032","3033","3034","3035","3036","3037","3038","3039","3040","3041","3042","3043","3044","3045","3046","3047","3048","3049","3050","3051","3052","3053","3054","3055","3056","3057","3058","3059","3060","3061","3062","3063","3064","3065","3066","3067","3068","3069","3070","3071","3072","3073","3074","3075","3076","3077","3078","3079","3080","3081","3082","3083","3084","3085","3086","3087","3088"};
     
-    private static String[] lenguaExtrajeraMadre = {"Achuar","Afrikáans","Aguaruna","Aimara","Albanés","Alemán","Amarakaeri","Amárico","Amuesha","Árabe","Araona","Armenio","Asháninca","Aymara","Azerí","Baure","Bengalí","Bésiro","Bielorruso","Birmano","Bislama","Bora","Bosnio","Búlgaro","Candoshi","Canichana","Capanahua","Caquinte","Cashibo-cacataibo","Cashinahua","Catalán","Cauqui","Cavineño","Cayubaba","Chácobo","Chayahuita","Checo","Chicheua","Chimán","Cingalés","Cocama","Comorense","Coreano","Criollo haitiano","Criollo seychellense","Croata","Culina","Danés","Dzongka","Ese ejja","Eslovaco","Esloveno","Estonio","Filipino","Finés","fiyiano","Francés","Georgiano","Griego","Guaraní","Guarasu’we","Guarayu","Hebreo","Hindi","Hiri motu","Huambisa","Huitoto","Húngaro","Indonesio","Indostano fiyiano","Inglés","Irlandés","Islandés","Italiano","Itonama","Jaqaru","Jébero","Jemer","Kazajo","Kirguís","Kiribatiano","Lao","Latín","Leco","Lengua de signos española","lengua de signos neozelandesa","Letón","Lituano","Luxemburgués","Macedonio","Machajuyai-kallawaya","Machiguenga","Machineri","Malayo","Maldivo","malgache","Maltés","Mandarín","Maorí","Maropa","Marshalés","Matsés","Mojeño-ignaciano","Mojeño-trinitario","Moldavo","Mongol","Moré","Mosetén","Movima","Nauruano","Ndebele meridional","Neerlandés","Nepalí","Noruego","Omagua","Pacawara","palaosiano","Pastún","Persa","Polaco","Portugués","Puquina","Quechua","romanche","ruanda","Rumano","Rundi","Ruso","Serbio","Shipibo-conibo","Sirionó","Somalí","Soto meridional","Soto septentrional","Suahili","Suazi","Sueco","Tacana","Tai","Tamil","Tapiete","Tayiko","Tetum","Ticuna","Tigriña","Tok pisin","Tongano","Toromona","Tsonga","Tsuana","Turco","Turcomano","Tuvaluano","Ucraniano","Urarina","urdu","Uru-chipaya","Uzbeko","Venda","Vietnamita","weenhayek","Xosa","Yagua","yaminawa","Yine","Yuki","Yuracaré","Zamuco","Zulú"};
-    private static String[] codigoLenguaExtrajeraMadre = {"2661","2662","2663","2664","2665","2666","2667","2668","2669","2670","2671","2672","2673","2674","2675","2676","2677","2678","2679","2680","2681","2682","2683","2684","2685","2686","2687","2688","2689","2690","2691","2692","2693","2694","2695","2696","2697","2698","2699","2700","2701","2702","2703","2704","2705","2706","2707","2708","2709","2710","2711","2712","2713","2714","2715","2716","2717","2718","2719","2720","2721","2722","2723","2724","2725","2726","2727","2728","2729","2730","2731","2732","2733","2734","2735","2736","2737","2738","2739","2740","2741","2742","2743","2744","2745","2746","2747","2748","2749","2750","2751","2752","2753","2754","2755","2756","2757","2758","2759","2760","2761","2762","2763","2764","2765","2766","2767","2768","2769","2770","2771","2772","2773","2774","2775","2776","2777","2778","2779","2780","2781","2782","2783","2784","2785","2786","2787","2788","2789","2790","2791","2792","2793","2794","2795","2796","2797","2798","2799","2800","2801","2802","2803","2804","2805","2806","2807","2808","2809","2810","2811","2812","2813","2814","2815","2816","2817","2818","2819","2820","2821","2822","2823","2824","2825","2826","2827","2828","2829"};
+    private static String[] lenguaExtranjeraPadre = {"Achuar","Afrikáans","Aguaruna","Aimara","Albanés","Alemán","Amarakaeri","Amárico","Amuesha","Árabe","Araona","Armenio","Asháninca","Aymara","Azerí","Baure","Bengalí","Bésiro","Bielorruso","Birmano","Bislama","Bora","Bosnio","Búlgaro","Candoshi","Canichana","Capanahua","Caquinte","Cashibo-cacataibo","Cashinahua","Catalán","Cauqui","Cavineño","Cayubaba","Chácobo","Chayahuita","Checo","Chicheua","Chimán","Cingalés","Cocama","Comorense","Coreano","Criollo haitiano","Criollo seychellense","Croata","Culina","Danés","Dzongka","Ese ejja","Eslovaco","Esloveno","Estonio","Filipino","Finés","fiyiano","Francés","Georgiano","Griego","Guaraní","Guarasu’we","Guarayu","Hebreo","Hindi","Hiri motu","Huambisa","Huitoto","Húngaro","Indonesio","Indostano fiyiano","Inglés","Irlandés","Islandés","Italiano","Itonama","japonés","Jaqaru","Jébero","Jemer","Kazajo","Kirguís","Kiribatiano","Lao","Latín","Leco","Lengua de signos española","lengua de signos neozelandesa","Letón","Lituano","Luxemburgués","Macedonio","Machajuyai-kallawaya","Machiguenga","Machineri","Malayo","Maldivo","malgache","Maltés","Mandarín","Maorí","Maropa","Marshalés","Matsés","Mojeño-ignaciano","Mojeño-trinitario","Moldavo","Mongol","Moré","Mosetén","Movima","Nauruano","Ndebele meridional","Neerlandés","Nepalí","Noruego","Omagua","Pacawara","palaosiano","Pastún","Persa","Polaco","Portugués","Puquina","Quechua","romanche","ruanda","Rumano","Rundi","Ruso","Serbio","Shipibo-conibo","Sirionó","Somalí","Soto meridional","Soto septentrional","Suahili","Suazi","Sueco","Tacana","Tai","Tamil","Tapiete","Tayiko","Tetum","Ticuna","Tigriña","Tok pisin","Tongano","Toromona","Tsonga","Tsuana","Turco","Turcomano","Tuvaluano","Ucraniano","Urarina","urdu","Uru-chipaya","Uzbeko","Venda","Vietnamita","weenhayek","Xosa","Yagua","yaminawa","Yine","Yuki","Yuracaré","Zamuco","Zulú"};
+    private static String[] codigoLenguaExtranjeraPadre = {"2492","2493","2494","2495","2496","2497","2498","2499","2500","2501","2502","2503","2504","2505","2506","2507","2508","2509","2510","2511","2512","2513","2514","2515","2516","2517","2518","2519","2520","2521","2522","2523","2524","2525","2526","2527","2528","2529","2530","2531","2532","2533","2534","2535","2536","2537","2538","2539","2540","2541","2542","2543","2544","2545","2546","2547","2548","2549","2550","2551","2552","2553","2554","2555","2556","2557","2558","2559","2560","2561","2562","2563","2564","2565","2566","3104","2567","2568","2569","2570","2571","2572","2573","2574","2575","2576","2577","2578","2579","2580","2581","2582","2583","2584","2585","2586","2587","2588","2589","2590","2591","2592","2593","2594","2595","2596","2597","2598","2599","2600","2601","2602","2603","2604","2605","2606","2607","2608","2609","2610","2611","2612","2613","2614","2615","2616","2617","2618","2619","2620","2621","2622","2623","2624","2625","2626","2627","2628","2629","2630","2631","2632","2633","2634","2635","2636","2637","2638","2639","2640","2641","2642","2643","2644","2645","2646","2647","2648","2649","2650","2651","2652","2653","2654","2655","2656","2657","2658","2659","2660"};
     
-    private static String[] lenguaIndigenaPadre = {"Cha`palaa","A`ingae","Zia pedee","Paicoca","Shiwiar chicham","Tsa`fiqui","Achuar chicham","Awapít","Shuar chicham","Waotededo","Kichwa amazónico","Kichwa región interandina"};
-    private static String[] codigoLenguaIndigenaPadre = {"2468","2469","2470","2471","2472","2473","2474","2475","2476","2477","2478","2479"};
+    private static String[] lenguaExtrajeraMadre = {"Achuar","Afrikáans","Aguaruna","Aimara","Albanés","Alemán","Amarakaeri","Amárico","Amuesha","Árabe","Araona","Armenio","Asháninca","Aymara","Azerí","Baure","Bengalí","Bésiro","Bielorruso","Birmano","Bislama","Bora","Bosnio","Búlgaro","Candoshi","Canichana","Capanahua","Caquinte","Cashibo-cacataibo","Cashinahua","Catalán","Cauqui","Cavineño","Cayubaba","Chácobo","Chayahuita","Checo","Chicheua","Chimán","Cingalés","Cocama","Comorense","Coreano","Criollo haitiano","Criollo seychellense","Croata","Culina","Danés","Dzongka","Ese ejja","Eslovaco","Esloveno","Estonio","Filipino","Finés","fiyiano","Francés","Georgiano","Griego","Guaraní","Guarasu’we","Guarayu","Hebreo","Hindi","Hiri motu","Huambisa","Huitoto","Húngaro","Indonesio","Indostano fiyiano","Inglés","Irlandés","Islandés","Italiano","Itonama","japonés","Jaqaru","Jébero","Jemer","Kazajo","Kirguís","Kiribatiano","Lao","Latín","Leco","Lengua de signos española","lengua de signos neozelandesa","Letón","Lituano","Luxemburgués","Macedonio","Machajuyai-kallawaya","Machiguenga","Machineri","Malayo","Maldivo","malgache","Maltés","Mandarín","Maorí","Maropa","Marshalés","Matsés","Mojeño-ignaciano","Mojeño-trinitario","Moldavo","Mongol","Moré","Mosetén","Movima","Nauruano","Ndebele meridional","Neerlandés","Nepalí","Noruego","Omagua","Pacawara","palaosiano","Pastún","Persa","Polaco","Portugués","Puquina","Quechua","romanche","ruanda","Rumano","Rundi","Ruso","Serbio","Shipibo-conibo","Sirionó","Somalí","Soto meridional","Soto septentrional","Suahili","Suazi","Sueco","Tacana","Tai","Tamil","Tapiete","Tayiko","Tetum","Ticuna","Tigriña","Tok pisin","Tongano","Toromona","Tsonga","Tsuana","Turco","Turcomano","Tuvaluano","Ucraniano","Urarina","urdu","Uru-chipaya","Uzbeko","Venda","Vietnamita","weenhayek","Xosa","Yagua","yaminawa","Yine","Yuki","Yuracaré","Zamuco","Zulú"};
+    private static String[] codigoLenguaExtrajeraMadre = {"2661","2662","2663","2664","2665","2666","2667","2668","2669","2670","2671","2672","2673","2674","2675","2676","2677","2678","2679","2680","2681","2682","2683","2684","2685","2686","2687","2688","2689","2690","2691","2692","2693","2694","2695","2696","2697","2698","2699","2700","2701","2702","2703","2704","2705","2706","2707","2708","2709","2710","2711","2712","2713","2714","2715","2716","2717","2718","2719","2720","2721","2722","2723","2724","2725","2726","2727","2728","2729","2730","2731","2732","2733","2734","2735","3103","2736","2737","2738","2739","2740","2741","2742","2743","2744","2745","2746","2747","2748","2749","2750","2751","2752","2753","2754","2755","2756","2757","2758","2759","2760","2761","2762","2763","2764","2765","2766","2767","2768","2769","2770","2771","2772","2773","2774","2775","2776","2777","2778","2779","2780","2781","2782","2783","2784","2785","2786","2787","2788","2789","2790","2791","2792","2793","2794","2795","2796","2797","2798","2799","2800","2801","2802","2803","2804","2805","2806","2807","2808","2809","2810","2811","2812","2813","2814","2815","2816","2817","2818","2819","2820","2821","2822","2823","2824","2825","2826","2827","2828","2829"};
     
-    private static String[] lenguaIndigenaMadre = {"Cha`palaa","A`ingae","Zia pedee","Paicoca","Shiwiar chicham","Tsa`fiqui","Achuar chicham","Awapít","Shuar chicham","Waotededo","Kichwa amazónico","Kichwa región interandina"};
-    private static String[] codigoLenguaIndigenaMadre = {"2480","2481","2482","2483","2484","2485","2486","2487","2488","2489","2490","2491"};
+    private static String[] lenguaIndigenaPadre = {"Awapít","Achuar chicham","Cha`palaa","A`ingae","Zia pedee","Paicoca","Shiwiar chicham","Shuar chicham","Tsa`fiqui","Waotededo","Zapara","Andoa","Kichwa Amazónico","Kichwa Región Interandina"};
+    private static String[] codigoLenguaIndigenaPadre = {"2475","2474","2468","2469","2470","2471","2472","2476","2473","2477","3099","3100","2478","2479"};
+    
+    private static String[] lenguaIndigenaMadre = {"Awapít","Achuar chicham","Cha`palaa","A`ingae","Zia pedee","Paicoca","Shiwiar chicham","Shuar chicham","Tsa`fiqui","Waotededo","Zapara","Andoa","Kichwa Amazónico","Kichwa Región Interandina"};
+    private static String[] codigoLenguaIndigenaMadre = {"2487","2486","2480","2481","2482","2483","2484","2488","2485","2489","3101","3102","2490","2491"};
     
     private boolean encuestaTerminada;
     private String archivoGenerado = "";
     private boolean banderaEditar = false;
     private int ultimaPestaña = 0;
+//    private int firstTime = 0;
     /**
      * Creates new form Encuesta
      */
@@ -126,9 +130,13 @@ public class EncuestaContexto extends javax.swing.JFrame {
         allComponents.putAll(componentesSeccionSeis);
         /*-----Carga respuestas almacenadas----------*/
         cargarXml();
+        /*----------------------------------*/
+//        if(firstTime == 1){
+//            JOptionPane.showMessageDialog(this, "informacion","Mensaje",JOptionPane.INFORMATION_MESSAGE);
+//        }
         //CAMBIAR VERSION ANTIGUA FCO
         if(archivoGenerado.equalsIgnoreCase("1")){
-            int dialogResult = JOptionPane.showConfirmDialog (null, "¿Deseas llenar nuevamente la encuesta?","Encuesta Finalizada",JOptionPane.YES_NO_OPTION);
+            int dialogResult = JOptionPane.showConfirmDialog (null, "¿Deseas reiniciar la encuesta?\nRecuerda que si seleccionas Si deberás completar la encuesta nuevamente,\nsi elijes No podrás ver y editar los datos registrados en la encuesta.","Encuesta finalizada",JOptionPane.YES_NO_OPTION);
             //0 Si  1 No  2 Cancel
             if(dialogResult == 0){
                 vaciarXML();
@@ -291,6 +299,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
                             if(((JScrollPane)d).getName().equalsIgnoreCase("lista_288") && jList_288 != null){
                                 jList_288.setEnabled(false);
                             }
+                            if(((JScrollPane)d).getName().equalsIgnoreCase("lista_365") && jList_365 != null){
+                                jList_365.setEnabled(false);
+                            }
                             if(((JScrollPane)d).getName().equalsIgnoreCase("lista_356") && jList_356 != null){
                                 jList_356.setEnabled(false);
                             }
@@ -418,6 +429,11 @@ public class EncuestaContexto extends javax.swing.JFrame {
         bgSec1_293.add(rad_2128);
         bgSec1_293.add(rad_2129);
         bgSec1_293.add(rad_2130);
+        bgSec1_293.add(rad_3089);
+        bgSec1_293.add(rad_3090);
+        bgSec1_293.add(rad_3091);
+        bgSec1_293.add(rad_3092);
+        bgSec1_293.add(rad_3093);
         
         bgSec1_294.add(rad_2131);
         bgSec1_294.add(rad_2132);
@@ -456,16 +472,24 @@ public class EncuestaContexto extends javax.swing.JFrame {
         bgSec1_295.add(rad_2164);
         bgSec1_295.add(rad_2165);
         bgSec1_295.add(rad_2166);
+        bgSec1_295.add(rad_3094);
+        bgSec1_295.add(rad_3095);
+        bgSec1_295.add(rad_3096);
+        bgSec1_295.add(rad_3097);
+        bgSec1_295.add(rad_3098);
         
         bgSec1_296.add(rad_2167);
         bgSec1_296.add(rad_2168);
         bgSec1_296.add(rad_2169);
         bgSec1_296.add(rad_2170);
         
+        rad_2170.setEnabled(false);
+        
         bgSec1_297.add(rad_2171);
         bgSec1_297.add(rad_2172);
         bgSec1_297.add(rad_2173);
         bgSec1_297.add(rad_2174);
+        rad_2174.setEnabled(false);
 
         jPanel_284.setVisible(false);
         jPanel_286.setVisible(false);
@@ -482,6 +506,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jPanel_358.setVisible(false);
         jPanel_360.setVisible(false);
         jPanel_362.setVisible(false);
+        jPanel_365.setVisible(false);
         
         jLabel_282.setVisible(false);
         jLabel_283.setVisible(false);
@@ -503,9 +528,17 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jLabel_358.setVisible(false);
         jLabel_360.setVisible(false);
         jLabel_362.setVisible(false);
+        jLabel_365.setVisible(false);
         
         jList_288.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = paises;
+            @Override
+            public int getSize() { return strings.length; }
+            @Override
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jList_365.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = paisesProviene;
             @Override
             public int getSize() { return strings.length; }
             @Override
@@ -552,6 +585,15 @@ public class EncuestaContexto extends javax.swing.JFrame {
         bgSec2_298.add(rad_2180);
         bgSec2_298.add(rad_2181);
         bgSec2_298.add(rad_2182);
+        
+        bgSec2_299.add(rad_2183);
+        bgSec2_299.add(rad_2184);
+        bgSec2_299.add(rad_2185);
+        bgSec2_299.add(rad_2186);
+        bgSec2_299.add(rad_2187);
+        bgSec2_299.add(rad_2188);
+        bgSec2_299.add(rad_2189);
+        bgSec2_299.add(rad_2190);
         
         bgSec2_302.add(rad_2193);
         bgSec2_302.add(rad_2194);
@@ -604,6 +646,15 @@ public class EncuestaContexto extends javax.swing.JFrame {
         bgSec3_307.add(rad_2219);
         bgSec3_307.add(rad_2220);
         bgSec3_307.add(rad_2221);
+        bgSec3_307.add(rad_3105);
+        rad_2215.setEnabled(false);
+        rad_2216.setEnabled(false);
+        rad_2217.setEnabled(false);
+        rad_2218.setEnabled(false);
+        rad_2219.setEnabled(false);
+        rad_2220.setEnabled(false);
+        rad_2221.setEnabled(false);
+        rad_3105.setEnabled(false);
         
         bgSec3_308.add(rad_2222);
         bgSec3_308.add(rad_2223);
@@ -660,6 +711,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         bgSec3_314.add(rad_2271);
         bgSec3_314.add(rad_2272);
         bgSec3_314.add(rad_2273);
+        bgSec3_314.add(rad_3106);
         
         bgSec3_315.add(rad_2274);
         bgSec3_315.add(rad_2275);
@@ -672,6 +724,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         bgSec3_315.add(rad_2282);
         bgSec3_315.add(rad_2283);
         bgSec3_315.add(rad_2284);
+        bgSec3_315.add(rad_3107);
         
         bgSec3_316.add(rad_2285);
         bgSec3_316.add(rad_2286);
@@ -698,6 +751,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         bgSec3_322.add(rad_2315);
         bgSec3_322.add(rad_2316);
         bgSec3_322.add(rad_2317);
+        bgSec3_322.add(rad_3109);
         
         bgSec3_323.add(rad_2318);
         bgSec3_323.add(rad_2319);
@@ -999,6 +1053,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         bgSec6_351 = new javax.swing.ButtonGroup();
         bgSec6_352 = new javax.swing.ButtonGroup();
         bgSec6_353 = new javax.swing.ButtonGroup();
+        bgSec2_299 = new javax.swing.ButtonGroup();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanelSec_1 = new javax.swing.JPanel();
@@ -1124,6 +1179,11 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel_293 = new javax.swing.JLabel();
+        rad_3089 = new javax.swing.JRadioButton();
+        rad_3090 = new javax.swing.JRadioButton();
+        rad_3091 = new javax.swing.JRadioButton();
+        rad_3092 = new javax.swing.JRadioButton();
+        rad_3093 = new javax.swing.JRadioButton();
         jPanel_294 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         rad_2131 = new javax.swing.JRadioButton();
@@ -1169,6 +1229,11 @@ public class EncuestaContexto extends javax.swing.JFrame {
         rad_2159 = new javax.swing.JRadioButton();
         rad_2160 = new javax.swing.JRadioButton();
         jLabel_295 = new javax.swing.JLabel();
+        rad_3094 = new javax.swing.JRadioButton();
+        rad_3095 = new javax.swing.JRadioButton();
+        rad_3096 = new javax.swing.JRadioButton();
+        rad_3097 = new javax.swing.JRadioButton();
+        rad_3098 = new javax.swing.JRadioButton();
         jPanel_296 = new javax.swing.JPanel();
         jLabel21 = new javax.swing.JLabel();
         rad_2167 = new javax.swing.JRadioButton();
@@ -1203,6 +1268,11 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jLabel_362 = new javax.swing.JLabel();
         jScrollPane11 = new javax.swing.JScrollPane();
         jList_362 = new javax.swing.JList<>();
+        jPanel_365 = new javax.swing.JPanel();
+        jLabel90 = new javax.swing.JLabel();
+        jLabel_365 = new javax.swing.JLabel();
+        jScrollPane12 = new javax.swing.JScrollPane();
+        jList_365 = new javax.swing.JList<>();
         jScrollPane2 = new javax.swing.JScrollPane();
         jPanelSec_2 = new javax.swing.JPanel();
         jPanel_298 = new javax.swing.JPanel();
@@ -1286,6 +1356,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         rad_2220 = new javax.swing.JRadioButton();
         rad_2221 = new javax.swing.JRadioButton();
         jLabel_307 = new javax.swing.JLabel();
+        rad_3105 = new javax.swing.JRadioButton();
         jPanel_308 = new javax.swing.JPanel();
         jLabel36 = new javax.swing.JLabel();
         rad_2222 = new javax.swing.JRadioButton();
@@ -1362,6 +1433,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         rad_2272 = new javax.swing.JRadioButton();
         rad_2273 = new javax.swing.JRadioButton();
         jLabel_314 = new javax.swing.JLabel();
+        rad_3106 = new javax.swing.JRadioButton();
         jPanel_315 = new javax.swing.JPanel();
         jLabel45 = new javax.swing.JLabel();
         rad_2274 = new javax.swing.JRadioButton();
@@ -1376,6 +1448,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         rad_2283 = new javax.swing.JRadioButton();
         rad_2284 = new javax.swing.JRadioButton();
         jLabel_315 = new javax.swing.JLabel();
+        rad_3107 = new javax.swing.JRadioButton();
         jPanel_316 = new javax.swing.JPanel();
         jLabel46 = new javax.swing.JLabel();
         rad_2285 = new javax.swing.JRadioButton();
@@ -1394,6 +1467,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         chk_2292 = new javax.swing.JCheckBox();
         chk_2293 = new javax.swing.JCheckBox();
         jLabel_318 = new javax.swing.JLabel();
+        chk_3108 = new javax.swing.JCheckBox();
         jPanel_319 = new javax.swing.JPanel();
         jLabel49 = new javax.swing.JLabel();
         rad_2294 = new javax.swing.JRadioButton();
@@ -1430,6 +1504,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         rad_2316 = new javax.swing.JRadioButton();
         rad_2317 = new javax.swing.JRadioButton();
         jLabel_322 = new javax.swing.JLabel();
+        rad_3109 = new javax.swing.JRadioButton();
         jPanel_323 = new javax.swing.JPanel();
         jLabel53 = new javax.swing.JLabel();
         rad_2318 = new javax.swing.JRadioButton();
@@ -1515,6 +1590,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         chk_2367 = new javax.swing.JCheckBox();
         chk_2368 = new javax.swing.JCheckBox();
         jLabel_332 = new javax.swing.JLabel();
+        chk_3110 = new javax.swing.JCheckBox();
         jPanel_333 = new javax.swing.JPanel();
         jLabel63 = new javax.swing.JLabel();
         rad_2369 = new javax.swing.JRadioButton();
@@ -1535,6 +1611,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         chk_2378 = new javax.swing.JCheckBox();
         chk_2379 = new javax.swing.JCheckBox();
         jLabel_335 = new javax.swing.JLabel();
+        chk_3111 = new javax.swing.JCheckBox();
         jPanel_336 = new javax.swing.JPanel();
         jLabel66 = new javax.swing.JLabel();
         rad_2380 = new javax.swing.JRadioButton();
@@ -1794,6 +1871,11 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         chk_1811.setText("Me encuentro en situación de privación de libertad");
         chk_1811.setName("1811"); // NOI18N
+        chk_1811.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk_1811ActionPerformed(evt);
+            }
+        });
 
         jLabel_282.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel_282.setForeground(new java.awt.Color(255, 51, 51));
@@ -1855,7 +1937,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         jPanel_283.setName("283"); // NOI18N
 
-        jLabel2.setText("<html><b>1.2. ¿Alguien en tu familia tiene discapacidad?</b><br/>(selecciona una opción )</html>");
+        jLabel2.setText("<html><b>1.2. ¿Alguien en tu hogar tiene discapacidad?</b><br/>(selecciona una opción )</html>");
         jLabel2.setName("1"); // NOI18N
 
         rad_1812.setText("Sí");
@@ -1912,7 +1994,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         jPanel_284.setName("284"); // NOI18N
 
-        jLabel3.setText("<html><b>1.2.1. ¿Qué miembro de tu familia tiene discapacidad?</b><br/>(selección múltiple )</html>");
+        jLabel3.setText("<html><b>1.2.1. ¿Qué miembro de tu hogar tiene discapacidad?</b><br/>(selección múltiple )</html>");
         jLabel3.setName("1"); // NOI18N
 
         chk_1814.setText("Yo");
@@ -1920,9 +2002,19 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         chk_1815.setText("Padre");
         chk_1815.setName("1815"); // NOI18N
+        chk_1815.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk_1815ActionPerformed(evt);
+            }
+        });
 
         chk_1816.setText("Madre");
         chk_1816.setName("1816"); // NOI18N
+        chk_1816.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk_1816ActionPerformed(evt);
+            }
+        });
 
         chk_1817.setText("Hermanas/os");
         chk_1817.setName("1817"); // NOI18N
@@ -1991,7 +2083,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         jPanel_285.setName("285"); // NOI18N
 
-        jLabel4.setText("<html><b>1.3. ¿Algún miembro de tu familia, incluyéndote a ti, <br/>ha estado en situación de movilidad humana<br/>(migración, retorno, refugio)?</b><br/>(selecciona una opción )</html>\n");
+        jLabel4.setText("<html><b>1.3. ¿Algún miembro de tu hogar, incluyéndote a ti, <br/>ha estado en situación de movilidad humana<br/>(migración, retorno, refugio)?</b><br/>(selecciona una opción )</html>\n");
         jLabel4.setName("1"); // NOI18N
 
         rad_1822.setText("Sí");
@@ -2049,6 +2141,11 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         chk_1824.setText("Yo");
         chk_1824.setName("1824"); // NOI18N
+        chk_1824.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk_1824ActionPerformed(evt);
+            }
+        });
 
         chk_1825.setText("Padre");
         chk_1825.setName("1825"); // NOI18N
@@ -2128,7 +2225,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
                     .addComponent(chk_1825)
                     .addComponent(chk_1824)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(109, Short.MAX_VALUE))
         );
         jPanel_286Layout.setVerticalGroup(
             jPanel_286Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2233,7 +2330,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         jPanel_288.setName("288"); // NOI18N
 
-        jLabel7.setText("<html><b>1.3.3. ¿A que país realizó la migración?</b><br/>(selecciona una opción)</html>\n");
+        jLabel7.setText("<html><b>1.3.2.1. ¿A que país realizó la migración?</b><br/>(selecciona una opción)</html>\n");
         jLabel7.setName("1"); // NOI18N
 
         jLabel_288.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -2279,7 +2376,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         jPanel_289.setName("289"); // NOI18N
 
-        jLabel8.setText("<html><b>1.3.4. ¿Cuál fue el motivo principal?</b><br/>(selecciona una opción)</html>\n");
+        jLabel8.setText("<html><b>1.3.3. ¿Cuál fue el motivo principal?</b><br/>(selecciona una opción)</html>\n");
         jLabel8.setName("1"); // NOI18N
 
         rad_2085.setText("Trabajo");
@@ -2352,7 +2449,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         jPanel_290.setName("290"); // NOI18N
 
-        jLabel9.setText("<html><b>1.3.5. ¿Recibes algún beneficio económico de esta persona?</b><br/>(selecciona una opción)</html>\n");
+        jLabel9.setText("<html><b>1.3.4. ¿Recibes algún beneficio económico de esta persona?</b><br/>(selecciona una opción)</html>\n");
         jLabel9.setName("1"); // NOI18N
 
         rad_2092.setText("Sí");
@@ -2405,7 +2502,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         jPanel_291.setName("291"); // NOI18N
 
-        jLabel10.setText("<html><b>1.3.6. ¿Cuánto dinero en promedio recibes mensualmente<br/>de esta persona?</b><html>\n");
+        jLabel10.setText("<html><b>1.3.4.1. ¿Cuánto dinero en promedio recibes mensualmente<br/>de esta persona?</b><html>\n");
         jLabel10.setName("1"); // NOI18N
 
         txt_2094.setName("2094"); // NOI18N
@@ -2620,7 +2717,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         rad_2117.setText("Kichwa de la sierra");
         rad_2117.setName("2117"); // NOI18N
 
-        jLabel13.setText("Pueblos");
+        jLabel13.setText("Nacionalidades");
 
         rad_2118.setText("Pastos");
         rad_2118.setName("2118"); // NOI18N
@@ -2661,7 +2758,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         rad_2130.setText("Puruhá");
         rad_2130.setName("2130"); // NOI18N
 
-        jLabel14.setText("Nacionalidades ");
+        jLabel14.setText("Pueblos");
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
@@ -2670,6 +2767,21 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jLabel_293.setText("* Esta pregunta es obligatoria.");
         jLabel_293.setName("lbl_293"); // NOI18N
 
+        rad_3089.setText("Kañari");
+        rad_3089.setName("3089"); // NOI18N
+
+        rad_3090.setText("Saraguro");
+        rad_3090.setName("3090"); // NOI18N
+
+        rad_3091.setText("Paltas");
+        rad_3091.setName("3091"); // NOI18N
+
+        rad_3092.setText("Pueblo Manta");
+        rad_3092.setName("3092"); // NOI18N
+
+        rad_3093.setText("Pueblo Huancavilca");
+        rad_3093.setName("3093"); // NOI18N
+
         javax.swing.GroupLayout jPanel_293Layout = new javax.swing.GroupLayout(jPanel_293);
         jPanel_293.setLayout(jPanel_293Layout);
         jPanel_293Layout.setHorizontalGroup(
@@ -2677,75 +2789,113 @@ public class EncuestaContexto extends javax.swing.JFrame {
             .addGroup(jPanel_293Layout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addGroup(jPanel_293Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_293, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel_293Layout.createSequentialGroup()
                         .addGroup(jPanel_293Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel_293)
-                            .addComponent(rad_2105)
-                            .addComponent(rad_2106)
-                            .addComponent(rad_2107)
-                            .addComponent(rad_2108)
-                            .addComponent(rad_2109)
-                            .addComponent(rad_2110)
-                            .addComponent(rad_2111)
-                            .addComponent(rad_2112)
-                            .addComponent(rad_2113)
-                            .addComponent(rad_2114)
-                            .addComponent(rad_2115)
-                            .addComponent(rad_2117)
-                            .addGroup(jPanel_293Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel_293Layout.createSequentialGroup()
+                            .addGroup(jPanel_293Layout.createSequentialGroup()
+                                .addGroup(jPanel_293Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(rad_2103)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel13))
-                                .addComponent(rad_2116, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addComponent(rad_2104))
-                        .addGap(49, 49, 49)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(rad_2117)
+                                    .addComponent(rad_2105)
+                                    .addComponent(rad_2106)
+                                    .addComponent(rad_2107)
+                                    .addComponent(rad_2108)
+                                    .addComponent(rad_2109)
+                                    .addComponent(rad_2110)
+                                    .addComponent(rad_2111)
+                                    .addComponent(rad_2112)
+                                    .addComponent(rad_2113)
+                                    .addComponent(rad_2114)
+                                    .addComponent(rad_2115)
+                                    .addComponent(rad_2116)
+                                    .addComponent(rad_2104))
+                                .addGap(47, 47, 47)
+                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel14))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel_293Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel_293Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(rad_2119, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(rad_2127, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(rad_2120)
-                                .addComponent(rad_2121)
-                                .addComponent(rad_2122)
-                                .addComponent(rad_2123)
-                                .addComponent(rad_2124)
-                                .addComponent(rad_2125)
-                                .addComponent(rad_2126)
-                                .addComponent(rad_2128)
-                                .addComponent(rad_2129)
-                                .addComponent(rad_2130))
-                            .addGroup(jPanel_293Layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(jLabel14))
-                            .addComponent(rad_2118)))
-                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(94, Short.MAX_VALUE))
+                            .addComponent(jLabel13)
+                            .addComponent(rad_2120)
+                            .addComponent(rad_2121)
+                            .addComponent(rad_2122)
+                            .addComponent(rad_2123)
+                            .addComponent(rad_2124)
+                            .addComponent(rad_2125)
+                            .addComponent(rad_2126)
+                            .addComponent(rad_2128)
+                            .addComponent(rad_2129)
+                            .addComponent(rad_2130)
+                            .addComponent(rad_3089)
+                            .addComponent(rad_3090)
+                            .addComponent(rad_3091)
+                            .addComponent(rad_3092)
+                            .addComponent(rad_3093)
+                            .addComponent(rad_2118)
+                            .addComponent(rad_2119)
+                            .addComponent(rad_2127))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel_293Layout.setVerticalGroup(
             jPanel_293Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_293Layout.createSequentialGroup()
-                .addGap(0, 0, 0)
                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel_293)
                 .addGroup(jPanel_293Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel_293Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel_293Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jSeparator1)
+                        .addGap(21, 21, 21)
+                        .addComponent(jSeparator1))
+                    .addGroup(jPanel_293Layout.createSequentialGroup()
+                        .addGroup(jPanel_293Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel_293Layout.createSequentialGroup()
-                                .addComponent(jLabel_293)
-                                .addGroup(jPanel_293Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel_293Layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(rad_2103)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(rad_2104)
-                                        .addGap(3, 3, 3))
-                                    .addGroup(jPanel_293Layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel13)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(rad_2118))
+                            .addGroup(jPanel_293Layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addGroup(jPanel_293Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel14)
+                                    .addComponent(jLabel13))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_2103)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel_293Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel_293Layout.createSequentialGroup()
+                                .addComponent(rad_2119)
+                                .addGap(2, 2, 2)
+                                .addComponent(rad_2120)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_2121)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_2122)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_2123)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_2124)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_2125)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_2126)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_2127)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_2128)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_2129)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_2130)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_3089)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_3090)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_3091)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_3092))
+                            .addGroup(jPanel_293Layout.createSequentialGroup()
+                                .addComponent(rad_2104)
+                                .addGap(3, 3, 3)
                                 .addComponent(rad_2105)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(rad_2106)
@@ -2771,37 +2921,10 @@ public class EncuestaContexto extends javax.swing.JFrame {
                                 .addComponent(rad_2116)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(rad_2117)))
-                        .addGap(7, 7, 7))
-                    .addGroup(jPanel_293Layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(jLabel14)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rad_2118)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rad_2119)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rad_2120)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rad_2121)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rad_2122)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rad_2123)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rad_2124)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rad_2125)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rad_2126)
-                        .addGap(3, 3, 3)
-                        .addComponent(rad_2127)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rad_2128)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rad_2129)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rad_2130)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addComponent(rad_3093)
+                        .addGap(0, 0, 0)))
+                .addGap(0, 0, 0))
         );
 
         jPanel_294.setName("294"); // NOI18N
@@ -2895,7 +3018,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
                     .addComponent(rad_2131)
                     .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel_294))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
         jPanel_294Layout.setVerticalGroup(
             jPanel_294Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2925,7 +3048,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         jPanel_295.setName("295"); // NOI18N
 
-        jLabel16.setText("Pueblos");
+        jLabel16.setText("Nacionalidades");
 
         rad_2153.setText("Kichwa de la sierra");
         rad_2153.setName("2153"); // NOI18N
@@ -2949,7 +3072,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         rad_2164.setText("Tomabela");
         rad_2164.setName("2164"); // NOI18N
 
-        jLabel17.setText("Nacionalidades ");
+        jLabel17.setText("Pueblos");
 
         rad_2166.setText("Puruhá");
         rad_2166.setName("2166"); // NOI18N
@@ -3026,7 +3149,22 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jLabel_295.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel_295.setForeground(new java.awt.Color(255, 51, 51));
         jLabel_295.setText("* Esta pregunta es obligatoria.");
-        jLabel_295.setName("lbl_294"); // NOI18N
+        jLabel_295.setName("lbl_295"); // NOI18N
+
+        rad_3094.setText("Kañari");
+        rad_3094.setName("3094"); // NOI18N
+
+        rad_3095.setText("Saraguro");
+        rad_3095.setName("3095"); // NOI18N
+
+        rad_3096.setText("Paltas");
+        rad_3096.setName("3096"); // NOI18N
+
+        rad_3097.setText("Pueblo Manta");
+        rad_3097.setName("3097"); // NOI18N
+
+        rad_3098.setText("Pueblo Huancavilca");
+        rad_3098.setName("3098"); // NOI18N
 
         javax.swing.GroupLayout jPanel_295Layout = new javax.swing.GroupLayout(jPanel_295);
         jPanel_295.setLayout(jPanel_295Layout);
@@ -3036,66 +3174,107 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 .addGroup(jPanel_295Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel_295Layout.createSequentialGroup()
                         .addGroup(jPanel_295Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rad_2152)
-                            .addGroup(jPanel_295Layout.createSequentialGroup()
-                                .addComponent(rad_2139)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel16))
-                            .addComponent(rad_2141)
-                            .addComponent(rad_2142)
-                            .addComponent(rad_2143)
-                            .addComponent(rad_2144)
-                            .addComponent(rad_2145)
-                            .addComponent(rad_2146)
-                            .addComponent(rad_2147)
-                            .addComponent(rad_2148)
-                            .addComponent(rad_2149)
-                            .addComponent(rad_2150)
-                            .addComponent(rad_2151)
-                            .addComponent(rad_2153)
                             .addGroup(jPanel_295Layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(jLabel_295))
-                            .addComponent(rad_2140))
-                        .addGap(55, 55, 55)
-                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel_295Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel_295Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(rad_2155, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(rad_2163, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(rad_2156)
-                                .addComponent(rad_2157)
-                                .addComponent(rad_2158)
-                                .addComponent(rad_2159)
-                                .addComponent(rad_2160)
-                                .addComponent(rad_2161)
-                                .addComponent(rad_2162)
-                                .addComponent(rad_2164)
-                                .addComponent(rad_2165)
-                                .addComponent(rad_2166))
+                                .addComponent(jLabel16)
+                                .addGap(83, 83, 83))
                             .addGroup(jPanel_295Layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(jLabel17))
-                            .addComponent(rad_2154)))
-                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(jPanel_295Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(rad_2139)
+                                    .addComponent(rad_2152)
+                                    .addComponent(rad_2141)
+                                    .addComponent(rad_2142)
+                                    .addComponent(rad_2143)
+                                    .addComponent(rad_2144)
+                                    .addComponent(rad_2145)
+                                    .addComponent(rad_2146)
+                                    .addComponent(rad_2147)
+                                    .addComponent(rad_2148)
+                                    .addComponent(rad_2149)
+                                    .addComponent(rad_2150)
+                                    .addComponent(rad_2151)
+                                    .addComponent(rad_2153)
+                                    .addComponent(rad_2140))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(28, 28, 28)))
+                        .addGroup(jPanel_295Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(rad_2156)
+                            .addComponent(rad_2157)
+                            .addComponent(rad_2158)
+                            .addComponent(rad_2159)
+                            .addComponent(rad_2160)
+                            .addComponent(rad_2161)
+                            .addComponent(rad_2162)
+                            .addComponent(rad_2164)
+                            .addComponent(rad_2165)
+                            .addComponent(rad_2166)
+                            .addComponent(rad_3094)
+                            .addComponent(rad_3095)
+                            .addComponent(rad_3096)
+                            .addComponent(rad_3097)
+                            .addComponent(rad_3098)
+                            .addComponent(rad_2154)
+                            .addComponent(jLabel17)
+                            .addComponent(rad_2155)
+                            .addComponent(rad_2163)))
+                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_295, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(122, Short.MAX_VALUE))
         );
         jPanel_295Layout.setVerticalGroup(
             jPanel_295Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_295Layout.createSequentialGroup()
                 .addGap(0, 0, 0)
                 .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(0, 0, 0)
+                .addComponent(jLabel_295)
+                .addGap(0, 0, 0)
                 .addGroup(jPanel_295Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_295Layout.createSequentialGroup()
-                        .addComponent(jSeparator2)
-                        .addGap(10, 10, 10))
                     .addGroup(jPanel_295Layout.createSequentialGroup()
-                        .addComponent(jLabel_295)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                        .addComponent(jLabel17)
+                        .addGap(5, 5, 5)
+                        .addGroup(jPanel_295Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel_295Layout.createSequentialGroup()
+                                .addComponent(rad_2154)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_2155)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_2156)
+                                .addGap(0, 0, 0)
+                                .addComponent(rad_2157)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_2158)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_2159)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_2160)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_2161)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_2162)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_2163)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_2164)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_2165)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_2166)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_3094)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_3095)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_3096)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_3097)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(rad_3098))
+                            .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel_295Layout.createSequentialGroup()
                         .addComponent(jLabel16)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(5, 5, 5)
                         .addComponent(rad_2139)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(rad_2140)
@@ -3124,37 +3303,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(rad_2152)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rad_2153))
-                    .addGroup(jPanel_295Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel17)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rad_2154)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rad_2155)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rad_2156)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rad_2157)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rad_2158)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rad_2159)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rad_2160)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rad_2161)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rad_2162)
-                        .addGap(3, 3, 3)
-                        .addComponent(rad_2163)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rad_2164)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rad_2165)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rad_2166)
-                        .addContainerGap())))
+                        .addComponent(rad_2153)))
+                .addGap(52, 52, 52))
         );
 
         jPanel_296.setName("296"); // NOI18N
@@ -3309,7 +3459,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         jPanel_356.setName("356"); // NOI18N
 
-        jLabel42.setText("<html><b>1.6.1 ¿Cual es la lengua indígena de tu padre?</b><br/>(selecciona una opción)</html>\n");
+        jLabel42.setText("<html><b>1.6.1. ¿Cual es la lengua indígena de tu padre?</b><br/>(selecciona una opción)</html>\n");
         jLabel42.setName("1"); // NOI18N
 
         jLabel_356.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -3334,7 +3484,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
                     .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(jLabel42)
                     .addComponent(jLabel_356, javax.swing.GroupLayout.Alignment.LEADING))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(273, Short.MAX_VALUE))
         );
         jPanel_356Layout.setVerticalGroup(
             jPanel_356Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3350,7 +3500,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         jPanel_360.setName("360"); // NOI18N
 
-        jLabel86.setText("<html><b>1.6.1 ¿Cual es la lengua extranjera de tu padre?</b><br/>(selecciona una opción)</html>\n");
+        jLabel86.setText("<html><b>1.6.2. ¿Cual es la lengua extranjera de tu padre?</b><br/>(selecciona una opción)</html>\n");
         jLabel86.setName("1"); // NOI18N
 
         jLabel_360.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -3391,7 +3541,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         jPanel_358.setName("358"); // NOI18N
 
-        jLabel87.setText("<html><b>1.7.1 ¿Cual es la lengua indígena de tu madre?</b><br/>(selecciona una opción)</html>\n");
+        jLabel87.setText("<html><b>1.7.1. ¿Cual es la lengua indígena de tu madre?</b><br/>(selecciona una opción)</html>\n");
         jLabel87.setName("1"); // NOI18N
 
         jLabel_358.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -3432,7 +3582,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         jPanel_362.setName("362"); // NOI18N
 
-        jLabel88.setText("<html><b>1.7.1 ¿Cual es la lengua extranjera de tu madre?</b><br/>(selecciona una opción)</html>\n");
+        jLabel88.setText("<html><b>1.7.2. ¿Cual es la lengua extranjera de tu madre?</b><br/>(selecciona una opción)</html>\n");
         jLabel88.setName("1"); // NOI18N
 
         jLabel_362.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -3471,36 +3621,84 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 .addGap(7, 7, 7))
         );
 
+        jPanel_365.setName("365"); // NOI18N
+
+        jLabel90.setText("<html><b>1.3.2.2. ¿De qué país proviene?</b><br/>(selecciona una opción)</html>\n");
+        jLabel90.setName("1"); // NOI18N
+
+        jLabel_365.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel_365.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel_365.setText("* Esta pregunta es obligatoria.");
+        jLabel_365.setName("lbl_365"); // NOI18N
+
+        jScrollPane12.setName("lista_365"); // NOI18N
+
+        jList_365.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jList_365.setName("365"); // NOI18N
+        jList_365.setVisibleRowCount(20);
+        jScrollPane12.setViewportView(jList_365);
+
+        javax.swing.GroupLayout jPanel_365Layout = new javax.swing.GroupLayout(jPanel_365);
+        jPanel_365.setLayout(jPanel_365Layout);
+        jPanel_365Layout.setHorizontalGroup(
+            jPanel_365Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel_365Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(jPanel_365Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel_365Layout.createSequentialGroup()
+                        .addComponent(jLabel_365)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel_365Layout.createSequentialGroup()
+                        .addComponent(jScrollPane12)
+                        .addGap(85, 85, 85))
+                    .addGroup(jPanel_365Layout.createSequentialGroup()
+                        .addComponent(jLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        jPanel_365Layout.setVerticalGroup(
+            jPanel_365Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel_365Layout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(jLabel90, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel_365)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(7, 7, 7))
+        );
+
         javax.swing.GroupLayout jPanelSec_1Layout = new javax.swing.GroupLayout(jPanelSec_1);
         jPanelSec_1.setLayout(jPanelSec_1Layout);
         jPanelSec_1Layout.setHorizontalGroup(
             jPanelSec_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelSec_1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanelSec_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel_358, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel_295, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel_292, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel_291, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel_290, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel_289, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel_288, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel_287, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel_286, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel_285, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel_284, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel_282, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel_283, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel_296, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel_297, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel_356, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel_360, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel_362, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel_293, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanelSec_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelSec_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jPanel_295, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel_294, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelSec_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jPanel_358, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel_291, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel_290, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel_289, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel_288, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel_287, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel_286, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel_285, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel_284, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel_282, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel_283, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel_296, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel_297, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel_356, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel_360, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel_362, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelSec_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jPanel_293, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel_292, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jPanel_365, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(100, 100, 100))
-            .addGroup(jPanelSec_1Layout.createSequentialGroup()
-                .addComponent(jPanel_294, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanelSec_1Layout.setVerticalGroup(
             jPanelSec_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3520,6 +3718,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addComponent(jPanel_288, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
+                .addComponent(jPanel_365, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
                 .addComponent(jPanel_289, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(jPanel_290, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3527,13 +3727,13 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 .addComponent(jPanel_291, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(jPanel_292, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(0, 0, 0)
                 .addComponent(jPanel_293, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(jPanel_294, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel_295, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jPanel_295, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(7, 7, 7)
                 .addComponent(jPanel_296, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(jPanel_356, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4147,7 +4347,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         rad_2213.setText("Tiene 2 cuartos de baño exclusivos con ducha");
         rad_2213.setName("2213"); // NOI18N
 
-        rad_2214.setText("Tiene 3 o mas cuartos de baño exclusivos con ducha");
+        rad_2214.setText("Tiene 3 o más cuartos de baño exclusivos con ducha");
         rad_2214.setName("2214"); // NOI18N
 
         jLabel_306.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -4235,7 +4435,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         jScrollPane2.setViewportView(jPanelSec_2);
 
-        jTabbedPane1.addTab("TIPOLOGIA DE LA VIVIENDA", jScrollPane2);
+        jTabbedPane1.addTab("TIPOLOGÍA DE LA VIVIENDA", jScrollPane2);
 
         jPanel_307.setName("307"); // NOI18N
 
@@ -4268,6 +4468,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jLabel_307.setText("* Esta pregunta es obligatoria.");
         jLabel_307.setName("lbl_307"); // NOI18N
 
+        rad_3105.setText("Yo");
+        rad_3105.setName("3105"); // NOI18N
+
         javax.swing.GroupLayout jPanel_307Layout = new javax.swing.GroupLayout(jPanel_307);
         jPanel_307.setLayout(jPanel_307Layout);
         jPanel_307Layout.setHorizontalGroup(
@@ -4284,7 +4487,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
                             .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(rad_2219)
                             .addComponent(rad_2220)
-                            .addComponent(rad_2221)))
+                            .addComponent(rad_2221)
+                            .addComponent(rad_3105)))
                     .addGroup(jPanel_307Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel_307)))
@@ -4311,6 +4515,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 .addComponent(rad_2220)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(rad_2221)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(rad_3105)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -4812,7 +5018,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         rad_2261.setText("Desocupados");
         rad_2261.setName("2261"); // NOI18N
 
-        rad_2262.setText("Inactivos");
+        rad_2262.setText("Inactivo (Jubilado)");
         rad_2262.setName("2262"); // NOI18N
 
         jLabel_313.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -4920,6 +5126,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jLabel_314.setText("* Esta pregunta es obligatoria.");
         jLabel_314.setName("lbl_314"); // NOI18N
 
+        rad_3106.setText("Inactivo (Jubilado)");
+        rad_3106.setName("3106"); // NOI18N
+
         javax.swing.GroupLayout jPanel_314Layout = new javax.swing.GroupLayout(jPanel_314);
         jPanel_314.setLayout(jPanel_314Layout);
         jPanel_314Layout.setHorizontalGroup(
@@ -4939,7 +5148,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
                     .addComponent(rad_2270)
                     .addComponent(rad_2271)
                     .addComponent(rad_2272)
-                    .addComponent(rad_2273))
+                    .addComponent(rad_2273)
+                    .addComponent(rad_3106))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel_314Layout.setVerticalGroup(
@@ -4971,6 +5181,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 .addComponent(rad_2272)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(rad_2273)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(rad_3106)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -5017,6 +5229,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jLabel_315.setText("* Esta pregunta es obligatoria.");
         jLabel_315.setName("lbl_315"); // NOI18N
 
+        rad_3107.setText("Inactivo (Jubilado)");
+        rad_3107.setName("3107"); // NOI18N
+
         javax.swing.GroupLayout jPanel_315Layout = new javax.swing.GroupLayout(jPanel_315);
         jPanel_315.setLayout(jPanel_315Layout);
         jPanel_315Layout.setHorizontalGroup(
@@ -5037,7 +5252,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
                             .addComponent(rad_2281)
                             .addComponent(rad_2282)
                             .addComponent(rad_2283)
-                            .addComponent(rad_2284)))
+                            .addComponent(rad_2284)
+                            .addComponent(rad_3107)))
                     .addGroup(jPanel_315Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel_315)))
@@ -5072,6 +5288,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 .addComponent(rad_2283)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(rad_2284)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(rad_3107)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -5194,6 +5412,14 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jLabel_318.setText("* Esta pregunta es obligatoria.");
         jLabel_318.setName("lbl_318"); // NOI18N
 
+        chk_3108.setText("Ninguna de las anteriores");
+        chk_3108.setName("3108"); // NOI18N
+        chk_3108.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk_3108ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel_318Layout = new javax.swing.GroupLayout(jPanel_318);
         jPanel_318.setLayout(jPanel_318Layout);
         jPanel_318Layout.setHorizontalGroup(
@@ -5210,7 +5436,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
                             .addComponent(chk_2290)
                             .addComponent(chk_2291)
                             .addComponent(chk_2292))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(chk_3108, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel_318Layout.setVerticalGroup(
@@ -5230,6 +5457,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 .addComponent(chk_2292)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(chk_2293, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(chk_3108)
                 .addGap(6, 6, 6))
         );
 
@@ -5371,7 +5600,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         rad_2303.setText("Ninguno ");
         rad_2303.setName("2303"); // NOI18N
 
-        rad_2304.setText("1 a 25");
+        rad_2304.setText("1 - 25");
         rad_2304.setName("2304"); // NOI18N
 
         rad_2305.setText("26 - 50");
@@ -5471,6 +5700,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jLabel_322.setText("* Esta pregunta es obligatoria.");
         jLabel_322.setName("lbl_322"); // NOI18N
 
+        rad_3109.setText("Ninguna");
+        rad_3109.setName("3109"); // NOI18N
+
         javax.swing.GroupLayout jPanel_322Layout = new javax.swing.GroupLayout(jPanel_322);
         jPanel_322.setLayout(jPanel_322Layout);
         jPanel_322Layout.setHorizontalGroup(
@@ -5489,7 +5721,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
                             .addComponent(rad_2314)
                             .addComponent(rad_2315)
                             .addComponent(rad_2316)
-                            .addComponent(rad_2317)))
+                            .addComponent(rad_2317)
+                            .addComponent(rad_3109)))
                     .addGroup(jPanel_322Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel_322)))
@@ -5520,6 +5753,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 .addComponent(rad_2316)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(rad_2317)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rad_3109)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -5844,23 +6079,23 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         jScrollPane3.setViewportView(jPanelSec_3);
 
-        jTabbedPane1.addTab("CAPITAL ECONOMICO, SOCIAL Y CULTURAL", jScrollPane3);
+        jTabbedPane1.addTab("CAPITAL ECONÓMICO, SOCIAL Y CULTURAL", jScrollPane3);
 
         jPanel_327.setName("327"); // NOI18N
 
         jLabel57.setText("<html><b>4.1. ¿La institución educativa en la que estudiaste o estudias es :</b><br/>(selecciona una opción)</html>");
         jLabel57.setName("1"); // NOI18N
 
-        rad_2335.setText("Fiscal?");
+        rad_2335.setText("Fiscal");
         rad_2335.setName("2335"); // NOI18N
 
-        rad_2336.setText("Particular?");
+        rad_2336.setText("Particular");
         rad_2336.setName("2336"); // NOI18N
 
-        rad_2337.setText("Fisco misional?");
+        rad_2337.setText("Fisco misional");
         rad_2337.setName("2337"); // NOI18N
 
-        rad_2338.setText("Municipal?");
+        rad_2338.setText("Municipal");
         rad_2338.setName("2338"); // NOI18N
 
         jLabel_327.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -6277,6 +6512,14 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jLabel_332.setText("* Esta pregunta es obligatoria.");
         jLabel_332.setName("lbl_332"); // NOI18N
 
+        chk_3110.setText("Ninguno");
+        chk_3110.setName("3110"); // NOI18N
+        chk_3110.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk_3110ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel_332Layout = new javax.swing.GroupLayout(jPanel_332);
         jPanel_332.setLayout(jPanel_332Layout);
         jPanel_332Layout.setHorizontalGroup(
@@ -6290,7 +6533,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
                     .addComponent(chk_2365)
                     .addComponent(chk_2366)
                     .addComponent(chk_2367)
-                    .addComponent(chk_2368))
+                    .addComponent(chk_2368)
+                    .addComponent(chk_3110))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel_332Layout.setVerticalGroup(
@@ -6310,6 +6554,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 .addComponent(chk_2367)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(chk_2368)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(chk_3110)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -6327,7 +6573,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         rad_2371.setText("Hay 2 tv a color ");
         rad_2371.setName("2371"); // NOI18N
 
-        rad_2372.setText("Hay  3 o mas tv a color ");
+        rad_2372.setText("Hay  3 o más tv a color ");
         rad_2372.setName("2372"); // NOI18N
 
         jLabel_333.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -6386,7 +6632,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         rad_2375.setText("Hay 2 vehículos exclusivos para el hogar");
         rad_2375.setName("2375"); // NOI18N
 
-        rad_2376.setText("Hay  3 o mas vehículos exclusivos para el hogar");
+        rad_2376.setText("Hay  3 o más vehículos exclusivos para el hogar");
         rad_2376.setName("2376"); // NOI18N
 
         jLabel_334.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -6450,6 +6696,14 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jLabel_335.setText("* Esta pregunta es obligatoria.");
         jLabel_335.setName("lbl_335"); // NOI18N
 
+        chk_3111.setText("Ninguno");
+        chk_3111.setName("3111"); // NOI18N
+        chk_3111.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chk_3111ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel_335Layout = new javax.swing.GroupLayout(jPanel_335);
         jPanel_335.setLayout(jPanel_335Layout);
         jPanel_335Layout.setHorizontalGroup(
@@ -6462,7 +6716,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
                             .addComponent(chk_2377)
                             .addComponent(jLabel65, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(chk_2378)
-                            .addComponent(chk_2379)))
+                            .addComponent(chk_2379)
+                            .addComponent(chk_3111)))
                     .addGroup(jPanel_335Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel_335)))
@@ -6481,6 +6736,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 .addComponent(chk_2378)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(chk_2379)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(chk_3111)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -6501,7 +6758,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         rad_2383.setText("Hay  3 celulares  ");
         rad_2383.setName("2383"); // NOI18N
 
-        rad_2384.setText("Hay  4 o mas celulares");
+        rad_2384.setText("Hay 4 o más celulares");
         rad_2384.setName("2384"); // NOI18N
 
         jLabel_336.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -6645,7 +6902,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         jPanel_338.setName("338"); // NOI18N
 
-        jLabel68.setText("<html><b>6.1. ¿Cómo te enteraste  de la convocatoria para rendir la prueba ENES?</b><br/>(selecciona una opción)</html>");
+        jLabel68.setText("<html><b>6.1. ¿Cómo te enteraste de la convocatoria para rendir el ENES?</b><br/>(selecciona una opción)</html>");
         jLabel68.setName("1"); // NOI18N
 
         rad_2390.setText("Colegio");
@@ -6810,16 +7067,16 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jLabel70.setText("<html><b>6.3. ¿Actualmente consideras que el SNNA ha:</b><br/>(selecciona una opción)</html>");
         jLabel70.setName("1"); // NOI18N
 
-        rad_2406.setText("Mejorado el acceso a educación superior?");
+        rad_2406.setText("Mejorado el acceso a educación superior");
         rad_2406.setName("2406"); // NOI18N
 
-        rad_2407.setText("Regularizado el acceso a educación superior?");
+        rad_2407.setText("Regularizado el acceso a educación superior");
         rad_2407.setName("2407"); // NOI18N
 
-        rad_2408.setText("Dificultado el acceso para los  y las aspirantes?");
+        rad_2408.setText("Dificultado el acceso para los  y las aspirantes");
         rad_2408.setName("2408"); // NOI18N
 
-        rad_2409.setText("<html>Establecido parámetros para democratizar el<br/>acceso a educación superior?</html>");
+        rad_2409.setText("<html>Establecido parámetros para democratizar el<br/>acceso a educación superior</html>");
         rad_2409.setName("2409"); // NOI18N
 
         jLabel_340.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -7206,7 +7463,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         jPanel_347.setName("347"); // NOI18N
 
-        jLabel77.setText("<html><b>6.4.6. A continuación te pedimos que evalúes los siguientes aspectos de tu<br/>formación de bachillerato. Selecciona la opción que esté acorde a tu opinión.</b><br/>(selecciona una opción)</html>");
+        jLabel77.setText("<html><b>6.5. A continuación te pedimos que evalúes los siguientes aspectos de tu<br/>formación de bachillerato. Selecciona la opción que esté acorde a tu opinión.</b><br/>(selecciona una opción)</html>");
         jLabel77.setName("1"); // NOI18N
 
         javax.swing.GroupLayout jPanel_347Layout = new javax.swing.GroupLayout(jPanel_347);
@@ -7228,7 +7485,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         jPanel_348.setName("348"); // NOI18N
 
-        jLabel78.setText("<html><b>6.4.6.1. Infraestructura del colegio</b><br/>(aulas, baños, laboratorios, biblioteca, comedor, patio, canchas, etc.)</html>");
+        jLabel78.setText("<html><b>6.5.1. Infraestructura del colegio</b><br/>(aulas, baños, laboratorios, biblioteca, comedor, patio, canchas, etc.)</html>");
         jLabel78.setName("1"); // NOI18N
 
         rad_2437.setText("Totalmente satisfecho");
@@ -7293,7 +7550,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         jPanel_349.setName("349"); // NOI18N
 
-        jLabel79.setText("<html><b>6.4.6.2. Ambiente sin violencia (la violencia puede incluir violencia física,<br/>verbal, psicológica, bullying, racismo, discriminación, etc.) entre estudiantes</b></html>");
+        jLabel79.setText("<html><b>6.5.2. Ambiente sin violencia (la violencia puede incluir violencia física,<br/>verbal, psicológica, bullying, racismo, discriminación, etc.) entre estudiantes</b></html>");
         jLabel79.setName("1"); // NOI18N
 
         rad_2442.setText("Totalmente satisfecho");
@@ -7358,7 +7615,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         jPanel_350.setName("350"); // NOI18N
 
-        jLabel80.setText("<html><b>6.4.6.3. Ambiente sin violencia (la violencia puede incluir violencia física,<br/>verbal, psicológica, bullying, racismo, discriminación, etc.) entre estudiantes<br/>y docentes.</b></html>");
+        jLabel80.setText("<html><b>6.5.3. Ambiente sin violencia (la violencia puede incluir violencia física,<br/>verbal, psicológica, bullying, racismo, discriminación, etc.) entre estudiantes<br/>y docentes.</b></html>");
         jLabel80.setName("1"); // NOI18N
 
         rad_2447.setText("Totalmente satisfecho");
@@ -7423,7 +7680,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         jPanel_351.setName("351"); // NOI18N
 
-        jLabel81.setText("<html><b>6.4.6.4. Orientación vocacional en el colegio para selección de carrera<br/>y elaboración de proyecto de vida.</b></html>");
+        jLabel81.setText("<html><b>6.5.4. Orientación vocacional en el colegio para selección de carrera<br/>y elaboración de proyecto de vida.</b></html>");
         jLabel81.setName("1"); // NOI18N
 
         rad_2452.setText("Totalmente satisfecho");
@@ -7488,7 +7745,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         jPanel_352.setName("352"); // NOI18N
 
-        jLabel82.setText("<html><b>6.4.6.5.Existencia de sistema de acompañamiento (tutoría) durante<br/>tu permanencia en la institución</b></html>");
+        jLabel82.setText("<html><b>6.5.5.Existencia de sistema de acompañamiento (tutoría) durante<br/>tu permanencia en la institución</b></html>");
         jLabel82.setName("1"); // NOI18N
 
         rad_2457.setText("Totalmente satisfecho");
@@ -7553,7 +7810,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         jPanel_353.setName("353"); // NOI18N
 
-        jLabel83.setText("<html><b>6.4.6.6. Los conocimientos y aprendizajes adquiridos en tu colegio<br/>te son útiles en tu vida.</b></html>");
+        jLabel83.setText("<html><b>6.5.6. Los conocimientos y aprendizajes adquiridos en tu colegio<br/>te son útiles en tu vida.</b></html>");
         jLabel83.setName("1"); // NOI18N
 
         rad_2462.setText("Totalmente satisfecho");
@@ -7695,7 +7952,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         jPanel_DatosPersonales.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos Personales", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, null, new java.awt.Color(153, 153, 153)));
 
-        jLabel20.setText("Cédula:");
+        jLabel20.setText("Documento de identificación:");
 
         txt_cedula.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -7732,44 +7989,35 @@ public class EncuestaContexto extends javax.swing.JFrame {
             jPanel_DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_DatosPersonalesLayout.createSequentialGroup()
                 .addContainerGap()
+                .addGroup(jPanel_DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel20)
+                    .addComponent(jLabel23, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel24, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel_DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel_DatosPersonalesLayout.createSequentialGroup()
-                        .addGroup(jPanel_DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel_DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_nombres, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_cedula, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel_DatosPersonalesLayout.createSequentialGroup()
-                        .addComponent(jLabel24)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_apellidos)))
-                .addGap(106, 106, 106)
+                    .addComponent(txt_nombres)
+                    .addComponent(txt_cedula, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_apellidos, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton_activarEncuesta)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel_DatosPersonalesLayout.setVerticalGroup(
             jPanel_DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_DatosPersonalesLayout.createSequentialGroup()
-                .addGroup(jPanel_DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel_DatosPersonalesLayout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(jButton_activarEncuesta))
-                    .addGroup(jPanel_DatosPersonalesLayout.createSequentialGroup()
-                        .addGap(0, 0, 0)
-                        .addGroup(jPanel_DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel20)
-                            .addComponent(txt_cedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(3, 3, 3)
-                        .addGroup(jPanel_DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_nombres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel23))
-                        .addGap(3, 3, 3)
-                        .addGroup(jPanel_DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txt_apellidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel24))))
-                .addGap(0, 0, 0))
+                .addGap(3, 3, 3)
+                .addGroup(jPanel_DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20)
+                    .addComponent(txt_cedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(3, 3, 3)
+                .addGroup(jPanel_DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_nombres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton_activarEncuesta)
+                    .addComponent(jLabel23))
+                .addGap(3, 3, 3)
+                .addGroup(jPanel_DatosPersonalesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_apellidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel24)))
         );
 
         jLabel89.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -7928,6 +8176,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
                                 if(d instanceof JScrollPane){
                                     if(((JScrollPane)d).getName().equalsIgnoreCase("lista_288") && jList_288 != null){
                                         jList_288.setEnabled(true);
+                                    }
+                                    if(((JScrollPane)d).getName().equalsIgnoreCase("lista_365") && jList_365 != null){
+                                        jList_365.setEnabled(true);
                                     }
                                     if(((JScrollPane)d).getName().equalsIgnoreCase("lista_356") && jList_356 != null){
                                         jList_356.setEnabled(true);
@@ -8200,25 +8451,29 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
     private void rad_1835ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1835ActionPerformed
         if(rad_1835.isSelected()){
-            muestraOcultaPanel(jPanel_288, true);
+            muestraOcultaPanel(jPanel_288, false);
+            muestraOcultaPanel(jPanel_365, true);
         }
     }//GEN-LAST:event_rad_1835ActionPerformed
 
     private void rad_1834ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1834ActionPerformed
         if(rad_1834.isSelected()){
             muestraOcultaPanel(jPanel_288, true);
+            muestraOcultaPanel(jPanel_365, false);
         }
     }//GEN-LAST:event_rad_1834ActionPerformed
 
     private void rad_1833ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1833ActionPerformed
         if(rad_1833.isSelected()){
             muestraOcultaPanel(jPanel_288, true);
+            muestraOcultaPanel(jPanel_365, false);
         }
     }//GEN-LAST:event_rad_1833ActionPerformed
 
     private void rad_1832ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_1832ActionPerformed
         if(rad_1832.isSelected()){
             muestraOcultaPanel(jPanel_288, false);
+            muestraOcultaPanel(jPanel_365, false);
             muestraOcultaPanel(jPanel_289, true);
         }
     }//GEN-LAST:event_rad_1832ActionPerformed
@@ -8265,11 +8520,11 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
     private void chk_1810ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1810ActionPerformed
         if(chk_1810.isSelected()){
-            habilitaDeshabilitaComponentesRango(1831,1831,false);
-            habilitaDeshabilitaComponentesRango(2221,2221,false);
-        }else{
-            habilitaDeshabilitaComponentesRango(1831,1831,true);
+            //habilitaDeshabilitaComponentesRango(1831,1831,false);
             habilitaDeshabilitaComponentesRango(2221,2221,true);
+        }else{
+            //habilitaDeshabilitaComponentesRango(1831,1831,true);
+            habilitaDeshabilitaComponentesRango(2221,2221,false);
         }
     }//GEN-LAST:event_chk_1810ActionPerformed
 
@@ -8280,40 +8535,40 @@ public class EncuestaContexto extends javax.swing.JFrame {
     private void chk_1808ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1808ActionPerformed
         if(chk_1808.isSelected()){
             habilitaDeshabilitaComponentesRango(1830,1830,false);
-            habilitaDeshabilitaComponentesRango(2220,2220,false);
+            habilitaDeshabilitaComponentesRango(2220,2220,true);
         }else{
             habilitaDeshabilitaComponentesRango(1830,1830,true);
-            habilitaDeshabilitaComponentesRango(2220,2220,true);
+            habilitaDeshabilitaComponentesRango(2220,2220,false);
         }
     }//GEN-LAST:event_chk_1808ActionPerformed
 
     private void chk_1807ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1807ActionPerformed
         if(chk_1807.isSelected()){
-            habilitaDeshabilitaComponentesRango(1829,1829,false);
-            habilitaDeshabilitaComponentesRango(2219,2219,false);
-        }else{
-            habilitaDeshabilitaComponentesRango(1829,1829,true);
+            //habilitaDeshabilitaComponentesRango(1829,1829,false);
             habilitaDeshabilitaComponentesRango(2219,2219,true);
+        }else{
+            //habilitaDeshabilitaComponentesRango(1829,1829,true);
+            habilitaDeshabilitaComponentesRango(2219,2219,false);
         }
     }//GEN-LAST:event_chk_1807ActionPerformed
 
     private void chk_1806ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1806ActionPerformed
         if(chk_1806.isSelected()){
-            habilitaDeshabilitaComponentesRango(1828,1828,false);
-            habilitaDeshabilitaComponentesRango(2218,2218,false);
-        }else{
-            habilitaDeshabilitaComponentesRango(1828,1828,true);
+            //habilitaDeshabilitaComponentesRango(1828,1828,false);
             habilitaDeshabilitaComponentesRango(2218,2218,true);
+        }else{
+            //habilitaDeshabilitaComponentesRango(1828,1828,true);
+            habilitaDeshabilitaComponentesRango(2218,2218,false);
         }
     }//GEN-LAST:event_chk_1806ActionPerformed
 
     private void chk_1805ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1805ActionPerformed
         if(chk_1805.isSelected()){
-            habilitaDeshabilitaComponentesRango(1827,1827,false);
-            habilitaDeshabilitaComponentesRango(2217,2217,false);
-        }else{
-            habilitaDeshabilitaComponentesRango(1827,1827,true);
+            //habilitaDeshabilitaComponentesRango(1827,1827,false);
             habilitaDeshabilitaComponentesRango(2217,2217,true);
+        }else{
+            //habilitaDeshabilitaComponentesRango(1827,1827,true);
+            habilitaDeshabilitaComponentesRango(2217,2217,false);
         }
     }//GEN-LAST:event_chk_1805ActionPerformed
 
@@ -8321,11 +8576,11 @@ public class EncuestaContexto extends javax.swing.JFrame {
         if(chk_1804.isSelected()){
             habilitaDeshabilitaComponentesRango(1826,1826,false);
             habilitaDeshabilitaComponentesRango(2138,2138,false);
-            habilitaDeshabilitaComponentesRango(2216,2216,false);
+            habilitaDeshabilitaComponentesRango(2216,2216,true);
         }else{
             habilitaDeshabilitaComponentesRango(1826,1826,true);
             habilitaDeshabilitaComponentesRango(2138,2138,true);
-            habilitaDeshabilitaComponentesRango(2216,2216,true);
+            habilitaDeshabilitaComponentesRango(2216,2216,false);
         }
     }//GEN-LAST:event_chk_1804ActionPerformed
 
@@ -8333,11 +8588,11 @@ public class EncuestaContexto extends javax.swing.JFrame {
         if(chk_1803.isSelected()){
             habilitaDeshabilitaComponentesRango(1825,1825,false);
             habilitaDeshabilitaComponentesRango(2102,2102,false);
-            habilitaDeshabilitaComponentesRango(2215,2215,false);
+            habilitaDeshabilitaComponentesRango(2215,2215,true);
         }else{
             habilitaDeshabilitaComponentesRango(1825,1825,true);
             habilitaDeshabilitaComponentesRango(2102,2102,true);
-            habilitaDeshabilitaComponentesRango(2215,2215,true);
+            habilitaDeshabilitaComponentesRango(2215,2215,false);
         }
     }//GEN-LAST:event_chk_1803ActionPerformed
 
@@ -8348,8 +8603,10 @@ public class EncuestaContexto extends javax.swing.JFrame {
             habilitaDeshabilitaComponentesRango(2215,2221,true);
             habilitaDeshabilitaComponentesRango(2095,2102,true);
             habilitaDeshabilitaComponentesRango(2131,2138,true);
+            habilitaDeshabilitaComponentesRango(3105,3105,true);
         }else{
             habilitaDeshabilitaComponentesRango(1803,1811,true);
+            habilitaDeshabilitaComponentesRango(3105,3105,false);
         }
     }//GEN-LAST:event_chk_1802ActionPerformed
 
@@ -8738,19 +8995,19 @@ public class EncuestaContexto extends javax.swing.JFrame {
             soloNumerosRango(evt, 1, 1, 3);
         }
         if(rad_2232.isSelected()){
-            soloNumerosRango(evt, 1, 1, 2);
+            soloNumerosRango(evt, 1, 1, 1);
         }
         if(rad_2233.isSelected()){
             soloNumerosRango(evt, 1, 1, 6);
         }
         if(rad_2234.isSelected()){
-            soloNumerosRango(evt, 1, 1, 6);
+            soloNumerosRango(evt, 1, 1, 10);
         }
         if(rad_2235.isSelected()){
             soloNumerosRango(evt, 1, 1, 6);
         }
         if(rad_2236.isSelected()){
-            soloNumerosRango(evt, 1, 1, 6);
+            soloNumerosRango(evt, 1, 1, 3);
         }
         if(rad_2237.isSelected()){
             soloNumerosRango(evt, 1, 1, 4);
@@ -8768,19 +9025,19 @@ public class EncuestaContexto extends javax.swing.JFrame {
             soloNumerosRango(evt, 1, 1, 3);
         }
         if(rad_2242.isSelected()){
-            soloNumerosRango(evt, 1, 1, 2);
+            soloNumerosRango(evt, 1, 1, 1);
         }
         if(rad_2243.isSelected()){
             soloNumerosRango(evt, 1, 1, 6);
         }
         if(rad_2244.isSelected()){
-            soloNumerosRango(evt, 1, 1, 6);
+            soloNumerosRango(evt, 1, 1, 10);
         }
         if(rad_2245.isSelected()){
             soloNumerosRango(evt, 1, 1, 6);
         }
         if(rad_2246.isSelected()){
-            soloNumerosRango(evt, 1, 1, 6);
+            soloNumerosRango(evt, 1, 1, 3);
         }
         if(rad_2247.isSelected()){
             soloNumerosRango(evt, 1, 1, 4);
@@ -8919,6 +9176,69 @@ public class EncuestaContexto extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_rad_2359ActionPerformed
 
+    private void chk_1811ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1811ActionPerformed
+        if(chk_1811.isSelected()){
+            habilitaDeshabilitaComponentesRango(1802,1810,false);
+            habilitaDeshabilitaComponentesRango(1824,1831,true);
+            habilitaDeshabilitaComponentesRango(2215,2221,true);
+            habilitaDeshabilitaComponentesRango(2095,2102,true);
+            habilitaDeshabilitaComponentesRango(2131,2138,true);
+        }else{
+            habilitaDeshabilitaComponentesRango(1802,1810,true);
+        }
+    }//GEN-LAST:event_chk_1811ActionPerformed
+
+    private void chk_1815ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1815ActionPerformed
+        if(chk_1815.isSelected()){
+            habilitaDeshabilitaComponentesRango(2170,2170,true);
+        }else{
+            habilitaDeshabilitaComponentesRango(2170,2170,false);
+        }
+        bgSec1_296.clearSelection();
+    }//GEN-LAST:event_chk_1815ActionPerformed
+
+    private void chk_1816ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1816ActionPerformed
+        if(chk_1816.isSelected()){
+            habilitaDeshabilitaComponentesRango(2174,2174,true);
+        }else{
+            habilitaDeshabilitaComponentesRango(2174,2174,false);
+        }
+        bgSec1_297.clearSelection();
+    }//GEN-LAST:event_chk_1816ActionPerformed
+
+    private void chk_1824ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1824ActionPerformed
+        if(chk_1824.isSelected()){
+            habilitaDeshabilitaComponentesRango(3105,3105,true);
+        }else{
+            habilitaDeshabilitaComponentesRango(3105,3105,false);
+        }
+        bgSec3_307.clearSelection();
+    }//GEN-LAST:event_chk_1824ActionPerformed
+
+    private void chk_3108ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_3108ActionPerformed
+        if(chk_3108.isSelected()){
+            habilitaDeshabilitaComponentesRango(2289,2293,false);
+        }else{
+            habilitaDeshabilitaComponentesRango(2289,2293,true);
+        }
+    }//GEN-LAST:event_chk_3108ActionPerformed
+
+    private void chk_3110ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_3110ActionPerformed
+        if(chk_3110.isSelected()){
+            habilitaDeshabilitaComponentesRango(2364,2368,false);
+        }else{
+            habilitaDeshabilitaComponentesRango(2364,2368,true);
+        }
+    }//GEN-LAST:event_chk_3110ActionPerformed
+
+    private void chk_3111ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_3111ActionPerformed
+        if(chk_3111.isSelected()){
+            habilitaDeshabilitaComponentesRango(2377,2379,false);
+        }else{
+            habilitaDeshabilitaComponentesRango(2377,2379,true);
+        }
+    }//GEN-LAST:event_chk_3111ActionPerformed
+
     /**
      * 
      * @param j
@@ -9001,6 +9321,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 break;
             case "298":
                 bgSec2_298.clearSelection();
+                break;
+             case "299":
+                bgSec2_299.clearSelection();
                 break;
             case "302":
                 bgSec2_302.clearSelection();
@@ -9161,6 +9484,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 if(((JScrollPane)componentes1[a]).getName().equalsIgnoreCase("lista_288") && jList_288 != null){
                     jList_288.clearSelection();
                 }
+                if(((JScrollPane)componentes1[a]).getName().equalsIgnoreCase("lista_365") && jList_365 != null){
+                    jList_365.clearSelection();
+                }
                 if(((JScrollPane)componentes1[a]).getName().equalsIgnoreCase("lista_356") && jList_356 != null){
                     jList_356.clearSelection();
                 }
@@ -9297,6 +9623,16 @@ public class EncuestaContexto extends javax.swing.JFrame {
                                 keyNode.setAttribute("SELECTED", !(jList_288.isSelectionEmpty())?codificador("1",true):codificador("0",true));
                                 keyNode.setAttribute("INDEX", codificador((""+jList_288.getSelectedIndex()),true));
                                 keyNode.setAttribute("VALUE", codificador(codigoPaises[jList_288.getSelectedIndex()],true));
+                                keyNode.setAttribute("TYPE",codificador("1",true));
+                                //valor = jList_288.getSelectedValue();
+                            }
+                        }
+                        if(((JScrollPane)b.getValue()).getName().equalsIgnoreCase("lista_365")){
+                            if(!jList_365.isSelectionEmpty()){
+                                keyNode.setAttribute("ENABLED", (jList_365.isEnabled())?codificador("1",true):codificador("0",true));
+                                keyNode.setAttribute("SELECTED", !(jList_365.isSelectionEmpty())?codificador("1",true):codificador("0",true));
+                                keyNode.setAttribute("INDEX", codificador((""+jList_365.getSelectedIndex()),true));
+                                keyNode.setAttribute("VALUE", codificador(codigoPaisesProviene[jList_365.getSelectedIndex()],true));
                                 keyNode.setAttribute("TYPE",codificador("1",true));
                                 //valor = jList_288.getSelectedValue();
                             }
@@ -9439,6 +9775,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
             List list = rootNode.getChildren( "LISTA_RESPUESTAS" );
             //Se obtiene el elemento 'LISTA_RESPUESTAS'
             Element respuestas = (Element) list.get(0);
+//            firstTime = list.size();
             //Se obtiene la lista de hijos del tag 'LISTA_RESPUESTAS'
             List lista_componentes = respuestas.getChildren();
             //Se recorre la lista de campos
@@ -9472,6 +9809,12 @@ public class EncuestaContexto extends javax.swing.JFrame {
                         if(componente.getAttributeValue("ENABLED") != null && componente.getAttributeValue("INDEX") != null){
                             jList_288.setEnabled(codificador(componente.getAttributeValue("ENABLED"),false).equalsIgnoreCase("1"));
                             jList_288.setSelectedIndex(Integer.parseInt(codificador(componente.getAttributeValue("INDEX"),false)));
+                        }
+                    }
+                    if(((JScrollPane)componenteGui).getName().equalsIgnoreCase("lista_365") && jList_365 != null){
+                        if(componente.getAttributeValue("ENABLED") != null && componente.getAttributeValue("INDEX") != null){
+                            jList_365.setEnabled(codificador(componente.getAttributeValue("ENABLED"),false).equalsIgnoreCase("1"));
+                            jList_365.setSelectedIndex(Integer.parseInt(codificador(componente.getAttributeValue("INDEX"),false)));
                         }
                     }
                     if(((JScrollPane)componenteGui).getName().equalsIgnoreCase("lista_356") && jList_356 != null){
@@ -9533,6 +9876,11 @@ public class EncuestaContexto extends javax.swing.JFrame {
                         if(auxiliar[a] instanceof JScrollPane){
                             if(((JScrollPane)auxiliar[a]).getName().equalsIgnoreCase("lista_288")){
                                 if(!jList_288.isSelectionEmpty()){
+                                    bandera++;
+                                }
+                            }
+                            if(((JScrollPane)auxiliar[a]).getName().equalsIgnoreCase("lista_365")){
+                                if(!jList_365.isSelectionEmpty()){
                                     bandera++;
                                 }
                             }
@@ -9831,6 +10179,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
     private javax.swing.ButtonGroup bgSec1_296;
     private javax.swing.ButtonGroup bgSec1_297;
     private javax.swing.ButtonGroup bgSec2_298;
+    private javax.swing.ButtonGroup bgSec2_299;
     private javax.swing.ButtonGroup bgSec2_302;
     private javax.swing.ButtonGroup bgSec2_303;
     private javax.swing.ButtonGroup bgSec2_304;
@@ -9921,6 +10270,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
     private javax.swing.JCheckBox chk_2377;
     private javax.swing.JCheckBox chk_2378;
     private javax.swing.JCheckBox chk_2379;
+    private javax.swing.JCheckBox chk_3108;
+    private javax.swing.JCheckBox chk_3110;
+    private javax.swing.JCheckBox chk_3111;
     private javax.swing.JButton jButton_Atras;
     private javax.swing.JButton jButton_Sigueinte;
     private javax.swing.JButton jButton_activarEncuesta;
@@ -10013,6 +10365,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel88;
     private javax.swing.JLabel jLabel89;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel90;
     private javax.swing.JLabel jLabel_282;
     private javax.swing.JLabel jLabel_283;
     private javax.swing.JLabel jLabel_284;
@@ -10087,11 +10440,13 @@ public class EncuestaContexto extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_358;
     private javax.swing.JLabel jLabel_360;
     private javax.swing.JLabel jLabel_362;
+    private javax.swing.JLabel jLabel_365;
     private javax.swing.JList<String> jList_288;
     private javax.swing.JList<String> jList_356;
     private javax.swing.JList<String> jList_358;
     private javax.swing.JList<String> jList_360;
     private javax.swing.JList<String> jList_362;
+    private javax.swing.JList<String> jList_365;
     private javax.swing.JPanel jPanelSec_1;
     private javax.swing.JPanel jPanelSec_2;
     private javax.swing.JPanel jPanelSec_3;
@@ -10174,10 +10529,12 @@ public class EncuestaContexto extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel_358;
     private javax.swing.JPanel jPanel_360;
     private javax.swing.JPanel jPanel_362;
+    private javax.swing.JPanel jPanel_365;
     private javax.swing.JPanel jPanel_DatosPersonales;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
+    private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -10553,6 +10910,20 @@ public class EncuestaContexto extends javax.swing.JFrame {
     private javax.swing.JRadioButton rad_2464;
     private javax.swing.JRadioButton rad_2465;
     private javax.swing.JRadioButton rad_2466;
+    private javax.swing.JRadioButton rad_3089;
+    private javax.swing.JRadioButton rad_3090;
+    private javax.swing.JRadioButton rad_3091;
+    private javax.swing.JRadioButton rad_3092;
+    private javax.swing.JRadioButton rad_3093;
+    private javax.swing.JRadioButton rad_3094;
+    private javax.swing.JRadioButton rad_3095;
+    private javax.swing.JRadioButton rad_3096;
+    private javax.swing.JRadioButton rad_3097;
+    private javax.swing.JRadioButton rad_3098;
+    private javax.swing.JRadioButton rad_3105;
+    private javax.swing.JRadioButton rad_3106;
+    private javax.swing.JRadioButton rad_3107;
+    private javax.swing.JRadioButton rad_3109;
     private javax.swing.JTextField txt_2094;
     private javax.swing.JTextField txt_2191;
     private javax.swing.JTextField txt_2192;
