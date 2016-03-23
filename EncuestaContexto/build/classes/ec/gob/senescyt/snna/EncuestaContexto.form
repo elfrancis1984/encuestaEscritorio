@@ -114,10 +114,12 @@
     </Component>
     <Component class="javax.swing.ButtonGroup" name="bgSec6_353">
     </Component>
+    <Component class="javax.swing.ButtonGroup" name="bgSec2_299">
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="title" type="java.lang.String" value="Prototipo encuesta"/>
+    <Property name="title" type="java.lang.String" value="Encuesta contexto"/>
     <Property name="iconImage" type="java.awt.Image" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
       <Connection component="Form" name="iconImage" type="property"/>
     </Property>
@@ -167,21 +169,28 @@
                   </Group>
               </Group>
           </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="141" max="-2" attributes="0"/>
+              <Component id="jLabel89" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+              <Component id="jLabel89" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
               <Component id="jPanel_DatosPersonales" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
               <Component id="jTabbedPane1" min="-2" pref="510" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jButton_Sigueinte" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jButton_Atras" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -221,34 +230,38 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="jPanel_358" max="32767" attributes="0"/>
-                              <Component id="jPanel_295" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jPanel_292" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jPanel_291" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jPanel_290" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jPanel_289" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jPanel_288" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jPanel_287" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jPanel_286" alignment="1" max="32767" attributes="0"/>
-                              <Component id="jPanel_285" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jPanel_284" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jPanel_282" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jPanel_283" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jPanel_296" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jPanel_297" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jPanel_356" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jPanel_360" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jPanel_362" max="32767" attributes="0"/>
-                              <Component id="jPanel_293" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="jPanel_295" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jPanel_294" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="jPanel_358" max="32767" attributes="0"/>
+                                  <Component id="jPanel_291" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jPanel_290" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jPanel_289" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jPanel_288" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jPanel_287" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jPanel_286" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="jPanel_285" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jPanel_284" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jPanel_282" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jPanel_283" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jPanel_296" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jPanel_297" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jPanel_356" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jPanel_360" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jPanel_362" max="32767" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="jPanel_293" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jPanel_292" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="jPanel_365" alignment="0" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
                           <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="jPanel_294" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -270,6 +283,8 @@
                           <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                           <Component id="jPanel_288" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
+                          <Component id="jPanel_365" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                           <Component id="jPanel_289" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                           <Component id="jPanel_290" min="-2" max="-2" attributes="0"/>
@@ -277,12 +292,13 @@
                           <Component id="jPanel_291" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                           <Component id="jPanel_292" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           <Component id="jPanel_293" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           <Component id="jPanel_294" min="-2" max="-2" attributes="0"/>
-                          <Component id="jPanel_295" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jPanel_295" min="-2" pref="476" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           <Component id="jPanel_296" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           <Component id="jPanel_356" min="-2" max="-2" attributes="0"/>
@@ -456,6 +472,9 @@
                         <Property name="text" type="java.lang.String" value="Me encuentro en situaci&#xf3;n de privaci&#xf3;n de libertad"/>
                         <Property name="name" type="java.lang.String" value="1811" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk_1811ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel_282">
                       <Properties>
@@ -517,7 +536,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel2">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;1.2. &#xbf;Alguien en tu familia tiene discapacidad?&lt;/b&gt;&lt;br/&gt;(selecciona una opci&#xf3;n )&lt;/html&gt;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;1.2. &#xbf;Alguien en tu hogar tiene discapacidad?&lt;/b&gt;&lt;br/&gt;(selecciona una opci&#xf3;n )&lt;/html&gt;"/>
                         <Property name="name" type="java.lang.String" value="1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -610,7 +629,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel3">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;1.2.1. &#xbf;Qu&#xe9; miembro de tu familia tiene discapacidad?&lt;/b&gt;&lt;br/&gt;(selecci&#xf3;n m&#xfa;ltiple )&lt;/html&gt;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;1.2.1. &#xbf;Qu&#xe9; miembro de tu hogar tiene discapacidad?&lt;/b&gt;&lt;br/&gt;(selecci&#xf3;n m&#xfa;ltiple )&lt;/html&gt;"/>
                         <Property name="name" type="java.lang.String" value="1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -625,12 +644,18 @@
                         <Property name="text" type="java.lang.String" value="Padre"/>
                         <Property name="name" type="java.lang.String" value="1815" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk_1815ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="chk_1816">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Madre"/>
                         <Property name="name" type="java.lang.String" value="1816" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk_1816ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="chk_1817">
                       <Properties>
@@ -715,7 +740,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel4">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;1.3. &#xbf;Alg&#xfa;n miembro de tu familia, incluy&#xe9;ndote a ti, &lt;br/&gt;ha estado en situaci&#xf3;n de movilidad humana&lt;br/&gt;(migraci&#xf3;n, retorno, refugio)?&lt;/b&gt;&lt;br/&gt;(selecciona una opci&#xf3;n )&lt;/html&gt;&#xa;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;1.3. &#xbf;Alg&#xfa;n miembro de tu hogar, incluy&#xe9;ndote a ti, &lt;br/&gt;ha estado en situaci&#xf3;n de movilidad humana&lt;br/&gt;(migraci&#xf3;n, retorno, refugio)?&lt;/b&gt;&lt;br/&gt;(selecciona una opci&#xf3;n )&lt;/html&gt;&#xa;"/>
                         <Property name="name" type="java.lang.String" value="1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -773,7 +798,7 @@
                                   <Component id="chk_1824" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="109" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -817,6 +842,9 @@
                         <Property name="text" type="java.lang.String" value="Yo"/>
                         <Property name="name" type="java.lang.String" value="1824" noResource="true"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk_1824ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JCheckBox" name="chk_1825">
                       <Properties>
@@ -1038,7 +1066,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel7">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;1.3.3. &#xbf;A que pa&#xed;s realiz&#xf3; la migraci&#xf3;n?&lt;/b&gt;&lt;br/&gt;(selecciona una opci&#xf3;n)&lt;/html&gt;&#xa;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;1.3.2.1. &#xbf;A que pa&#xed;s realiz&#xf3; la migraci&#xf3;n?&lt;/b&gt;&lt;br/&gt;(selecciona una opci&#xf3;n)&lt;/html&gt;&#xa;"/>
                         <Property name="name" type="java.lang.String" value="1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -1135,7 +1163,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel8">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;1.3.4. &#xbf;Cu&#xe1;l fue el motivo principal?&lt;/b&gt;&lt;br/&gt;(selecciona una opci&#xf3;n)&lt;/html&gt;&#xa;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;1.3.3. &#xbf;Cu&#xe1;l fue el motivo principal?&lt;/b&gt;&lt;br/&gt;(selecciona una opci&#xf3;n)&lt;/html&gt;&#xa;"/>
                         <Property name="name" type="java.lang.String" value="1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -1234,7 +1262,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel9">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;1.3.5. &#xbf;Recibes alg&#xfa;n beneficio econ&#xf3;mico de esta persona?&lt;/b&gt;&lt;br/&gt;(selecciona una opci&#xf3;n)&lt;/html&gt;&#xa;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;1.3.4. &#xbf;Recibes alg&#xfa;n beneficio econ&#xf3;mico de esta persona?&lt;/b&gt;&lt;br/&gt;(selecciona una opci&#xf3;n)&lt;/html&gt;&#xa;"/>
                         <Property name="name" type="java.lang.String" value="1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -1313,7 +1341,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel10">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;1.3.6. &#xbf;Cu&#xe1;nto dinero en promedio recibes mensualmente&lt;br/&gt;de esta persona?&lt;/b&gt;&lt;html&gt;&#xa;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;1.3.4.1. &#xbf;Cu&#xe1;nto dinero en promedio recibes mensualmente&lt;br/&gt;de esta persona?&lt;/b&gt;&lt;html&gt;&#xa;"/>
                         <Property name="name" type="java.lang.String" value="1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -1499,91 +1527,130 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
+                                  <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel_293" alignment="0" min="-2" pref="300" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel_293" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="rad_2105" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="rad_2106" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="rad_2107" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="rad_2108" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="rad_2109" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="rad_2110" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="rad_2111" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="rad_2112" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="rad_2113" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="rad_2114" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="rad_2115" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="rad_2117" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="rad_2103" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace max="32767" attributes="0"/>
-                                                  <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2117" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2105" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2106" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2107" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2108" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2109" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2110" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2111" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2112" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2113" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2114" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2115" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2116" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2104" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
-                                              <Component id="rad_2116" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                                              <Component id="jSeparator1" min="-2" pref="11" max="-2" attributes="0"/>
                                           </Group>
-                                          <Component id="rad_2104" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                                      <Component id="jSeparator1" min="-2" pref="11" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                              <Component id="rad_2119" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="rad_2127" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="rad_2120" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="rad_2121" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="rad_2122" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="rad_2123" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="rad_2124" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="rad_2125" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="rad_2126" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="rad_2128" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="rad_2129" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="rad_2130" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                                              <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
-                                          </Group>
+                                          <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_2120" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_2121" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_2122" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_2123" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_2124" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_2125" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_2126" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_2128" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_2129" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_2130" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_3089" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_3090" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_3091" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_3092" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_3093" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="rad_2118" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_2119" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_2127" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="94" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
                               <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel_293" min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                                      <Component id="jSeparator1" max="32767" attributes="0"/>
+                                  </Group>
                                   <Group type="102" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="jSeparator1" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
-                                              <Component id="jLabel_293" min="-2" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Group type="102" attributes="0">
-                                                      <EmptySpace max="32767" attributes="0"/>
-                                                      <Component id="rad_2103" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                      <Component id="rad_2104" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace max="32767" attributes="0"/>
-                                                  </Group>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="rad_2118" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_2103" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace pref="1" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="rad_2119" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                              <Component id="rad_2120" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_2121" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_2122" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_2123" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_2124" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_2125" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_2126" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_2127" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_2128" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_2129" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_2130" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_3089" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_3090" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_3091" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_3092" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="rad_2104" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                                               <Component id="rad_2105" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="rad_2106" min="-2" max="-2" attributes="0"/>
@@ -1611,40 +1678,12 @@
                                               <Component id="rad_2117" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                      <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="rad_2118" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="rad_2119" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="rad_2120" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="rad_2121" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="rad_2122" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="rad_2123" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="rad_2124" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="rad_2125" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="rad_2126" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                                      <Component id="rad_2127" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="rad_2128" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="rad_2129" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="rad_2130" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="rad_3093" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
+                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1748,7 +1787,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel13">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Pueblos"/>
+                        <Property name="text" type="java.lang.String" value="Nacionalidades"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2118">
@@ -1831,7 +1870,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel14">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Nacionalidades "/>
+                        <Property name="text" type="java.lang.String" value="Pueblos"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JSeparator" name="jSeparator1">
@@ -1849,6 +1888,36 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="* Esta pregunta es obligatoria."/>
                         <Property name="name" type="java.lang.String" value="lbl_293" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="rad_3089">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Ka&#xf1;ari"/>
+                        <Property name="name" type="java.lang.String" value="3089" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="rad_3090">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Saraguro"/>
+                        <Property name="name" type="java.lang.String" value="3090" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="rad_3091">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Paltas"/>
+                        <Property name="name" type="java.lang.String" value="3091" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="rad_3092">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Pueblo Manta"/>
+                        <Property name="name" type="java.lang.String" value="3092" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="rad_3093">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Pueblo Huancavilca"/>
+                        <Property name="name" type="java.lang.String" value="3093" noResource="true"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -1875,7 +1944,7 @@
                                   <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel_294" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="13" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2012,58 +2081,60 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="rad_2152" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="rad_2139" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Component id="rad_2141" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="rad_2142" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="rad_2143" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="rad_2144" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="rad_2145" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="rad_2146" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="rad_2147" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="rad_2148" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="rad_2149" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="rad_2150" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="rad_2151" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="rad_2153" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Group type="102" attributes="0">
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jLabel_295" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Component id="rad_2140" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
-                                      <Component id="jSeparator2" min="-2" pref="11" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                              <Component id="rad_2155" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="rad_2163" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="rad_2156" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="rad_2157" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="rad_2158" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="rad_2159" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="rad_2160" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="rad_2161" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="rad_2162" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="rad_2164" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="rad_2165" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="rad_2166" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                                              <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="rad_2139" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2152" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2141" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2142" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2143" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2144" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2145" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2146" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2147" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2148" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2149" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2150" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2151" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2153" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="rad_2140" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace pref="44" max="32767" attributes="0"/>
+                                              <Component id="jSeparator2" min="-2" pref="11" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                           </Group>
+                                      </Group>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="rad_2156" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_2157" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_2158" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_2159" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_2160" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_2161" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_2162" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_2164" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_2165" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_2166" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_3094" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_3095" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_3096" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_3097" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_3098" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="rad_2154" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_2155" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_2163" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel_295" min="-2" pref="300" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="122" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2072,17 +2143,57 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                               <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                              <Component id="jLabel_295" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jSeparator2" max="32767" attributes="0"/>
-                                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="rad_2154" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_2155" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_2156" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                                              <Component id="rad_2157" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_2158" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_2159" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_2160" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_2161" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_2162" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_2163" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_2164" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_2165" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_2166" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_3094" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_3095" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_3096" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_3097" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="rad_3098" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="jSeparator2" min="-2" pref="397" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                                   <Group type="102" attributes="0">
-                                      <Component id="jLabel_295" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="7" max="32767" attributes="0"/>
                                       <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                                       <Component id="rad_2139" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="rad_2140" min="-2" max="-2" attributes="0"/>
@@ -2113,38 +2224,8 @@
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="rad_2153" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                                      <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="rad_2154" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="rad_2155" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="rad_2156" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="rad_2157" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="rad_2158" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="rad_2159" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="rad_2160" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="rad_2161" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="rad_2162" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                                      <Component id="rad_2163" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="rad_2164" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="rad_2165" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="rad_2166" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                  </Group>
                               </Group>
+                              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2152,7 +2233,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel16">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Pueblos"/>
+                        <Property name="text" type="java.lang.String" value="Nacionalidades"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2153">
@@ -2195,7 +2276,7 @@
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel17">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Nacionalidades "/>
+                        <Property name="text" type="java.lang.String" value="Pueblos"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2166">
@@ -2351,7 +2432,37 @@
                           <Color blue="33" green="33" red="ff" type="rgb"/>
                         </Property>
                         <Property name="text" type="java.lang.String" value="* Esta pregunta es obligatoria."/>
-                        <Property name="name" type="java.lang.String" value="lbl_294" noResource="true"/>
+                        <Property name="name" type="java.lang.String" value="lbl_295" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="rad_3094">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Ka&#xf1;ari"/>
+                        <Property name="name" type="java.lang.String" value="3094" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="rad_3095">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Saraguro"/>
+                        <Property name="name" type="java.lang.String" value="3095" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="rad_3096">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Paltas"/>
+                        <Property name="name" type="java.lang.String" value="3096" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="rad_3097">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Pueblo Manta"/>
+                        <Property name="name" type="java.lang.String" value="3097" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="rad_3098">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Pueblo Huancavilca"/>
+                        <Property name="name" type="java.lang.String" value="3098" noResource="true"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -2569,7 +2680,7 @@
                                   <Component id="jLabel42" alignment="1" max="32767" attributes="0"/>
                                   <Component id="jLabel_356" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="273" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2590,7 +2701,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel42">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;1.6.1 &#xbf;Cual es la lengua ind&#xed;gena de tu padre?&lt;/b&gt;&lt;br/&gt;(selecciona una opci&#xf3;n)&lt;/html&gt;&#xa;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;1.6.1. &#xbf;Cual es la lengua ind&#xed;gena de tu padre?&lt;/b&gt;&lt;br/&gt;(selecciona una opci&#xf3;n)&lt;/html&gt;&#xa;"/>
                         <Property name="name" type="java.lang.String" value="1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -2669,7 +2780,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel86">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;1.6.1 &#xbf;Cual es la lengua extranjera de tu padre?&lt;/b&gt;&lt;br/&gt;(selecciona una opci&#xf3;n)&lt;/html&gt;&#xa;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;1.6.2. &#xbf;Cual es la lengua extranjera de tu padre?&lt;/b&gt;&lt;br/&gt;(selecciona una opci&#xf3;n)&lt;/html&gt;&#xa;"/>
                         <Property name="name" type="java.lang.String" value="1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -2748,7 +2859,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel87">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;1.7.1 &#xbf;Cual es la lengua ind&#xed;gena de tu madre?&lt;/b&gt;&lt;br/&gt;(selecciona una opci&#xf3;n)&lt;/html&gt;&#xa;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;1.7.1. &#xbf;Cual es la lengua ind&#xed;gena de tu madre?&lt;/b&gt;&lt;br/&gt;(selecciona una opci&#xf3;n)&lt;/html&gt;&#xa;"/>
                         <Property name="name" type="java.lang.String" value="1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -2827,7 +2938,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel88">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;1.7.1 &#xbf;Cual es la lengua extranjera de tu madre?&lt;/b&gt;&lt;br/&gt;(selecciona una opci&#xf3;n)&lt;/html&gt;&#xa;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;1.7.2. &#xbf;Cual es la lengua extranjera de tu madre?&lt;/b&gt;&lt;br/&gt;(selecciona una opci&#xf3;n)&lt;/html&gt;&#xa;"/>
                         <Property name="name" type="java.lang.String" value="1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -2870,6 +2981,93 @@
                     </Container>
                   </SubComponents>
                 </Container>
+                <Container class="javax.swing.JPanel" name="jPanel_365">
+                  <Properties>
+                    <Property name="name" type="java.lang.String" value="365" noResource="true"/>
+                  </Properties>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel_365" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jScrollPane12" max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel90" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
+                              <Component id="jLabel90" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel_365" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jScrollPane12" min="-2" pref="204" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="jLabel90">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;1.3.2.2. &#xbf;De qu&#xe9; pa&#xed;s proviene?&lt;/b&gt;&lt;br/&gt;(selecciona una opci&#xf3;n)&lt;/html&gt;&#xa;"/>
+                        <Property name="name" type="java.lang.String" value="1" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel_365">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Arial" size="12" style="1"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="33" green="33" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="* Esta pregunta es obligatoria."/>
+                        <Property name="name" type="java.lang.String" value="lbl_365" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Container class="javax.swing.JScrollPane" name="jScrollPane12">
+                      <Properties>
+                        <Property name="name" type="java.lang.String" value="lista_365" noResource="true"/>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                      </AuxValues>
+
+                      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                      <SubComponents>
+                        <Component class="javax.swing.JList" name="jList_365">
+                          <Properties>
+                            <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
+                              <StringArray count="0"/>
+                            </Property>
+                            <Property name="selectionMode" type="int" value="0"/>
+                            <Property name="name" type="java.lang.String" value="365" noResource="true"/>
+                            <Property name="visibleRowCount" type="int" value="20"/>
+                          </Properties>
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                          </AuxValues>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                  </SubComponents>
+                </Container>
               </SubComponents>
             </Container>
           </SubComponents>
@@ -2877,8 +3075,8 @@
         <Container class="javax.swing.JScrollPane" name="jScrollPane2">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="TIPOLOGIA DE LA VIVIENDA">
-                <Property name="tabTitle" type="java.lang.String" value="TIPOLOGIA DE LA VIVIENDA"/>
+              <JTabbedPaneConstraints tabName="TIPOLOG&#xcd;A DE LA VIVIENDA">
+                <Property name="tabTitle" type="java.lang.String" value="TIPOLOG&#xcd;A DE LA VIVIENDA"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -3843,7 +4041,7 @@
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2214">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Tiene 3 o mas cuartos de ba&#xf1;o exclusivos con ducha"/>
+                        <Property name="text" type="java.lang.String" value="Tiene 3 o m&#xe1;s cuartos de ba&#xf1;o exclusivos con ducha"/>
                         <Property name="name" type="java.lang.String" value="2214" noResource="true"/>
                       </Properties>
                     </Component>
@@ -3868,8 +4066,8 @@
         <Container class="javax.swing.JScrollPane" name="jScrollPane3">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="CAPITAL ECONOMICO, SOCIAL Y CULTURAL">
-                <Property name="tabTitle" type="java.lang.String" value="CAPITAL ECONOMICO, SOCIAL Y CULTURAL"/>
+              <JTabbedPaneConstraints tabName="CAPITAL ECON&#xd3;MICO, SOCIAL Y CULTURAL">
+                <Property name="tabTitle" type="java.lang.String" value="CAPITAL ECON&#xd3;MICO, SOCIAL Y CULTURAL"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -3979,6 +4177,7 @@
                                           <Component id="rad_2219" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="rad_2220" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="rad_2221" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_3105" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -4011,6 +4210,8 @@
                               <Component id="rad_2220" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="rad_2221" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="rad_3105" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -4075,6 +4276,12 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="* Esta pregunta es obligatoria."/>
                         <Property name="name" type="java.lang.String" value="lbl_307" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="rad_3105">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Yo"/>
+                        <Property name="name" type="java.lang.String" value="3105" noResource="true"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -4839,7 +5046,7 @@
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2262">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Inactivos"/>
+                        <Property name="text" type="java.lang.String" value="Inactivo (Jubilado)"/>
                         <Property name="name" type="java.lang.String" value="2262" noResource="true"/>
                       </Properties>
                     </Component>
@@ -4881,6 +5088,7 @@
                                   <Component id="rad_2271" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="rad_2272" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="rad_2273" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="rad_3106" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
@@ -4915,6 +5123,8 @@
                               <Component id="rad_2272" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="rad_2273" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="rad_3106" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -5005,6 +5215,12 @@
                         <Property name="name" type="java.lang.String" value="lbl_314" noResource="true"/>
                       </Properties>
                     </Component>
+                    <Component class="javax.swing.JRadioButton" name="rad_3106">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Inactivo (Jubilado)"/>
+                        <Property name="name" type="java.lang.String" value="3106" noResource="true"/>
+                      </Properties>
+                    </Component>
                   </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="jPanel_315">
@@ -5032,6 +5248,7 @@
                                           <Component id="rad_2282" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="rad_2283" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="rad_2284" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_3107" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -5072,6 +5289,8 @@
                               <Component id="rad_2283" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="rad_2284" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="rad_3107" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -5160,6 +5379,12 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="* Esta pregunta es obligatoria."/>
                         <Property name="name" type="java.lang.String" value="lbl_315" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="rad_3107">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Inactivo (Jubilado)"/>
+                        <Property name="name" type="java.lang.String" value="3107" noResource="true"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -5339,6 +5564,7 @@
                                       </Group>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
+                                  <Component id="chk_3108" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -5361,6 +5587,8 @@
                               <Component id="chk_2292" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="chk_2293" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="chk_3108" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -5414,6 +5642,15 @@
                         <Property name="text" type="java.lang.String" value="* Esta pregunta es obligatoria."/>
                         <Property name="name" type="java.lang.String" value="lbl_318" noResource="true"/>
                       </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="chk_3108">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Ninguna de las anteriores"/>
+                        <Property name="name" type="java.lang.String" value="3108" noResource="true"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk_3108ActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -5683,7 +5920,7 @@
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2304">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="1 a 25"/>
+                        <Property name="text" type="java.lang.String" value="1 - 25"/>
                         <Property name="name" type="java.lang.String" value="2304" noResource="true"/>
                       </Properties>
                     </Component>
@@ -5748,6 +5985,7 @@
                                           <Component id="rad_2315" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="rad_2316" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Component id="rad_2317" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rad_3109" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -5784,6 +6022,8 @@
                               <Component id="rad_2316" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="rad_2317" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="rad_3109" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -5860,6 +6100,12 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="* Esta pregunta es obligatoria."/>
                         <Property name="name" type="java.lang.String" value="lbl_322" noResource="true"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JRadioButton" name="rad_3109">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Ninguna"/>
+                        <Property name="name" type="java.lang.String" value="3109" noResource="true"/>
                       </Properties>
                     </Component>
                   </SubComponents>
@@ -6351,25 +6597,25 @@
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2335">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Fiscal?"/>
+                        <Property name="text" type="java.lang.String" value="Fiscal"/>
                         <Property name="name" type="java.lang.String" value="2335" noResource="true"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2336">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Particular?"/>
+                        <Property name="text" type="java.lang.String" value="Particular"/>
                         <Property name="name" type="java.lang.String" value="2336" noResource="true"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2337">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Fisco misional?"/>
+                        <Property name="text" type="java.lang.String" value="Fisco misional"/>
                         <Property name="name" type="java.lang.String" value="2337" noResource="true"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2338">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Municipal?"/>
+                        <Property name="text" type="java.lang.String" value="Municipal"/>
                         <Property name="name" type="java.lang.String" value="2338" noResource="true"/>
                       </Properties>
                     </Component>
@@ -6917,6 +7163,7 @@
                                   <Component id="chk_2366" min="-2" max="-2" attributes="0"/>
                                   <Component id="chk_2367" min="-2" max="-2" attributes="0"/>
                                   <Component id="chk_2368" min="-2" max="-2" attributes="0"/>
+                                  <Component id="chk_3110" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
@@ -6939,6 +7186,8 @@
                               <Component id="chk_2367" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="chk_2368" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="chk_3110" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -6992,6 +7241,15 @@
                         <Property name="text" type="java.lang.String" value="* Esta pregunta es obligatoria."/>
                         <Property name="name" type="java.lang.String" value="lbl_332" noResource="true"/>
                       </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="chk_3110">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Ninguno"/>
+                        <Property name="name" type="java.lang.String" value="3110" noResource="true"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk_3110ActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -7071,7 +7329,7 @@
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2372">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Hay  3 o mas tv a color "/>
+                        <Property name="text" type="java.lang.String" value="Hay  3 o m&#xe1;s tv a color "/>
                         <Property name="name" type="java.lang.String" value="2372" noResource="true"/>
                       </Properties>
                     </Component>
@@ -7165,7 +7423,7 @@
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2376">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Hay  3 o mas veh&#xed;culos exclusivos para el hogar"/>
+                        <Property name="text" type="java.lang.String" value="Hay  3 o m&#xe1;s veh&#xed;culos exclusivos para el hogar"/>
                         <Property name="name" type="java.lang.String" value="2376" noResource="true"/>
                       </Properties>
                     </Component>
@@ -7200,6 +7458,7 @@
                                           <Component id="jLabel65" min="-2" max="-2" attributes="0"/>
                                           <Component id="chk_2378" min="-2" max="-2" attributes="0"/>
                                           <Component id="chk_2379" min="-2" max="-2" attributes="0"/>
+                                          <Component id="chk_3111" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
@@ -7224,6 +7483,8 @@
                               <Component id="chk_2378" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="chk_2379" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="chk_3111" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -7265,6 +7526,15 @@
                         <Property name="text" type="java.lang.String" value="* Esta pregunta es obligatoria."/>
                         <Property name="name" type="java.lang.String" value="lbl_335" noResource="true"/>
                       </Properties>
+                    </Component>
+                    <Component class="javax.swing.JCheckBox" name="chk_3111">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Ninguno"/>
+                        <Property name="name" type="java.lang.String" value="3111" noResource="true"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chk_3111ActionPerformed"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -7346,7 +7616,7 @@
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2384">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Hay  4 o mas celulares"/>
+                        <Property name="text" type="java.lang.String" value="Hay 4 o m&#xe1;s celulares"/>
                         <Property name="name" type="java.lang.String" value="2384" noResource="true"/>
                       </Properties>
                     </Component>
@@ -7602,7 +7872,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel68">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;6.1. &#xbf;C&#xf3;mo te enteraste  de la convocatoria para rendir la prueba ENES?&lt;/b&gt;&lt;br/&gt;(selecciona una opci&#xf3;n)&lt;/html&gt;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;6.1. &#xbf;C&#xf3;mo te enteraste de la convocatoria para rendir el ENES?&lt;/b&gt;&lt;br/&gt;(selecciona una opci&#xf3;n)&lt;/html&gt;"/>
                         <Property name="name" type="java.lang.String" value="1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -7849,25 +8119,25 @@
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2406">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Mejorado el acceso a educaci&#xf3;n superior?"/>
+                        <Property name="text" type="java.lang.String" value="Mejorado el acceso a educaci&#xf3;n superior"/>
                         <Property name="name" type="java.lang.String" value="2406" noResource="true"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2407">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Regularizado el acceso a educaci&#xf3;n superior?"/>
+                        <Property name="text" type="java.lang.String" value="Regularizado el acceso a educaci&#xf3;n superior"/>
                         <Property name="name" type="java.lang.String" value="2407" noResource="true"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2408">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Dificultado el acceso para los  y las aspirantes?"/>
+                        <Property name="text" type="java.lang.String" value="Dificultado el acceso para los  y las aspirantes"/>
                         <Property name="name" type="java.lang.String" value="2408" noResource="true"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2409">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;Establecido par&#xe1;metros para democratizar el&lt;br/&gt;acceso a educaci&#xf3;n superior?&lt;/html&gt;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;Establecido par&#xe1;metros para democratizar el&lt;br/&gt;acceso a educaci&#xf3;n superior&lt;/html&gt;"/>
                         <Property name="name" type="java.lang.String" value="2409" noResource="true"/>
                       </Properties>
                     </Component>
@@ -8454,7 +8724,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel77">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;6.4.6. A continuaci&#xf3;n te pedimos que eval&#xfa;es los siguientes aspectos de tu&lt;br/&gt;formaci&#xf3;n de bachillerato. Selecciona la opci&#xf3;n que est&#xe9; acorde a tu opini&#xf3;n.&lt;/b&gt;&lt;br/&gt;(selecciona una opci&#xf3;n)&lt;/html&gt;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;6.5. A continuaci&#xf3;n te pedimos que eval&#xfa;es los siguientes aspectos de tu&lt;br/&gt;formaci&#xf3;n de bachillerato. Selecciona la opci&#xf3;n que est&#xe9; acorde a tu opini&#xf3;n.&lt;/b&gt;&lt;br/&gt;(selecciona una opci&#xf3;n)&lt;/html&gt;"/>
                         <Property name="name" type="java.lang.String" value="1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -8515,7 +8785,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel78">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;6.4.6.1. Infraestructura del colegio&lt;/b&gt;&lt;br/&gt;(aulas, ba&#xf1;os, laboratorios, biblioteca, comedor, patio, canchas, etc.)&lt;/html&gt;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;6.5.1. Infraestructura del colegio&lt;/b&gt;&lt;br/&gt;(aulas, ba&#xf1;os, laboratorios, biblioteca, comedor, patio, canchas, etc.)&lt;/html&gt;"/>
                         <Property name="name" type="java.lang.String" value="1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -8618,7 +8888,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel79">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;6.4.6.2. Ambiente sin violencia (la violencia puede incluir violencia f&#xed;sica,&lt;br/&gt;verbal, psicol&#xf3;gica, bullying, racismo, discriminaci&#xf3;n, etc.) entre estudiantes&lt;/b&gt;&lt;/html&gt;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;6.5.2. Ambiente sin violencia (la violencia puede incluir violencia f&#xed;sica,&lt;br/&gt;verbal, psicol&#xf3;gica, bullying, racismo, discriminaci&#xf3;n, etc.) entre estudiantes&lt;/b&gt;&lt;/html&gt;"/>
                         <Property name="name" type="java.lang.String" value="1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -8721,7 +8991,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel80">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;6.4.6.3. Ambiente sin violencia (la violencia puede incluir violencia f&#xed;sica,&lt;br/&gt;verbal, psicol&#xf3;gica, bullying, racismo, discriminaci&#xf3;n, etc.) entre estudiantes&lt;br/&gt;y docentes.&lt;/b&gt;&lt;/html&gt;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;6.5.3. Ambiente sin violencia (la violencia puede incluir violencia f&#xed;sica,&lt;br/&gt;verbal, psicol&#xf3;gica, bullying, racismo, discriminaci&#xf3;n, etc.) entre estudiantes&lt;br/&gt;y docentes.&lt;/b&gt;&lt;/html&gt;"/>
                         <Property name="name" type="java.lang.String" value="1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -8824,7 +9094,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel81">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;6.4.6.4. Orientaci&#xf3;n vocacional en el colegio para selecci&#xf3;n de carrera&lt;br/&gt;y elaboraci&#xf3;n de proyecto de vida.&lt;/b&gt;&lt;/html&gt;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;6.5.4. Orientaci&#xf3;n vocacional en el colegio para selecci&#xf3;n de carrera&lt;br/&gt;y elaboraci&#xf3;n de proyecto de vida.&lt;/b&gt;&lt;/html&gt;"/>
                         <Property name="name" type="java.lang.String" value="1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -8927,7 +9197,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel82">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;6.4.6.5.Existencia de sistema de acompa&#xf1;amiento (tutor&#xed;a) durante&lt;br/&gt;tu permanencia en la instituci&#xf3;n&lt;/b&gt;&lt;/html&gt;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;6.5.5.Existencia de sistema de acompa&#xf1;amiento (tutor&#xed;a) durante&lt;br/&gt;tu permanencia en la instituci&#xf3;n&lt;/b&gt;&lt;/html&gt;"/>
                         <Property name="name" type="java.lang.String" value="1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -9023,7 +9293,7 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel83">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;6.4.6.6. Los conocimientos y aprendizajes adquiridos en tu colegio&lt;br/&gt;te son &#xfa;tiles en tu vida.&lt;/b&gt;&lt;/html&gt;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;6.5.6. Los conocimientos y aprendizajes adquiridos en tu colegio&lt;br/&gt;te son &#xfa;tiles en tu vida.&lt;/b&gt;&lt;/html&gt;"/>
                         <Property name="name" type="java.lang.String" value="1" noResource="true"/>
                       </Properties>
                     </Component>
@@ -9109,57 +9379,42 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jLabel20" max="32767" attributes="0"/>
-                              <Component id="jLabel23" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txt_nombres" min="-2" pref="268" max="-2" attributes="0"/>
-                              <Component id="txt_cedula" min="-2" pref="100" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txt_apellidos" max="32767" attributes="0"/>
-                      </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel23" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel24" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
-                  <Component id="jButton_activarEncuesta" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="txt_nombres" max="32767" attributes="0"/>
+                      <Component id="txt_cedula" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                      <Component id="txt_apellidos" pref="274" max="32767" attributes="0"/>
+                  </Group>
                   <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jButton_activarEncuesta" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                          <Component id="jButton_activarEncuesta" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txt_cedula" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txt_nombres" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel23" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txt_apellidos" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_cedula" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txt_nombres" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButton_activarEncuesta" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel23" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="txt_apellidos" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
           </Group>
         </DimensionLayout>
@@ -9167,7 +9422,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel20">
           <Properties>
-            <Property name="text" type="java.lang.String" value="C&#xe9;dula:"/>
+            <Property name="text" type="java.lang.String" value="Documento de identificaci&#xf3;n:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txt_cedula">
@@ -9205,5 +9460,13 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JLabel" name="jLabel89">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="14" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="ENCUESTA DE CONTEXTO SEGUNDO PERIODO 2016"/>
+      </Properties>
+    </Component>
   </SubComponents>
 </Form>
