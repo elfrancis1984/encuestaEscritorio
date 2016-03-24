@@ -136,7 +136,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 //        }
         //CAMBIAR VERSION ANTIGUA FCO
         if(archivoGenerado.equalsIgnoreCase("1")){
-            int dialogResult = JOptionPane.showConfirmDialog (null, "¿Deseas reiniciar la encuesta?\nRecuerda que si seleccionas Si deberás completar la encuesta nuevamente,\nsi elijes No podrás ver y editar los datos registrados en la encuesta.","Encuesta finalizada",JOptionPane.YES_NO_OPTION);
+            int dialogResult = JOptionPane.showConfirmDialog (null, "¿Deseas reiniciar la encuesta?\nRecuerda que si seleccionas Si, deberás completar la encuesta nuevamente desde cero.\nSi elijes No podrás ver y editar los datos registrados en la encuesta.","Encuesta finalizada",JOptionPane.YES_NO_OPTION);
             //0 Si  1 No  2 Cancel
             if(dialogResult == 0){
                 vaciarXML();
@@ -655,7 +655,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         rad_2219.setEnabled(false);
         rad_2220.setEnabled(false);
         rad_2221.setEnabled(false);
-        rad_3105.setEnabled(false);
+        //rad_3105.setEnabled(false);
         
         bgSec3_308.add(rad_2222);
         bgSec3_308.add(rad_2223);
@@ -8154,9 +8154,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 rad_2219.setEnabled(false);
                 rad_2220.setEnabled(false);
                 rad_2221.setEnabled(false);
-                rad_3105.setEnabled(false);
-                if(chk_1802.isSelected())//YO
-                    habilitaDeshabilitaComponentesRango(3105,3105,true);
+                rad_3105.setEnabled(true);
+//                if(chk_1802.isSelected())//YO
+//                    habilitaDeshabilitaComponentesRango(3105,3105,true);
                 if(chk_1803.isSelected())//Padre
                     habilitaDeshabilitaComponentesRango(2215,2215,true);
                 if(chk_1804.isSelected())//Madre
@@ -8652,10 +8652,10 @@ public class EncuestaContexto extends javax.swing.JFrame {
             habilitaDeshabilitaComponentesRango(2215,2221,true);
             habilitaDeshabilitaComponentesRango(2095,2102,true);
             habilitaDeshabilitaComponentesRango(2131,2138,true);
-            habilitaDeshabilitaComponentesRango(3105,3105,true);
+            //habilitaDeshabilitaComponentesRango(3105,3105,true);
         }else{
             habilitaDeshabilitaComponentesRango(1803,1811,true);
-            habilitaDeshabilitaComponentesRango(3105,3105,false);
+            //habilitaDeshabilitaComponentesRango(3105,3105,false);
         }
         bgSec3_307.clearSelection();
     }//GEN-LAST:event_chk_1802ActionPerformed

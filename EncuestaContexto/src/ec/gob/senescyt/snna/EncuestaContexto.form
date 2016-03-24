@@ -258,10 +258,8 @@
                                   <Component id="jPanel_356" alignment="0" max="32767" attributes="0"/>
                                   <Component id="jPanel_360" alignment="0" max="32767" attributes="0"/>
                                   <Component id="jPanel_362" max="32767" attributes="0"/>
-                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="jPanel_293" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jPanel_292" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="jPanel_293" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jPanel_292" alignment="0" max="32767" attributes="0"/>
                                   <Component id="jPanel_365" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -1684,7 +1682,6 @@
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="rad_3093" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
