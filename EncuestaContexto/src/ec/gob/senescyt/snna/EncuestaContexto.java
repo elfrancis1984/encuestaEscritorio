@@ -647,6 +647,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         bgSec3_307.add(rad_2220);
         bgSec3_307.add(rad_2221);
         bgSec3_307.add(rad_3105);
+        
         rad_2215.setEnabled(false);
         rad_2216.setEnabled(false);
         rad_2217.setEnabled(false);
@@ -892,6 +893,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         bgSec6_338.add(rad_2395);
         bgSec6_338.add(rad_2396);
         bgSec6_338.add(rad_2397);
+        bgSec6_338.add(rad_3112);
         
         bgSec6_339.add(rad_2398);
         bgSec6_339.add(rad_2399);
@@ -1641,6 +1643,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         rad_2396 = new javax.swing.JRadioButton();
         rad_2397 = new javax.swing.JRadioButton();
         jLabel_338 = new javax.swing.JLabel();
+        rad_3112 = new javax.swing.JRadioButton();
         jPanel_339 = new javax.swing.JPanel();
         jLabel69 = new javax.swing.JLabel();
         rad_2398 = new javax.swing.JRadioButton();
@@ -1762,9 +1765,10 @@ public class EncuestaContexto extends javax.swing.JFrame {
         txt_apellidos = new javax.swing.JTextField();
         jButton_activarEncuesta = new javax.swing.JButton();
         jLabel89 = new javax.swing.JLabel();
+        jLabel91 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Encuesta contexto");
+        setTitle("SNNA - ENCUESTA");
         setIconImage(getIconImage());
         setLocationByPlatform(true);
         setResizable(false);
@@ -2136,7 +2140,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         jPanel_286.setName("286"); // NOI18N
 
-        jLabel5.setText("<html><b>1.3.1. ¿Qué miembro de tu familia está en situación de movilidad humana?</b><br/> (selección múltiple)</html>\n\n");
+        jLabel5.setText("<html><b>1.3.1. ¿Qué miembro de tu hogar está en situación de movilidad humana?</b><br/> (selección múltiple)</html>\n\n");
         jLabel5.setName("1"); // NOI18N
 
         chk_1824.setText("Yo");
@@ -2225,7 +2229,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
                     .addComponent(chk_1825)
                     .addComponent(chk_1824)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(109, Short.MAX_VALUE))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
         jPanel_286Layout.setVerticalGroup(
             jPanel_286Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2717,7 +2721,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         rad_2117.setText("Kichwa de la sierra");
         rad_2117.setName("2117"); // NOI18N
 
-        jLabel13.setText("Nacionalidades");
+        jLabel13.setText("Pueblos");
 
         rad_2118.setText("Pastos");
         rad_2118.setName("2118"); // NOI18N
@@ -2758,7 +2762,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         rad_2130.setText("Puruhá");
         rad_2130.setName("2130"); // NOI18N
 
-        jLabel14.setText("Pueblos");
+        jLabel14.setText("Nacionalidades");
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
@@ -5229,7 +5233,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jLabel_315.setText("* Esta pregunta es obligatoria.");
         jLabel_315.setName("lbl_315"); // NOI18N
 
-        rad_3107.setText("Inactivo (Jubilado)");
+        rad_3107.setText("Inactiva (Jubilada)");
         rad_3107.setName("3107"); // NOI18N
 
         javax.swing.GroupLayout jPanel_315Layout = new javax.swing.GroupLayout(jPanel_315);
@@ -6934,6 +6938,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jLabel_338.setText("* Esta pregunta es obligatoria.");
         jLabel_338.setName("lbl_338"); // NOI18N
 
+        rad_3112.setText("Contact Center SNNA");
+        rad_3112.setName("3112"); // NOI18N
+
         javax.swing.GroupLayout jPanel_338Layout = new javax.swing.GroupLayout(jPanel_338);
         jPanel_338.setLayout(jPanel_338Layout);
         jPanel_338Layout.setHorizontalGroup(
@@ -6950,7 +6957,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
                     .addComponent(rad_2394)
                     .addComponent(rad_2395)
                     .addComponent(rad_2396)
-                    .addComponent(rad_2397))
+                    .addComponent(rad_2397)
+                    .addComponent(rad_3112))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel_338Layout.setVerticalGroup(
@@ -6976,6 +6984,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 .addComponent(rad_2396)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(rad_2397)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rad_3112)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -8023,6 +8033,9 @@ public class EncuestaContexto extends javax.swing.JFrame {
         jLabel89.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel89.setText("ENCUESTA DE CONTEXTO SEGUNDO PERIODO 2016");
 
+        jLabel91.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        jLabel91.setText("© Copyright Derechos Reservados - SNNA. Encuesta v1.0, 2016.");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -8032,11 +8045,14 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 644, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap())
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jLabel91)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButton_Atras, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jButton_Sigueinte)
@@ -8061,7 +8077,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton_Sigueinte)
-                    .addComponent(jButton_Atras))
+                    .addComponent(jButton_Atras)
+                    .addComponent(jLabel91))
                 .addGap(3, 3, 3))
         );
 
@@ -8130,6 +8147,30 @@ public class EncuestaContexto extends javax.swing.JFrame {
             break;
             case 3:
                 jButton_Sigueinte.setText("Siguiente");
+                rad_2215.setEnabled(false);
+                rad_2216.setEnabled(false);
+                rad_2217.setEnabled(false);
+                rad_2218.setEnabled(false);
+                rad_2219.setEnabled(false);
+                rad_2220.setEnabled(false);
+                rad_2221.setEnabled(false);
+                rad_3105.setEnabled(false);
+                if(chk_1802.isSelected())//YO
+                    habilitaDeshabilitaComponentesRango(3105,3105,true);
+                if(chk_1803.isSelected())//Padre
+                    habilitaDeshabilitaComponentesRango(2215,2215,true);
+                if(chk_1804.isSelected())//Madre
+                    habilitaDeshabilitaComponentesRango(2216,2216,true);
+                if(chk_1805.isSelected())//Hermanos
+                    habilitaDeshabilitaComponentesRango(2217,2217,true);
+                if(chk_1806.isSelected())//Abuelos
+                    habilitaDeshabilitaComponentesRango(2218,2218,true);
+                if(chk_1807.isSelected())//Hijo
+                    habilitaDeshabilitaComponentesRango(2219,2219,true);
+                if(chk_1808.isSelected())//Conyuge
+                    habilitaDeshabilitaComponentesRango(2220,2220,true);
+                if(chk_1810.isSelected())//Otros
+                    habilitaDeshabilitaComponentesRango(2221,2221,true);
             break;
             case 4:
                 jButton_Sigueinte.setText("Siguiente");
@@ -8494,6 +8535,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
             muestraOcultaPanel(jPanel_289, false);
             muestraOcultaPanel(jPanel_290, false);
             muestraOcultaPanel(jPanel_291, false);
+            muestraOcultaPanel(jPanel_365, false);
         }
     }//GEN-LAST:event_rad_1823ActionPerformed
 
@@ -8526,10 +8568,11 @@ public class EncuestaContexto extends javax.swing.JFrame {
             //habilitaDeshabilitaComponentesRango(1831,1831,true);
             habilitaDeshabilitaComponentesRango(2221,2221,false);
         }
+        bgSec3_307.clearSelection();
     }//GEN-LAST:event_chk_1810ActionPerformed
 
     private void chk_1809ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1809ActionPerformed
-
+        bgSec3_307.clearSelection();
     }//GEN-LAST:event_chk_1809ActionPerformed
 
     private void chk_1808ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1808ActionPerformed
@@ -8540,6 +8583,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
             habilitaDeshabilitaComponentesRango(1830,1830,true);
             habilitaDeshabilitaComponentesRango(2220,2220,false);
         }
+        bgSec3_307.clearSelection();
     }//GEN-LAST:event_chk_1808ActionPerformed
 
     private void chk_1807ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1807ActionPerformed
@@ -8550,6 +8594,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
             //habilitaDeshabilitaComponentesRango(1829,1829,true);
             habilitaDeshabilitaComponentesRango(2219,2219,false);
         }
+        bgSec3_307.clearSelection();
     }//GEN-LAST:event_chk_1807ActionPerformed
 
     private void chk_1806ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1806ActionPerformed
@@ -8560,6 +8605,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
             //habilitaDeshabilitaComponentesRango(1828,1828,true);
             habilitaDeshabilitaComponentesRango(2218,2218,false);
         }
+        bgSec3_307.clearSelection();
     }//GEN-LAST:event_chk_1806ActionPerformed
 
     private void chk_1805ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1805ActionPerformed
@@ -8570,6 +8616,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
             //habilitaDeshabilitaComponentesRango(1827,1827,true);
             habilitaDeshabilitaComponentesRango(2217,2217,false);
         }
+        bgSec3_307.clearSelection();
     }//GEN-LAST:event_chk_1805ActionPerformed
 
     private void chk_1804ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1804ActionPerformed
@@ -8582,6 +8629,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
             habilitaDeshabilitaComponentesRango(2138,2138,true);
             habilitaDeshabilitaComponentesRango(2216,2216,false);
         }
+        bgSec3_307.clearSelection();
     }//GEN-LAST:event_chk_1804ActionPerformed
 
     private void chk_1803ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1803ActionPerformed
@@ -8594,6 +8642,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
             habilitaDeshabilitaComponentesRango(2102,2102,true);
             habilitaDeshabilitaComponentesRango(2215,2215,false);
         }
+        bgSec3_307.clearSelection();
     }//GEN-LAST:event_chk_1803ActionPerformed
 
     private void chk_1802ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1802ActionPerformed
@@ -8608,6 +8657,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
             habilitaDeshabilitaComponentesRango(1803,1811,true);
             habilitaDeshabilitaComponentesRango(3105,3105,false);
         }
+        bgSec3_307.clearSelection();
     }//GEN-LAST:event_chk_1802ActionPerformed
 
     private void rad_2420ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_2420ActionPerformed
@@ -9186,6 +9236,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         }else{
             habilitaDeshabilitaComponentesRango(1802,1810,true);
         }
+        bgSec3_307.clearSelection();
     }//GEN-LAST:event_chk_1811ActionPerformed
 
     private void chk_1815ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1815ActionPerformed
@@ -10366,6 +10417,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel89;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel90;
+    private javax.swing.JLabel jLabel91;
     private javax.swing.JLabel jLabel_282;
     private javax.swing.JLabel jLabel_283;
     private javax.swing.JLabel jLabel_284;
@@ -10924,6 +10976,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
     private javax.swing.JRadioButton rad_3106;
     private javax.swing.JRadioButton rad_3107;
     private javax.swing.JRadioButton rad_3109;
+    private javax.swing.JRadioButton rad_3112;
     private javax.swing.JTextField txt_2094;
     private javax.swing.JTextField txt_2191;
     private javax.swing.JTextField txt_2192;
