@@ -2926,8 +2926,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(rad_2117)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rad_3093)
-                        .addGap(0, 0, 0)))
+                        .addComponent(rad_3093)))
                 .addGap(0, 0, 0))
         );
 
@@ -3698,9 +3697,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
                         .addComponent(jPanel_356, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel_360, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel_362, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelSec_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jPanel_293, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel_292, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jPanel_293, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel_292, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel_365, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(100, 100, 100))
         );
@@ -5299,7 +5297,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
         jPanel_316.setName("316"); // NOI18N
 
-        jLabel46.setText("<html><b>3.8. Alguien en tu hogar esta afiliado o cubierto por el seguro del IESS<br/> (general, voluntario o campesino) y/o seguro del ISSFA o ISSPOL.</b><br/>(selecciona una opción)</html>");
+        jLabel46.setText("<html><b>3.8. Alguien en tu hogar está afiliado o cubierto por el seguro del IESS<br/> (general, voluntario o campesino) y/o seguro del ISSFA o ISSPOL.</b><br/>(selecciona una opción)</html>");
         jLabel46.setName("1"); // NOI18N
 
         rad_2285.setText("Sí");
@@ -5343,6 +5341,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 .addComponent(rad_2286)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jLabel46.getAccessibleContext().setAccessibleName("<html><b>3.8. Alguien en tu hogar está afiliado o cubierto por el seguro del IESS<br/> (general, voluntario o campesino) y/o seguro del ISSFA o ISSPOL.</b><br/>(selecciona una opción)</html>");
 
         jPanel_317.setName("317"); // NOI18N
 
@@ -9567,6 +9567,16 @@ public class EncuestaContexto extends javax.swing.JFrame {
         try{ 
             if(jF1.showSaveDialog(null)==jF1.APPROVE_OPTION){ 
                 ruta = jF1.getSelectedFile().getAbsolutePath();
+                int pos = ruta.indexOf('.');
+                String ext = "";
+                if(pos != -1){
+                    ext = ruta.substring(pos, ruta.length());
+                    if(!ext.equalsIgnoreCase(".xml") && !ext.equalsIgnoreCase(".XML")){
+                        ruta = ruta.substring(0,pos) + ".xml";
+                    }
+                }else{
+                    ruta = ruta + ".xml";
+                }
                 //System.out.println(ruta);
                 encuestaTerminada = true;
             } 

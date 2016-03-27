@@ -5436,9 +5436,12 @@
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel46">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;3.8. Alguien en tu hogar esta afiliado o cubierto por el seguro del IESS&lt;br/&gt; (general, voluntario o campesino) y/o seguro del ISSFA o ISSPOL.&lt;/b&gt;&lt;br/&gt;(selecciona una opci&#xf3;n)&lt;/html&gt;"/>
+                        <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;3.8. Alguien en tu hogar est&#xe1; afiliado o cubierto por el seguro del IESS&lt;br/&gt; (general, voluntario o campesino) y/o seguro del ISSFA o ISSPOL.&lt;/b&gt;&lt;br/&gt;(selecciona una opci&#xf3;n)&lt;/html&gt;"/>
                         <Property name="name" type="java.lang.String" value="1" noResource="true"/>
                       </Properties>
+                      <AccessibilityProperties>
+                        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;3.8. Alguien en tu hogar est&#xe1; afiliado o cubierto por el seguro del IESS&lt;br/&gt; (general, voluntario o campesino) y/o seguro del ISSFA o ISSPOL.&lt;/b&gt;&lt;br/&gt;(selecciona una opci&#xf3;n)&lt;/html&gt;"/>
+                      </AccessibilityProperties>
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2285">
                       <Properties>
