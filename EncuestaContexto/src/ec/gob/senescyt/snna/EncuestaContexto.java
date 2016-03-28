@@ -490,6 +490,15 @@ public class EncuestaContexto extends javax.swing.JFrame {
         bgSec1_297.add(rad_2173);
         bgSec1_297.add(rad_2174);
         rad_2174.setEnabled(false);
+        
+        chk_1814.setEnabled(false);
+        chk_1815.setEnabled(false);
+        chk_1816.setEnabled(false);
+        chk_1817.setEnabled(false);
+        chk_1818.setEnabled(false);
+        chk_1819.setEnabled(false);
+        chk_1820.setEnabled(false);
+        chk_1821.setEnabled(false);
 
         jPanel_284.setVisible(false);
         jPanel_286.setVisible(false);
@@ -2838,7 +2847,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
                             .addComponent(rad_2118)
                             .addComponent(rad_2119)
                             .addComponent(rad_2127))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(233, Short.MAX_VALUE))
         );
         jPanel_293Layout.setVerticalGroup(
             jPanel_293Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2926,7 +2935,8 @@ public class EncuestaContexto extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(rad_2117)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rad_3093)))
+                        .addComponent(rad_3093)
+                        .addGap(10, 10, 10)))
                 .addGap(0, 0, 0))
         );
 
@@ -3307,7 +3317,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
                         .addComponent(rad_2152)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(rad_2153)))
-                .addGap(52, 52, 52))
+                .addGap(10, 10, 10))
         );
 
         jPanel_296.setName("296"); // NOI18N
@@ -3734,7 +3744,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addComponent(jPanel_294, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel_295, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel_295, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(jPanel_296, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
@@ -6096,7 +6106,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
         rad_2336.setText("Particular");
         rad_2336.setName("2336"); // NOI18N
 
-        rad_2337.setText("Fisco misional");
+        rad_2337.setText("Fiscomisional");
         rad_2337.setName("2337"); // NOI18N
 
         rad_2338.setText("Municipal");
@@ -8562,61 +8572,69 @@ public class EncuestaContexto extends javax.swing.JFrame {
 
     private void chk_1810ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1810ActionPerformed
         if(chk_1810.isSelected()){
-            //habilitaDeshabilitaComponentesRango(1831,1831,false);
+            habilitaDeshabilitaComponentesRango(1821,1821,true);
             habilitaDeshabilitaComponentesRango(2221,2221,true);
         }else{
-            //habilitaDeshabilitaComponentesRango(1831,1831,true);
+            habilitaDeshabilitaComponentesRango(1821,1821,false);
             habilitaDeshabilitaComponentesRango(2221,2221,false);
         }
         bgSec3_307.clearSelection();
+        txt_2191.setText("");
     }//GEN-LAST:event_chk_1810ActionPerformed
 
     private void chk_1809ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1809ActionPerformed
         bgSec3_307.clearSelection();
+        txt_2191.setText("");
     }//GEN-LAST:event_chk_1809ActionPerformed
 
     private void chk_1808ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1808ActionPerformed
         if(chk_1808.isSelected()){
             habilitaDeshabilitaComponentesRango(1830,1830,false);
             habilitaDeshabilitaComponentesRango(2220,2220,true);
+            habilitaDeshabilitaComponentesRango(1820,1820,true);
         }else{
             habilitaDeshabilitaComponentesRango(1830,1830,true);
             habilitaDeshabilitaComponentesRango(2220,2220,false);
+            habilitaDeshabilitaComponentesRango(1820,1820,false);
         }
         bgSec3_307.clearSelection();
+        txt_2191.setText("");
     }//GEN-LAST:event_chk_1808ActionPerformed
 
     private void chk_1807ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1807ActionPerformed
         if(chk_1807.isSelected()){
-            //habilitaDeshabilitaComponentesRango(1829,1829,false);
+            habilitaDeshabilitaComponentesRango(1819,1819,true);
             habilitaDeshabilitaComponentesRango(2219,2219,true);
         }else{
-            //habilitaDeshabilitaComponentesRango(1829,1829,true);
+            habilitaDeshabilitaComponentesRango(1819,1819,false);
             habilitaDeshabilitaComponentesRango(2219,2219,false);
         }
         bgSec3_307.clearSelection();
+        txt_2191.setText("");
     }//GEN-LAST:event_chk_1807ActionPerformed
 
     private void chk_1806ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1806ActionPerformed
         if(chk_1806.isSelected()){
-            //habilitaDeshabilitaComponentesRango(1828,1828,false);
+            habilitaDeshabilitaComponentesRango(1818,1818,true);
             habilitaDeshabilitaComponentesRango(2218,2218,true);
         }else{
-            //habilitaDeshabilitaComponentesRango(1828,1828,true);
+            habilitaDeshabilitaComponentesRango(1818,1818,false);
             habilitaDeshabilitaComponentesRango(2218,2218,false);
         }
         bgSec3_307.clearSelection();
+        txt_2191.setText("");
     }//GEN-LAST:event_chk_1806ActionPerformed
 
     private void chk_1805ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1805ActionPerformed
         if(chk_1805.isSelected()){
-            //habilitaDeshabilitaComponentesRango(1827,1827,false);
+            habilitaDeshabilitaComponentesRango(1817,1817,true);
             habilitaDeshabilitaComponentesRango(2217,2217,true);
         }else{
-            //habilitaDeshabilitaComponentesRango(1827,1827,true);
+            habilitaDeshabilitaComponentesRango(1817,1817,false);
             habilitaDeshabilitaComponentesRango(2217,2217,false);
         }
         bgSec3_307.clearSelection();
+        txt_2191.setText("");
     }//GEN-LAST:event_chk_1805ActionPerformed
 
     private void chk_1804ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1804ActionPerformed
@@ -8624,12 +8642,14 @@ public class EncuestaContexto extends javax.swing.JFrame {
             habilitaDeshabilitaComponentesRango(1826,1826,false);
             habilitaDeshabilitaComponentesRango(2138,2138,false);
             habilitaDeshabilitaComponentesRango(2216,2216,true);
+            habilitaDeshabilitaComponentesRango(1816,1816,true);
         }else{
             habilitaDeshabilitaComponentesRango(1826,1826,true);
             habilitaDeshabilitaComponentesRango(2138,2138,true);
-            habilitaDeshabilitaComponentesRango(2216,2216,false);
+            habilitaDeshabilitaComponentesRango(1816,1816,false);
         }
         bgSec3_307.clearSelection();
+        txt_2191.setText("");
     }//GEN-LAST:event_chk_1804ActionPerformed
 
     private void chk_1803ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1803ActionPerformed
@@ -8637,12 +8657,15 @@ public class EncuestaContexto extends javax.swing.JFrame {
             habilitaDeshabilitaComponentesRango(1825,1825,false);
             habilitaDeshabilitaComponentesRango(2102,2102,false);
             habilitaDeshabilitaComponentesRango(2215,2215,true);
+            habilitaDeshabilitaComponentesRango(1815,1815,true);
         }else{
             habilitaDeshabilitaComponentesRango(1825,1825,true);
             habilitaDeshabilitaComponentesRango(2102,2102,true);
             habilitaDeshabilitaComponentesRango(2215,2215,false);
+            habilitaDeshabilitaComponentesRango(1815,1815,false);
         }
         bgSec3_307.clearSelection();
+        txt_2191.setText("");
     }//GEN-LAST:event_chk_1803ActionPerformed
 
     private void chk_1802ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1802ActionPerformed
@@ -8652,12 +8675,13 @@ public class EncuestaContexto extends javax.swing.JFrame {
             habilitaDeshabilitaComponentesRango(2215,2221,true);
             habilitaDeshabilitaComponentesRango(2095,2102,true);
             habilitaDeshabilitaComponentesRango(2131,2138,true);
-            //habilitaDeshabilitaComponentesRango(3105,3105,true);
+            habilitaDeshabilitaComponentesRango(1814,1814,true);
         }else{
             habilitaDeshabilitaComponentesRango(1803,1811,true);
-            //habilitaDeshabilitaComponentesRango(3105,3105,false);
+            habilitaDeshabilitaComponentesRango(1814,1814,false);
         }
         bgSec3_307.clearSelection();
+        txt_2191.setText("");
     }//GEN-LAST:event_chk_1802ActionPerformed
 
     private void rad_2420ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rad_2420ActionPerformed
@@ -8829,7 +8853,41 @@ public class EncuestaContexto extends javax.swing.JFrame {
     }//GEN-LAST:event_rad_2175ActionPerformed
 
     private void txt_2191KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_2191KeyTyped
-        soloNumerosRango(evt, 2, 1, 20);
+        if(chk_1802.isSelected()){//Solo
+            soloNumerosRango(evt,1,1,1);
+            return;
+        }
+        //Padre
+        if(chk_1803.isSelected() && !chk_1804.isSelected() && !chk_1805.isSelected() && !chk_1806.isSelected() && !chk_1807.isSelected() && !chk_1808.isSelected() && !chk_1809.isSelected() && !chk_1810.isSelected() && !chk_1811.isSelected()){
+            soloNumerosRango(evt,1,2,2);
+            return;
+        }
+        //Madre
+        if(!chk_1803.isSelected() && chk_1804.isSelected() && !chk_1805.isSelected() && !chk_1806.isSelected() && !chk_1807.isSelected() && !chk_1808.isSelected() && !chk_1809.isSelected() && !chk_1810.isSelected() && !chk_1811.isSelected()){
+            soloNumerosRango(evt,1,2,2);
+            return;
+        }
+        //Conyugue
+        if(!chk_1803.isSelected() && !chk_1804.isSelected() && !chk_1805.isSelected() && !chk_1806.isSelected() && !chk_1807.isSelected() && chk_1808.isSelected() && !chk_1809.isSelected() && !chk_1810.isSelected() && !chk_1811.isSelected()){
+            soloNumerosRango(evt,1,2,2);
+            return;
+        }
+        //Padre y Madre
+        if(chk_1803.isSelected() && chk_1804.isSelected() && !chk_1805.isSelected() && !chk_1806.isSelected() && !chk_1807.isSelected() && !chk_1808.isSelected() && !chk_1809.isSelected() && !chk_1810.isSelected() && !chk_1811.isSelected()){
+            soloNumerosRango(evt,1,3,3);
+            return;
+        }
+        //Padre y Conyugue
+        if(chk_1803.isSelected() && !chk_1804.isSelected() && !chk_1805.isSelected() && !chk_1806.isSelected() && !chk_1807.isSelected() && chk_1808.isSelected() && !chk_1809.isSelected() && !chk_1810.isSelected() && !chk_1811.isSelected()){
+            soloNumerosRango(evt,1,3,3);
+            return;
+        }
+        //Madre y Conyugue
+        if(!chk_1803.isSelected() && chk_1804.isSelected() && !chk_1805.isSelected() && !chk_1806.isSelected() && !chk_1807.isSelected() && chk_1808.isSelected() && !chk_1809.isSelected() && !chk_1810.isSelected() && !chk_1811.isSelected()){
+            soloNumerosRango(evt,1,3,3);
+            return;
+        }
+        soloNumerosRango(evt,1,2,20);
     }//GEN-LAST:event_txt_2191KeyTyped
 
     private void txt_2192KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_2192KeyTyped
@@ -9237,6 +9295,7 @@ public class EncuestaContexto extends javax.swing.JFrame {
             habilitaDeshabilitaComponentesRango(1802,1810,true);
         }
         bgSec3_307.clearSelection();
+        txt_2191.setText("");
     }//GEN-LAST:event_chk_1811ActionPerformed
 
     private void chk_1815ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chk_1815ActionPerformed
@@ -10074,7 +10133,11 @@ public class EncuestaContexto extends javax.swing.JFrame {
                 }
             }else{
                 evt.consume();
-                JOptionPane.showMessageDialog(this, "El valor ingresado debe estar entre "+ inicio+" y "+fin,"Error",JOptionPane.ERROR_MESSAGE);
+                if(inicio != fin){
+                    JOptionPane.showMessageDialog(this, "El valor ingresado debe estar entre "+ inicio+" y "+fin,"Error",JOptionPane.ERROR_MESSAGE);
+                }else{
+                    JOptionPane.showMessageDialog(this, "El valor ingresado no puede ser diferente a "+ inicio,"Error",JOptionPane.ERROR_MESSAGE);
+                }
             }
         }else{
                 getToolkit().beep();

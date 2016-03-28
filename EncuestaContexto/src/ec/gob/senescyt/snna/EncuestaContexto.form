@@ -299,7 +299,7 @@
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           <Component id="jPanel_294" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jPanel_295" min="-2" pref="476" max="-2" attributes="0"/>
+                          <Component id="jPanel_295" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           <Component id="jPanel_296" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
@@ -1583,7 +1583,7 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="233" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1682,6 +1682,7 @@
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="rad_3093" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
@@ -2226,7 +2227,7 @@
                                       <Component id="rad_2153" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -6613,7 +6614,7 @@
                     </Component>
                     <Component class="javax.swing.JRadioButton" name="rad_2337">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Fisco misional"/>
+                        <Property name="text" type="java.lang.String" value="Fiscomisional"/>
                         <Property name="name" type="java.lang.String" value="2337" noResource="true"/>
                       </Properties>
                     </Component>
