@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>D:\Recursos Encuesta Contexto\EncuestaJAR\EncuestaContexto.jar</jar>
+  <outfile>D:\Recursos Encuesta Contexto\EncuestaEXE\SNNA - ENCUESTA.exe</outfile>
+  <errTitle>Java requiered</errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl>http://java.com/download</downloadUrl>
+  <supportUrl>http://java.com/download</supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>D:\Recursos Encuesta Contexto\EncuestaJAR\iconos\encuesta_01.ico</icon>
+  <singleInstance>
+    <mutexName>Ya se esta ejecutando una instancia del programa</mutexName>
+    <windowTitle>Encuesta en ejecución</windowTitle>
+  </singleInstance>
+  <jre>
+    <path>jre7</path>
+    <bundledJre64Bit>false</bundledJre64Bit>
+    <bundledJreAsFallback>false</bundledJreAsFallback>
+    <minVersion></minVersion>
+    <maxVersion></maxVersion>
+    <jdkPreference>preferJre</jdkPreference>
+    <runtimeBits>64/32</runtimeBits>
+  </jre>
+  <versionInfo>
+    <fileVersion>1.0.0.1</fileVersion>
+    <txtFileVersion>1.0</txtFileVersion>
+    <fileDescription>Encuesta Contexto</fileDescription>
+    <copyright>SENESCYT - SNNA</copyright>
+    <productVersion>1.0.0.1</productVersion>
+    <txtProductVersion>1.0</txtProductVersion>
+    <productName>SNNA - ENCUESTA</productName>
+    <companyName>SENESCYT - SNNA</companyName>
+    <internalName>Encuesta</internalName>
+    <originalFilename>EncuestaContexto.exe</originalFilename>
+  </versionInfo>
+</launch4jConfig>
